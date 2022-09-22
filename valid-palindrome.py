@@ -46,6 +46,10 @@ we need to save the reversed strings in another variable!
 💡 Third attempt: Optimal Solution.
    Saves on Time and Space complexity!
 
+   How it Works.
+   In this method we are Traversing is a process in which each element of a data structure is accessed.
+   Traversing is also sometimes called iterating over the data structure. This saves on space.
+
    It works fine but does not work on strings with spaces🤔
 """
 
