@@ -4,7 +4,7 @@ Valid Palindrome: https://leetcode.com/problems/valid-palindrome/
 Python methods learnt from this are :
        1.isalnum() returns true if all the characters are alphanumeric
          (a-z) and (0-9) are alphanumeric
-       2. lower() returns a string in lower case
+       2.lower() returns a string in lower case
 """
 
 """
@@ -44,16 +44,21 @@ we need to save the reversed strings in another variable!
 
 """
 💡 Third attempt: Optimal Solution.
-  Saves on Time and Space complexity!
+   Saves on Time and Space complexity!
+
+   It works fine but does not work on strings with spaces🤔
 """
 
 def is_palindrome_three(str):
+    print(len(str))
     i, j = 0, len(str) - 1
 
     while i < j:
         while not str[i].isalnum() and i < j:
+            print(i)
             i += 1
         while not str[i].isalnum() and i < j:
+            print(j)
             j -= 1
         if str[i].lower() != str[j].lower():
             return False
@@ -62,4 +67,4 @@ def is_palindrome_three(str):
 
     return True
 
-print(is_palindrome_three('Dont nod'))
+print(is_palindrome_three('Mr. Owl ate my metal worm'))
