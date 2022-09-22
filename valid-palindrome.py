@@ -17,3 +17,4 @@ def is_palindrome(str):
 
 print(is_palindrome('mom'))
 print(''.join(reversed('mom')))
+h
