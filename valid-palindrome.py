@@ -10,6 +10,9 @@ Python methods learnt from this are :
 """
 💡 First attempt: Works with strings with no punctuation marks😊
 """
+from curses.ascii import isalnum
+
+
 def is_palindrome(str):
     b = ''.join(reversed(str))
     print(b)
@@ -54,7 +57,11 @@ we need to save the reversed strings in another variable!
 """
 
 def is_palindrome_three(str):
-    print(len(str))
+    # print(len(str))
+    # x = str.replace(" ", "").lower()
+    # print(x)
+    # print(len(x))
+    # print(len(str))
     i, j = 0, len(str) - 1
 
     while i < j:
@@ -71,4 +78,10 @@ def is_palindrome_three(str):
 
     return True
 
-print(is_palindrome_three('Mr. Owl ate my metal worm'))
+print(is_palindrome_three('Mr. Owl ate  my metal worm'))
+
+txt = "Mr. Owl ate my metal worm"
+
+x = txt.isalnum()
+
+print(x)
