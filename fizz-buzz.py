@@ -31,18 +31,21 @@ If you find yourself, appending a list inside a for-loop, Its a good idea to use
 
   1. What are the inputs ?
       An integer
-
-
 """
-# def _fizzbuzz2(i):
-#     if i%5 == 0 and i%3 == 0:
-#         print(i,'Fizzbuzz')
-#     elif i%3 == 0:
-#         print(i,'Fizz')
-#     elif i%5 == 0:
-#         print(i,'Buzz')
-#     else:
-#         print(str(i))
+fizz_int = 5
+
+def _fizzbuzz2(i):
+    if i%5 == 0 and i%3 == 0:
+        return 'Fizzbuzz'
+    elif i%3 == 0:
+        return 'Fizz'
+    elif i%5 == 0:
+        return'Buzz'
+    else:
+        return str(i)
+
+final_Strings = [_fizzbuzz2(i) for i in range(1, fizz_int + 1)]
+print('Here are the final strings:', final_Strings)
 
 
 
