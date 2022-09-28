@@ -21,9 +21,9 @@ def _fizzbuzz(n):
         else:
             print(str(i))
 
-_fizzbuzz(15)
-_fizzbuzz(3)
-_fizzbuzz(5)
+#_fizzbuzz(15)
+#_fizzbuzz(3)
+#_fizzbuzz(5)
 
 """
 Something I have learnt is since the above function does not return anything printing the fizzbuzz fn will return NONE
@@ -32,7 +32,7 @@ If you find yourself, appending a list inside a for-loop, Its a good idea to use
   1. What are the inputs ?
       An integer
 """
-fizz_int = 5
+fizz_int = 3
 
 def _fizzbuzz2(i):
     if i%5 == 0 and i%3 == 0:
