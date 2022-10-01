@@ -48,6 +48,24 @@ def _fizzbuzz2(i):
 final_Strings = [_fizzbuzz2(i) for i in range(1, fizz_int + 1)]
 print('Here are the final strings:', final_Strings)
 
+'''
+Introducing a class
+'''
 
+class Solution:
+    def fizzBuzz(self, n: int):
+        answer = list()
 
+        for i in range(1, n+1):
+            if i%5 == 0 and i%3 == 0:
+               answer.append('Fizzbuzz')
+            elif i%3 == 0:
+               answer.append('Fizz')
+            elif i%5 == 0:
+              answer.append('Buzz')
+            else:
+              answer.append(str(i))
+        return answer
 
+fizzList = Solution.fizzBuzz(1,15)
+print(fizzList)
