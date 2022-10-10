@@ -1,6 +1,6 @@
 """
 Link to problem: https://leetcode.com/problems/fizz-buzz/
-Problem
+Problem -Basic level
 
 Given an integer n, return a string array answer (1-indexed) where:
 
@@ -49,7 +49,7 @@ final_Strings = [_fizzbuzz2(i) for i in range(1, fizz_int + 1)]
 print('Here are the final strings:', final_Strings)
 
 '''
-Introducing a class
+💡Third Soln: Introducing a class 
 '''
 
 class Solution:
