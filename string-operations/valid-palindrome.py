@@ -78,7 +78,7 @@ def is_palindrome_three(str):
 
     return True
 
-print(is_palindrome_three('Mr. Owl ate  my metal worm'))
+print('Palindrom three:', is_palindrome_three('mom'))
 
 txt = "Mr. Owl ate my metal worm"
 

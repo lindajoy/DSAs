@@ -14,6 +14,7 @@ def is_valid_palindrome(str):
             j -= 1
         if str[i].lower() != str[j].lower():
             count += 1
+            print(count)
         if count == 1:
             return True
 
@@ -22,4 +23,7 @@ def is_valid_palindrome(str):
     return False
 
 
+print(is_valid_palindrome('abca'))
 print(is_valid_palindrome('aba'))
+print(is_valid_palindrome('abc'))
+

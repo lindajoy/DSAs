@@ -1,6 +1,8 @@
 """
 Selection Sort
 
+💡 First Solution
+
 Pseudocode:
       i) Find the smallest element in the array.
       ii) Insert/ swap with the element in the first position.
@@ -30,7 +32,9 @@ post_array = [7,1]
 print(selectionSort(post_array))
 
 
-"""
+""" 
+💡 Second solution
+
 Divide the input array into two subarrays in place. 
 The first subarray should be sorted at all times and should start with a length of 0, while the second subarray should be unsorted.
 Find the smallest (or largest) element in the unsorted subarray and insert it into the sorted subarray with a swap.
@@ -41,7 +45,7 @@ Repeat this process of finding the smallest (or largest) element in the unsorted
 # Best: O(n^2) time | O(1) space
 # Average: O(n^2) time | O(1) space
 # Worst: O(n^2) time | O(1) space
-
+ 
 
 def selectionSort00(array):
 

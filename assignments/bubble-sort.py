@@ -30,6 +30,7 @@ print(bubbleSort(array_2))
 Bubble sort solution 2
 """
 def bubbleSort00(array):
+    # if the length of the array is less than 2 => There's no need to sort the array, since it clearly indicates that the value it has one element.Makes Sense?🤔
     if len(array) < 2:
         return array
 
@@ -67,5 +68,5 @@ Not Operator:
 '''
 
 print (not True == False) # Returns True
-print (False == not True) # Invalid syntax
+#print (False == not True) # Invalid syntax
 print ( False == (not True))  # Returns True
