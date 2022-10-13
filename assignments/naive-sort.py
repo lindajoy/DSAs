@@ -1,5 +1,6 @@
 """
 Given an array of  integers => sort them: Why would you not use a array.sort()
+          Most of the interviews prevent you from using the sort method.
 """
 
 """
@@ -22,3 +23,19 @@ def naive_approach(arr, temp = 0):
 print(naive_approach([1,2,2,6,7,2]))
 
 # nested loops are dangerous they cause the quadratic time complexity O(N^2)
+
+
+"""
+Use the inbuilt method sorted
+"""
+prime_numbers = [11,13,7,1,2,3,5]
+
+"""
+prime_numbers.sort(reverse=True) => In Descending order
+"""
+
+prime_numbers.sort()
+
+print(prime_numbers)
+
+
