@@ -26,7 +26,7 @@ print(naive_approach([1,2,2,6,7,2]))
 
 
 """
-Use the inbuilt method sorted
+Use the inbuilt method sort 
 """
 prime_numbers = [11,13,7,1,2,3,5]
 
@@ -38,4 +38,12 @@ prime_numbers.sort()
 
 print(prime_numbers)
 
+"""
+Use the inbuilt method sorted Method 
+"""
 
+prime_numbers_2 = [11,13,7,1,2,3,5]
+
+sorted(prime_numbers_2)
+
+print(prime_numbers_2)
