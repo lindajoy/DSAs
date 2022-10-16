@@ -12,11 +12,12 @@ Given an array of  integers => sort them: Why would you not use a array.sort()
                  Continue this process till entire array is sorted in ascending order
 """
 
-def naive_approach(arr, temp = 0):
+def naive_approach(arr):
    # Sort the array in ascending order
    for i in range(0, len(arr)):
       for j in range(i + 1, len(arr)):
          if(arr[i] > arr[j]):
+            # swapping
             arr[i], arr[j] = arr[j], arr[i]
    return(arr)
 

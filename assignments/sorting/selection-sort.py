@@ -1,6 +1,7 @@
 """
 Selection Sort
 
+
 💡 First Solution
 
 Pseudocode:
@@ -11,7 +12,7 @@ Pseudocode:
 # Best: O(n^2) time | O(1) space
 # Average: O(n^2) time | O(1) space
 # Worst: O(n^2) time | O(1) space
-def selectionSort(array):
+def selectionSort(array, int):
     pos_to_insert = 0
     while pos_to_insert < len(array):
         smallest = pos_to_insert
@@ -101,3 +102,6 @@ x, y = y, x
 
 print('The swapped value of x:', x)
 print('The swapped value of y:', y)
+
+
+[1,1, 5,5,3]

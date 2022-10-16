@@ -1,14 +1,22 @@
+"""
+💡 Quick Sort
+    The quicksort algorithm for sorting arrays proceeds recursively-it selects an element (the "pivot"),
+    reorders the array to make all the elements less than or equal to the pivot appear first, followed by
+    all the elements greater than the pivot. The two subarrays are then sorted recursively
 
+    It kinda follows the divide and conquer approach.
+"""
 
 def quickSort(array):
     quick_sort_helper(array, 0 , len(array)-1)
     return array
 
-def quick_sort_helper(array, start ,end):
+def quick_sort_helper(array, start, end):
     if start >= end:
        return
 
     pivot = start
+    
     # position every number in the array in the sorted order with respect to the array[pivot]
     # left and right to stop at a place where: left <= pivot and right >= pivot
 
@@ -39,9 +47,10 @@ def quick_sort_helper(array, start ,end):
             quick_sort_helper(array, right + 1, end)
             quick_sort_helper(array, start, right - 1)
 
-sorted_array = [1,6,7,3,4]
-result2 = quickSort(sorted_array)
-print(result2)
+unsorted_array = [1,6,7,3,4]
+
+sorted_array= quickSort(unsorted_array)
+print(sorted_array)
 
 
         

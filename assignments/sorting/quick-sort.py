@@ -4,11 +4,10 @@
     reorders the array to make all the elements less than or equal to the pivot appear first, followed by
     all the elements greater than the pivot. The two subarrays are then sorted recursively
 
+    It kinda follows the divide and conquer approach.
+
     For this: I used the Dutch National Flag Problem (see EOP)
 """
-
-from cgitb import small
-
 
 def ducth_flag_partition(pivot_index, A):
     pivot = A[pivot_index]
