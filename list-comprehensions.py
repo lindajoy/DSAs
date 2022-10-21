@@ -1,5 +1,7 @@
 """
 💡 List Comprehensions
+
+Syntax for list comprehenesions: [expression for member in iterable]
 """
 """
 EXAMPLE 1
