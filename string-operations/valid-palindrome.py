@@ -10,7 +10,6 @@ Python methods learnt from this are :
 """
 💡 First attempt: Works with strings with no punctuation marks😊
 """
-from curses.ascii import isalnum
 
 
 def is_palindrome(str):

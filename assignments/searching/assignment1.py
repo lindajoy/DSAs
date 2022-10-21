@@ -32,7 +32,8 @@ print(result)
 
 '''
 💡 Second solution
-   Using binary trees. 
+   Using binary trees:
+   With binary trees the time complexity is logarithimic time complexity(O)
 '''
 integer = 9
 def binary_search1(A):
@@ -51,7 +52,7 @@ def binary_search1(A):
 
     return -1
 
-unsorted_arry3 = [0,1,2,3]
+unsorted_arry3 = [0,1,2,3,5]
 result2 = binary_search1(unsorted_arry2)
 print(result2)
 
