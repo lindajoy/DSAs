@@ -11,7 +11,3 @@ The fundamental clues  to identify problems needing this kind of technique are:
     - The problem will be based on array, list or string.
     - It will ask to find subrange in that array or string will have to give the longest, shortest or target values.
     - Its concept is mainly based on ideas like the longest sequence or shortest sequence of something that satisfies a given  condition perfectly.
-
-
-
-
