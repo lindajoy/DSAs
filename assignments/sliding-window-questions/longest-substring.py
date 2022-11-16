@@ -27,4 +27,26 @@ For reference: https://www.codingninjas.com/codestudio/library/subsequence-vs-su
 
 # Solution 1: Naive approach(Brute Force Algorithms)
 
-print('hello World')
+# Solution 2: Sliding window technique
+
+def lengthOfLongestSubstring(s: str):
+    charSet = set()
+    left = 0
+    res = 0
+
+    for r in range(len(s)):
+        while s[r] in charSet:
+            charSet.remove(s[left])
+            left += 1
+        charSet.add(s[r])
+        print(charSet)
+        # max returns the maximum value in an iterable.
+        res = max(res, r - left + 1) 
+        print(res)
+    return res
+
+print(lengthOfLongestSubstring("abcabcbb"))
+print(lengthOfLongestSubstring("bbbbb"))
+
+
+print(max(5,10,9))
