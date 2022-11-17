@@ -39,14 +39,19 @@ def lengthOfLongestSubstring(s: str):
             charSet.remove(s[left])
             left += 1
         charSet.add(s[r])
-        print(charSet)
         # max returns the maximum value in an iterable.
         res = max(res, r - left + 1) 
-        print(res)
     return res
 
 print(lengthOfLongestSubstring("abcabcbb"))
 print(lengthOfLongestSubstring("bbbbb"))
+print(len('hello'))
 
+print(max(5,10,9)) # outputs the maximum value in an iterable.
 
-print(max(5,10,9))
+'''
+Simple reminder of a for loop; how it works, how to loop through a string.
+'''
+s = 'hello'
+for i in range(len(s)):
+    print(s[i])
