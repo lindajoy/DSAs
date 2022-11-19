@@ -30,7 +30,13 @@ For reference: https://www.codingninjas.com/codestudio/library/subsequence-vs-su
 # Solution 2: Sliding window technique
 
 def lengthOfLongestSubstring(s: str):
-    charSet = set()
+    '''
+    Why do you use set() data type?
+
+    Sets are unordered and unstructured and do not allow duplicate values.
+    '''
+
+    charSet = set() 
     left = 0
     res = 0
 
@@ -45,7 +51,7 @@ def lengthOfLongestSubstring(s: str):
 
 print(lengthOfLongestSubstring("abcabcbb"))
 print(lengthOfLongestSubstring("bbbbb"))
-print(len('hello'))
+print(len('hello')) # outputs 5 the number of characters in the string.
 
 print(max(5,10,9)) # outputs the maximum value in an iterable.
 
