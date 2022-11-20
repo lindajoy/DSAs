@@ -95,3 +95,14 @@ print("Here is the array of hot temps:", hot_temps)
 """
 As a rule of thumb, it is best to avoid more than one nested comprehensions and use convectional loops
 """
+
+'''
+Implement a function that removes all the even elements from a given list. Name it remove_even(lst).
+'''
+my_list = [1,2,4,5,10,6,3]
+
+def remove_even(list):
+    return [num for num in  list if num % 2 != 0]
+
+nums = remove_even(my_list)
+print('😁😊😇',nums)
