@@ -28,9 +28,14 @@ print(merge_two_lists([1,3,4,5],[2,6,7,8]))
 💡 Data Struture Approach (as if there's a big difference 😁)
 '''
 def merge_lists(list1, list2):
+    # Assigning ptr1 and ptr2 to value 0
     ptr1 = ptr2 = 0
 
+    # Do a check if the index is always less than the length of the list
     while (ptr1 < len(list1) and ptr2 < len(list2)):
+        # If the value at that specific index in list1 is greater than the value in the value at the same level in list1
+        # Insert the number at the index => Insert(index, specific element)
+        # Increase the index value on both ptr and ptr2
         if list1[ptr1] > list2[ptr2]:
             list1.insert(ptr1, list2[ptr2])
             ptr1 += 1
@@ -38,6 +43,7 @@ def merge_lists(list1, list2):
         else:
             ptr1 += 1
 
+    # Why did you do this?
     if ptr2 < len(list2):
         list1 += list2[ptr2:]    
     return list1
