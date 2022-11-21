@@ -11,7 +11,7 @@ def remove_even(list):
 print(remove_even([3, 2, 41, 3, 34]))
 
 
-# using list comprehensions => Cleaner and more pythonic way
+# using list comprehensions => Cleaner and more Pythonic way
 def remove_even_list(list):
     return [number for number in list if number % 2 !=0]
 
