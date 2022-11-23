@@ -15,3 +15,12 @@ The fundamental clues  to identify problems needing this kind of technique are:
 
 ### How does the sliding window work?
   
+
+
+## Randoms From Different Questions.
+
+#### Find-max-sliding-window.py
+
+Deque - This is a double-ended queue where the pop and push operations work in O(1) at both ends.
+It acts as our window,We will store elements in the deque in decreasing order.
+The front of the deque contains the maximum value in that particular window.
