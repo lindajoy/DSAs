@@ -19,8 +19,6 @@ def find_sum(lst, k):
 
     # Loops through the list
     for el in lst:
-        print(k)
-        print(el)
         diff = k - el
         if seen.get(el):
             return [el, diff]
@@ -38,7 +36,6 @@ find_sum(lst,k)
 def find_sum_brute(list, k):
     for i in range(len(list)):
         for j in range(len(list)):
-            # if(lst[i]+lst[j] is k and i is not j):
             if(list[i]+list[j] is k and i is not j):
                 return [list[i],list[j]]
 
