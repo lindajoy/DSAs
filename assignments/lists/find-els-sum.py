@@ -52,10 +52,12 @@ print(len(lst) - 1)
 print('Hmm interesting')
 
 '''
-Brute Force solution
+💡 (Second Brute Force Solution) Brute Force solution
+
+Does not have guards in place, Traverses through the array and gets the final list that add up to k.
 '''
 
-def brute_solution(l, k) -> tuple:
+def brute_solution(l, k) -> list:
     for x in l:
         for y in l:
             if x + y == k:
