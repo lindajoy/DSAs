@@ -65,6 +65,10 @@ def brute_solution(l, k) -> list:
 
 print("BRUTE FORCE SOLUTION 3:", brute_solution([1,2,3,4,5], 8))
 
+'''
+Solution 3
+'''
+
 def binary_search(a, item):
     left, right = 0, len(a) - 1
     found = False
