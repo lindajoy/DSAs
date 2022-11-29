@@ -12,22 +12,32 @@ Sample Output
 lst = [21,60]
 
 '''
+'''
+This solution uses a dictionary, Ideally two numbers have to be added to get the sum k
 
+We initialize an empty dictionary.
+
+Then we loop through the list. Getting the difference of each element, if element exists on list append it on list.
+'''
 def find_sum(lst, k):
     # Initializes an empty dictionary
     seen = {}
 
     # Loops through the list
     for el in lst:
+        # For each element find the difference  and then return the reponsive array.
+        # Say case one: 81 - 1
+
         diff = k - el
         if seen.get(el):
             return [el, diff]
         seen[diff] = el
     
 lst = [1,21,3,14,5,60,7,6,77]
+list = [1,2,3,4,5]
 k = 81
 
-find_sum(lst,k)
+find_sum(list,k)
 
 
 '''
@@ -52,8 +62,7 @@ print(len(lst) - 1)
 print('Hmm interesting')
 
 '''
-💡 (Second Brute Force Solution) Brute Force solution
-
+💡 (Second Brute Force Solution) Brute Force solution.
 Does not have guards in place, Traverses through the array and gets the final list that add up to k.
 '''
 
