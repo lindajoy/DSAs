@@ -29,6 +29,7 @@ k = 81
 
 find_sum(lst,k)
 
+
 '''
 💡 Brute Force Algorithm
 Traversing through the whole array of size, for each element in the list, check if any elements add up to the target k.
@@ -49,6 +50,18 @@ print(len(lst))
 print(len(lst) - 1)
 
 print('Hmm interesting')
+
+'''
+Brute Force solution
+'''
+
+def brute_solution(l, k) -> tuple:
+    for x in l:
+        for y in l:
+            if x + y == k:
+                return x,y
+
+print("BRUTE FORCE SOLUTION 3:", brute_solution([1,2,3,4,5], 8))
 
 def binary_search(a, item):
     left, right = 0, len(a) - 1
