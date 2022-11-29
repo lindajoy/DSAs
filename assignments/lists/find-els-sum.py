@@ -79,6 +79,7 @@ def binary_search(a, item):
 def find_sum3(list,k):
     list.sort()
     for j in range(len(list)):
+        
         # find the difference in list through binary search
         # return the only if we find an index
         index = binary_search(lst, k -lst[j])

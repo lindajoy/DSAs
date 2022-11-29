@@ -102,7 +102,7 @@ Implement a function that removes all the even elements from a given list. Name 
 my_list = [1,2,4,5,10,6,3]
 
 def remove_even(list):
-    return [num for num in  list if num % 2 != 0]
+    return [num for num in list if num % 2 != 0]
 
 nums = remove_even(my_list)
 print('😁😊😇',nums)
