@@ -80,6 +80,7 @@ extend the first list by the second one from that index until the end.
 Since both lists are traversed in this solution as well, the time complexity is O(m(n+m)) 
 where n and m are the lengths of the lists. Both lists are not traversed separately
 so we cannot say that complexity is (m+n). The shorter of the two lengths is traversed in the while loop. 
-Also, the insert function gets called when the if-condition is true. In the worst-case, the second list has all the elements that are smaller than the elements of the first list. In this case, the complexity will be O(mn)
+Also, the insert function gets called when the if-condition is true. 
+In the worst-case, the second list has all the elements that are smaller than the elements of the first list. In this case, the complexity will be O(mn)
 
 '''
