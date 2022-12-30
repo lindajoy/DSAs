@@ -7,7 +7,7 @@ Sliding Window Technique is a method for finding subarrays in an array that sati
 Its a branch of dynamic programming is a technique that breaks a big problem into smaller subproblems, saves the result for later to avoid computing them again.
 
 The fundamental clues  to identify problems needing this kind of technique are:
-    1. Contiguous means sequential, which means the elements must be right next to each other to count as a pair. This is a giant  clue that a sliding window may work beautifully with this question.
+    1. Contiguous means sequential, which means the elements must be right next to each other to count as a pair. This is a **giant**  clue that a sliding window may work beautifully with this question.
     2. The problem will be based on array, list or string.
     3. It will ask to find subrange in that array or string will have to give the longest, shortest or target values.
     4. Its concept is mainly based on ideas like the longest sequence or shortest sequence of something that satisfies a given  condition perfectly.
