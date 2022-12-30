@@ -38,19 +38,27 @@ def getDistinctCharacters(str: str, k: int) -> int:
     leftWindow = 0
     res = 0
 
-    for char in range(len(str)):
-        while str[char] not in charSet:
-            if len(charSet) == k:
-                return charSet
-            else:
-                leftWindow+=1
-                return charSet
-        return charSet
+    while (len(charSet) < k):
+        for char in range(len(str)):
+            charSet.add(str[char])
+            print('Nimefika hapaa')
+            return len(charSet)
+    else:
+        return len(charSet)
 
 print(getDistinctCharacters('eceba', 2))
 
 
-                
+for n in range(2, 10):
+    for x in range(2, n):
+        if n % x == 0:
+            print(n, 'equals', x, '*', n//x)
+            break
+    else:
+        # loop fell through without finding a factor
+        print(n, 'is a prime number')
+
+Patt
 
     
 
