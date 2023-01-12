@@ -1,3 +1,4 @@
+from . import stack
 """
 Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
@@ -54,3 +55,47 @@ mystring2 = '{ { )'
 
 print(myParanthesisVerifier.isValid(mystring))
 # print(myParanthesisVerifier.isValid(mystring2))
+
+'''
+Understanding Educative Proposed Solution.
+'''
+
+S = stack.Stack()
+
+# Is Match Function
+def is_match(p1, p2):
+    if p1 == "(" and p2 == ")":
+        return True
+    elif p1 == "{" and p2 == "}":
+        return True
+    elif p1 == '[' and p2 == ']':
+        return True
+    else:
+        return False
+
+def is_parent_balanced(parent_string):
+    s = stack.Stack()
+    is_balanced = True
+    index = 0
+
+    while index < len(parent_string) and is_balanced:
+        paren = parent_string(index)
+        if paren in '([{':
+            s.push(paren)
+        else:
+            if s.is_empty():
+                is_balanced = False
+                break
+            else:
+                top = s.pop()
+                if not is_match(top,paren):
+                    is_balanced = False
+                    break
+
+        index += 1
+
+    if s.is_empty and is_balanced:
+        return True
+
+    else:
+        return False
