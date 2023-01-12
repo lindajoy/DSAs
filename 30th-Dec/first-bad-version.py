@@ -30,12 +30,26 @@ Typical Binary Search Problem
 # @return a bool
 # def isBadVersion(version):
 
-# class Solution(object):
-#     def firstBadVersion(self, n):
-#         """
-#         :type n: int
-#         :rtype: int
-#         """
+class Solution(object):
+    def firstBadVersion(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        #Initialize the start and the end value
+        start, end  = 1, n
 
-my_list = list(8)
-print(my_list)
+        while start <= end:
+            mid = start + (end-start) / 2
+            if isBadVersion(mid):
+                start = mid
+            else:
+                left = mid + 1
+
+        return left
+
+    
+
+# my_list = list(8)
+# print(my_list)
+print(7//2)
