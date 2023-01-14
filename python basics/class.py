@@ -56,4 +56,58 @@ class HelloJoy:
 
 sillyObj = HelloJoy('You can do this', 2023)
 
-print(sillyObj)
+# print(sillyObj)
+
+'''
+Class supports two kinds of operations: Attribute References and Instantiation.
+
+Attribute References: Are all names used for all attributr references. 
+Valid attribute names are all names that were in a class's namespace when the class
+object was created.
+
+'''
+
+'''
+💡 Class Definition
+'''
+
+class MyClass:
+    """A simple class"""
+    i = 12345
+
+    def f(self):
+        return "Hello World"
+
+'''
+This is an example of attribute referencing
+'''
+print('😁',MyClass.i)
+print('🤔',MyClass.f)
+print('🙂',MyClass.__doc__)
+
+'''
+Class instansiation
+'''
+
+x = MyClass()
+
+'''
+Classes have the __init_ method to initisalize objects with the initial state
+'''
+class Hello:
+    def __init__(self) -> None:
+        self.data = []
+
+"""
+You can pass arguments for greater flexibility. Arguments are given to the class
+instantiation operator are passed onto __init__().for Example:
+"""
+
+class Complex:
+    def __init__(self, realPoint, fakePoint) -> None:
+        self.r = realPoint
+        self.f = fakePoint
+
+x = Complex(3.0, 4.5)
+
+print(x.r, x.f)
