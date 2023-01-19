@@ -33,13 +33,15 @@ def needleHayStack(haystack, needle):
         
 
     while (start < end):
+        # isalnum() method returns True if all the characters are alphanumeric, meaning alphabet letter (a-z) and numbers (0-9). 
         while not haystack[start].isalnum() and haystack[start] == needle[start]:
               start += 1
               count = 0
         if(haystack[start].lower() !=  needle[start].lower()):
             count += 1
 
-        start, end = start + 1 , end -1
+        # Why is the end variable important?
+        start, end = start + 1 , end - 1
 
     return count
 
