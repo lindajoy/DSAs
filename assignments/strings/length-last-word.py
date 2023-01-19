@@ -12,6 +12,7 @@ random_sentence = "luffy is still joyboy"
 
 def lengthOfLongestString(random_sentence):
    random_array = [len(i) for i in random_sentence.split()]
+   print('😁 👀', random_array)
    return random_array[-1]
 
 print(lengthOfLongestString(random_sentence))

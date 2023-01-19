@@ -24,14 +24,15 @@ else:
 
 
 def needleHayStack(haystack, needle):
-    start, end = 0, len(haystack) -1
+    start, end = 0, len(haystack) - 1
     count = 0
    
+    # First checks whether the needle exists in the haystack, If it does not return -1
     if (needle not in haystack):
         return -1
         
 
-    while (start < end-1):
+    while (start < end):
         while not haystack[start].isalnum() and haystack[start] == needle[start]:
               start += 1
               count = 0
@@ -45,6 +46,7 @@ def needleHayStack(haystack, needle):
 print(needleHayStack('hello','ll'))
 print(needleHayStack('aaaaa','bba'))
 print(needleHayStack('beat','at'))
+print(needleHayStack('mississippi', 'issippi'))
 
 
 

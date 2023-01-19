@@ -2,7 +2,9 @@
 Selection Sort
 
 
-💡 First Solution
+💡 First Solution(Naive)
+
+Inputs = 
 
 Pseudocode:
       i) Find the smallest element in the array.
