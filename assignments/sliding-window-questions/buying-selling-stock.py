@@ -61,7 +61,10 @@ class solution:
 
 my_prices = [7,1,5,3,6,4]
 my_2prices = [7,6,4,3,1]
+my_3prices = [310,315,275,295,260,270,290,230,255,250]
 
 x = solution()
 print(x.maximumProfit(my_prices))
 print(x.maximumProfit(my_2prices))
+print(x.maximumProfit(my_3prices))
+
