@@ -26,8 +26,8 @@ def search_integer(array ,int):
 
 
 unsorted_arry2 = [1, 1, 2, 3, 5, 6]
-result = search_integer(unsorted_arry2, 1)
-print(result)
+result = search_integer(unsorted_arry2, 6)
+print('First Result:', result)
 
 
 '''
@@ -38,17 +38,16 @@ print(result)
 integer = 9
 def binary_search1(A):
     Left, Right  = 0, len(A) -1
+    midElement = Left + (Right - Left) // 2
 
     while Left <= Right:
         # Get the medium element in the array
-        medium = Left + (Right - Left) // 2
-
-        if A[medium] < integer:
-            Left = medium + 1
-        elif A[medium] == integer:
-            return medium
+        if A[midElement] < integer:
+            Left = midElement + 1
+        elif A[midElement] == integer:
+            return midElement
         else:
-            Right = medium - 1
+            Right = midElement - 1
 
     return -1
 
