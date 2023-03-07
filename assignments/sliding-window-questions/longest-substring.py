@@ -14,7 +14,7 @@ Explanation: The answer is "b", with the length of 1.
 Difference between a subsequence and a substring:
 
 1) A substring - a contiguous(continuous) sequence of characters present within a string. 
-                   It is a string present inside a string.
+                 It is a string present inside a string.
 
 2) A subsequence  - is a sequence that can be derived from another sequence of elements 
                     without changing the order of the remaining elements
@@ -61,3 +61,5 @@ Simple reminder of a for loop; how it works, how to loop through a string.
 s = 'hello'
 for i in range(len(s)):
     print(s[i])
+
+

@@ -77,10 +77,24 @@ def is_palindrome_three(str):
 
     return True
 
-print('Palindrom three:', is_palindrome_three('mom'))
+# print('Palindrom three:', is_palindrome_three('mom'))
 
 txt = "Mr. Owl ate my metal worm"
 
 x = txt.isalnum()
 
-print(x)
+# print(x)
+
+def is_palindrome_five(s):
+    left = 0
+    right = len(s) - 1
+
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left = +1
+        right = right - 1
+    return False
+
+print(is_palindrome_five('racecar'))
+print(is_palindrome_five('raceacar'))
