@@ -42,3 +42,4 @@ x = Solution()
 
 print(x.isHappy(19))
 print(x.isHappy(2))
+print(x.isHappy(4))
