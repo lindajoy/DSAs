@@ -54,7 +54,6 @@ def selectionSort00(array):
 
     # select the smallest element and place it at i
     for i in range(len(array) - 1):
-
         smallest = i
         for idx in range(i+1, len(array)):
             if array[smallest] > array[idx]:

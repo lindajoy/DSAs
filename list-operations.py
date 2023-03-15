@@ -55,10 +55,21 @@ print("Reversed again:",b)
 two_dimensional = [[1,2,3], [4,5,6],[7,8,9]]
 
 #accessing the first array
-print(two_dimensional[0])
+# print(two_dimensional[0])
 
-#accessing the first element in the first array
-print(two_dimensional[0][1])
+# #accessing the first element in the first array
+# print(two_dimensional[0][1])
 
-#insert
-print(two_dimensional.insert())
+# #insert
+# print(two_dimensional.insert())
+
+# Understanding enumerate method in python
+
+b = [2, 7, 11, 15]
+b = [(index, i ) for index , i in  enumerate(b)]
+b.sort()
+
+print("Here is the enumerated version:", b)
+print(b[1])
+print(b[1][1])
+

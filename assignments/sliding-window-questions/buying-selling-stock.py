@@ -29,7 +29,8 @@ and by iterating how much you will make.
 💡 Approach => Two Pointers approach
 
 PSEUDOCODE
-1. Intialize the left and right pointer (Left indicating when you buy the stock while right indicating when you are selling the stock)
+1. Intialize the left and right pointer 
+ (Left indicating when you buy the stock while right indicating when you are selling the stock)
 2. Initialize the max profit value to 0
 2. Loop through the array as long as the right pointer has not surpassed the length of the array.
 3. If the left pointer's value is greater than the right pointer value then:
@@ -55,6 +56,7 @@ class solution:
                 maximumProfit = max(maximumProfit, profit)
             else:
                 leftPointer = rightPointer
+
             rightPointer += 1
 
         return maximumProfit

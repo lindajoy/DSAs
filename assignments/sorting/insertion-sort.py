@@ -50,6 +50,6 @@ def insertionSort00(array):
 
     return array
 
-unsorted_array = [0, 1, 2, 5 ,3 ,2, 1,s1]
+unsorted_array = [0, 1, 2, 5 ,3 ,2, 1]
 sorted_array = insertionSort(unsorted_array)
 print(sorted_array)

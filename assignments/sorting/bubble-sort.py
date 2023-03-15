@@ -9,8 +9,8 @@ Bubble sort
 # Average: O(n^2) time | O(1) space
 # Worst: O(n^2) time | O(1) space
 def bubbleSort(array):
-
     did_swap = False
+    
     while True:
         did_swap = False
 

@@ -92,9 +92,27 @@ def is_palindrome_five(s):
     while left < right:
         if s[left] != s[right]:
             return False
-        left = +1
+        left += 1
         right = right - 1
     return False
 
-print(is_palindrome_five('racecar'))
-print(is_palindrome_five('raceacar'))
+# print(is_palindrome_five('racecar'))
+# print(is_palindrome_five('raceacar'))
+
+
+class Solution(object):
+    def validPalindrome(self, s):
+        # Initialize two pointer
+        start, end = 0 , len(s) - 1
+        count = 0
+
+        while start < end:
+            if s[start] != s[end]:
+                count += 1
+            else:
+                count = 0
+
+        return count
+
+x = Solution()
+print("Let me see", x.validPalindrome('aba'))

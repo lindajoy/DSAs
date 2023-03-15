@@ -5,6 +5,7 @@ sort your array such thet the even numbers come first then the odd
 
 def even_odd(A):
     next_even , next_odd = 0 , len(A) - 1
+    
     while next_even < next_odd:
         if A[next_even] % 2 == 0:
             next_even += 1

@@ -40,13 +40,13 @@ class Solution(object):
         start, end  = 1, n
 
         while start <= end:
-            mid = start + (end-start) / 2
+            mid = start + (end-start) // 2
             if isBadVersion(mid):
-                start = mid
+                end = mid
             else:
-                left = mid + 1
+                start = mid + 1
 
-        return left
+        return end
 
     
 
