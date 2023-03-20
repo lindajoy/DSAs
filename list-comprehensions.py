@@ -106,3 +106,6 @@ def remove_even(list):
 
 nums = remove_even(my_list)
 print('😁😊😇',nums)
+
+for index, number in enumerate(my_list):
+    print(my_list)
