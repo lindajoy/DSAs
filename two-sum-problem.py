@@ -31,6 +31,7 @@ is sorted.
 class twoSumProblem():
     def twoSum(nums, target):
         nums = [(i, index) for index, i in enumerate(nums)]
+        # Ooops never added the sort ---> 😶‍🌫️
         nums.sort()
         start, end = 0, len(nums) - 1
 
