@@ -87,3 +87,9 @@ print(counter)
 counter2 = Counter('hellojoy')
 print(counter2)
 
+
+# Enumerate Function: Say you want to loop through an entire list and get its index and count
+my_list = [1,2,3,4,5,6,7,8,9]
+
+for index, item in enumerate(my_list):
+    print(index ,':', item)
