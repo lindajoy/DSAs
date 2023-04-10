@@ -29,3 +29,8 @@ Pseudocode:
 Step 1: Start from the the beginning of the array(which is 3)
 Step 2: Take the first two elements in the array => 
 """
+
+from collections import Counter
+
+
+print(Counter("missipi"))
