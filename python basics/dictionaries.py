@@ -77,3 +77,13 @@ for value in harry_potter_chars.values():
 for key in harry_potter_chars.keys():
     print('🔑',key)
 
+# Calculating the frequency of each Value in a dictionary
+from collections import Counter
+
+# frequency of values
+counter = Counter(harry_potter_chars.values())
+print(counter)
+
+counter2 = Counter('hellojoy')
+print(counter2)
+
