@@ -93,3 +93,8 @@ my_list = [1,2,3,4,5,6,7,8,9]
 
 for index, item in enumerate(my_list):
     print(index ,':', item)
+
+# Something cool I found: Question was on finding the unique character in a string:
+
+for index, value in enumerate(harry_potter_chars.items()):
+    print('😁🥹', index ,':', value)
