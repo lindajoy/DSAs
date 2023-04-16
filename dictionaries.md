@@ -48,3 +48,4 @@ print(dictionary["key1"])
 # Perfect resource for dictionaries: https://www.dataquest.io/blog/python-dictionaries/
 
 # Example is under python basics folder.
+# Wrote about the enumerate function as well.
