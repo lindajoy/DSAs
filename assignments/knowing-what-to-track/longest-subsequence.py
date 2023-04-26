@@ -11,7 +11,7 @@ Dynamic programming technique where an algorithimic problem is first broken down
 into sub problems, the results are saved and then the sub-problems are optimized to find 
 the overall solution - which usually has to do with finding the maximum and minimum range of the 
 algorithimic query.
-
+https://medium.com/swlh/dynamic-programming-0-1-knapsack-python-code-222e607a2e8
 """
 
 """

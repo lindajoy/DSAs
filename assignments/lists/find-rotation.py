@@ -17,4 +17,4 @@ def find_rotation(nums):
 
 
 if __name__ == "__main__":
-    print(find_rotation([2,3,4,5,1]))
+    print(find_rotation([5,7,17,21,22,2,4]))
