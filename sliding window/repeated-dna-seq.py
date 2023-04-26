@@ -19,6 +19,9 @@ First Solution Pseudocode:
    4. SlicedString(left: right)
    5. Check if the slicedstring exists in seen => If it does add to the repeated else add to the seen.
    6. Increment the left and right pointers by 1.
+
+
+Question from Educative: https://www.educative.io/courses/grokking-coding-interview-patterns-python/7AWZ9X7ZgJr
 """
 
 def find_repeated_sequences(s, k):
@@ -28,6 +31,44 @@ def find_repeated_sequences(s, k):
     
     leftPtr = 0
     rightPtr = k
+
+    while rightPtr < len(s):
+        slicedstring = s[leftPtr: rightPtr]
+
+        if slicedstring in seen:
+            repeated.add(slicedstring)
+        else:
+           seen.add(slicedstring)
+
+        
+        leftPtr += 1
+        rightPtr += 1
+
+    return list(repeated)
+
+
+"""
+Leetcode Version:
+
+The DNA sequence is composed of a series of nucleotides abbreviated as 'A', 'C', 'G', and 'T'.
+
+For example, "ACGAATTCCG" is a DNA sequence.
+When studying DNA, it is useful to identify repeated sequences within the DNA.
+
+Given a string s that represents a DNA sequence, 
+return all the 10-letter-long sequences (substrings) that occur more than once in a DNA molecule. 
+You may return the answer in any order.
+
+Link to question: https://leetcode.com/problems/repeated-dna-sequences/
+"""
+
+def find_repeated_sequences(s):
+
+    # First step would be to initialize the seen and repeated sets
+    seen , repeated = set(), set()
+    
+    leftPtr = 0
+    rightPtr = 10
 
     while rightPtr < len(s):
         slicedstring = s[leftPtr: rightPtr]
