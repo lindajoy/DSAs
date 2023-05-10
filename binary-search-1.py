@@ -17,7 +17,7 @@ def binary_search(list, item):
     high = len(list) - 1
 
     while low <= high:
-        mid = low + high
+        mid = low + high // 2 
         guess = list[mid]
         print('Here is the mid-value:', guess)
 
