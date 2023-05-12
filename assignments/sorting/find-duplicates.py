@@ -18,4 +18,27 @@ def findDuplicates(arry):
                 return arry[i]
 
 x = [1,3,4,2,2]
-print(findDuplicates(x))
+# print(findDuplicates(x))
+
+"""
+Floyd's Hare and Tortoise Algorithm
+"""
+
+def findDuplicates2(array):
+    slow, fast = 0,0
+
+    while True:
+        slow = array[slow]
+        fast = array[array[fast]]
+        if fast == slow:
+            break
+
+        slow = array[0]
+        while slow != fast:
+            slow = array[slow]
+            fast = array[fast]
+            
+
+        return slow
+
+print(findDuplicates2(x))
