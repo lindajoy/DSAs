@@ -37,3 +37,12 @@ enumerate_list = [(i, num) for i, num in enumerate(some_list)]
 enumerate_list.sort(key=lambda x: x[1])
 
 print(enumerate_list)
+
+"""
+🎲 Looping through a dictionary
+"""
+
+d = {"a": 1, "b": 2, "c": 3, "d": 3}
+
+print(list(set(d.values())))
+print(list(d.keys()))
