@@ -46,3 +46,25 @@ d = {"a": 1, "b": 2, "c": 3, "d": 3}
 
 print(list(set(d.values())))
 print(list(d.keys()))
+
+"""
+Variables in Python are mainly of 2 types:
+
+Global variables: Declared outside the function or in a global scope.
+Local variables: Declared inside the function’s body or in a local scope.
+
+Non-Local Keyword Python => is used to work with variables inside nested functions whose local scopes are not defined.
+"""
+
+# First Function
+def f():
+    x = 10
+    
+    # Nested Function
+    def g():
+        nonlocal x
+        x = 1
+    g()
+    print (x)
+    
+print(f())
