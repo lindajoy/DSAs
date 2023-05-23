@@ -9,16 +9,20 @@ My first solution was this:
 """
 
 class SolutionOne(object):
+
     def validPalindrome(s):
+        count = 0
+
         left, right = 0, len(s) - 1
 
         while left < right:
             if s[left] != s[right]:
                 count += 1
-            else:
-                count = 0
+    
+        if count == 1:
+            return True
 
-        return count
+        return False
 
 class Solution(object):
     def validPalindrome(s):
@@ -36,6 +40,6 @@ class Solution(object):
             left, right = left + 1, right - 1
         return True
 
-x = Solution()
-b = 'aba'
-print(Solution.validPalindrome(b))
+x = SolutionOne()
+b = 'abc'
+print(SolutionOne.validPalindrome(b))

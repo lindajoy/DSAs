@@ -47,9 +47,9 @@ x = [[3,2],[4,3],[4,4],[2,5]]
 y = [[1,1],[2,2],[3,3],[4,4],[5,5]]
 z = [[12,46],[78,19],[63,15],[79,62],[13,10]]
 
-# print(mostPoints(z))
-# print(mostPoints(y))
-# print(mostPoints(x))
+print(mostPoints(z))
+print(mostPoints(y))
+print(mostPoints(x))
 
 """
 Dynamic Programming => Caching Method

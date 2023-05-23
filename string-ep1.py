@@ -27,3 +27,7 @@ RED, WHITE, BLUE = range(3)
 print("Blue:", BLUE)
 print("Red:", RED)
 print("White:", WHITE)
+
+x= "sasa"
+
+print(x[::-1])

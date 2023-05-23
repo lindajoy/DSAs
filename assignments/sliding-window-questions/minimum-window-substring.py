@@ -1,5 +1,6 @@
 """
-We are given two strings, s and t. The minimum window substring of t in s is defined as follows:It is the shortest substring of s that includes all of the characters present in t.
+We are given two strings, s and t.
+ The minimum window substring of t in s is defined as follows:It is the shortest substring of s that includes all of the characters present in t.
 
 The frequency of each character in this substring that belongs to t should be equal to or greater than its frequency in t.
 
