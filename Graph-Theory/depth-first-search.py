@@ -1,4 +1,13 @@
 """
+Depth First Traversal => Is a graph traversal Algorithm (Algorithms to visit every vertex of the graph)
+It may contain cycles(A node may be visited twice so we have to always keep track of the visited nodes by either using a set or an array)
+I prefer using a set since a set holds no duplicates.
+
+The basic Pseudocode is:
+1. Loop through rows and columns
+2. Mark as visited 
+3. Check the neigbors as well whether they are 1 or not.
+
 Number Of Islands
 
 Given an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water), 
