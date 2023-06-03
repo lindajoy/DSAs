@@ -8,6 +8,12 @@ The basic Pseudocode is:
 2. Mark as visited 
 3. Check the neigbors as well whether they are 1 or not.
 
+Applications of Depth Search.
+1. Detecting a cycle in a graph.
+2. Topological Sorting.
+3. Finding strongly connected components.
+4. Path Finding.
+
 Number Of Islands
 
 Given an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water), 
