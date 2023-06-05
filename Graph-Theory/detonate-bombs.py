@@ -16,6 +16,7 @@ Bombs: Here you are given the list of bombs
 """
 
 from collections import defaultdict
+import math
 
 def detonateMaximumBombs(bombs):
     # Create an adjacency list: Creating a graph on our own
@@ -28,7 +29,7 @@ def detonateMaximumBombs(bombs):
             xi, yi, ri = bombs[i]
             xj, yj, rj = bombs[r]
 
-            distance = sqrt((xi - xj) ** 2 + (yi -yj) ** 2)
+            distance = math.sqrt((xi - xj) ** 2 + (yi -yj) ** 2)
 
             # Not understood this bit
             if distance <= ri:
