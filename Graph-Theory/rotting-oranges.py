@@ -37,7 +37,7 @@ def orangesRotting(oranges):
                 if (row < 0 or row == len(oranges) or col < 0 or col == len(oranges[0] or oranges[row][col] != 1)):
                     continue
                 oranges[row][col] = 2
-                oranges.append([row, col])
+                fresh_fruits.append([row, col])
                 fresh_fruits -= 1
 
         time += 1

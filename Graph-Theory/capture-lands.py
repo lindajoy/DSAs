@@ -28,7 +28,6 @@ def captureRegions(matrix):
                 matrix[r][c] = "X"
 
     # Capture the unsurrounded region
-
     for r in range(rows):
         for c in range(columns):
             if matrix[r][c] == "T":
