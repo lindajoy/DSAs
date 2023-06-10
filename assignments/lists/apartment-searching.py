@@ -52,18 +52,25 @@ def find_optimal_apartment(blocks, required_buildings):
 
     # Loop through Blocks
     for i in range(num_blocks):
-        for building in required_buildings:
-            if blocks[i][building] == False:
+        # Looping through the required buildings
+        for building in required_buildings: 
+            # check if the certain bulding you are looking for is on the block
+            if blocks[i][building] == False or building not in blocks[i]: 
+                # Initialize the nearest block tto float(inf)
                 nearest_block = float("inf")
+                # Loop throug the num_blocks again
                 for j in range(num_blocks):
-                    if blocks[j][building] == True:
+                    if blocks[j][building] == True or building not in blocks[j]:
+                        # Get the nearest block by getting the minimum value
                         nearest_block = min(nearest_block, abs(j-i))
-
+                # Return the maximum distance
                 max_distances[i] = max(max_distances[i], nearest_block)
 
     # Find the block with the maximum minimum distance
     min_distances = min(max_distances)
     print(min_distances)
+    
+    # Find the optimal block
     optimal_blocks = [i for i , distance in enumerate(max_distances) if distance == min_distances]
     print(optimal_blocks)
     return optimal_blocks[0]
