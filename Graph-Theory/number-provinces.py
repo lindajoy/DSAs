@@ -58,3 +58,38 @@ def is_city_connetected(matrix):
             provinces += 1
 
     return provinces
+
+# 💡 IMPLEMENTATION 2: BREADTH FIRST SEARCH
+
+from collections import deque
+
+def is_city_connected_breadth(city):
+    # Since the its an n by n matrix there's no need of getting the number of rows and columns.
+    matrix_dimensions = len(city)
+
+    # We need to have this matrix so that when we visit a particular dimension we mark it as True.
+    visited = [False] * matrix_dimensions
+
+    # Number of provinces 
+    provinces = 0
+
+    def bfs(city):
+        queue = deque()
+        queue.append(city)
+
+        while queue:
+            current_city = queue.popleft()
+            visited[current_city] = True
+
+        for c in range(matrix_dimensions):
+            if matrix_dimensions[current_city][c] == 1 and not visited[c] == True:
+                bfs(c)
+
+
+    for r in range(matrix_dimensions):
+        if not visited[city]:
+            bfs(city)
+            provinces += 1
+
+    return provinces
+    
