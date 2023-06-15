@@ -23,7 +23,7 @@ def bubbleSort(array):
         if not did_swap:
             return array
 
-array_2 = [2,7,6,5,1,3]
+array_2 = [2,0,2,1,1,0]
 print(bubbleSort(array_2))
 
 """
