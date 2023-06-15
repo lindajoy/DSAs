@@ -46,6 +46,7 @@ d = {"a": 1, "b": 2, "c": 3, "d": 3}
 
 print(list(set(d.values())))
 print(list(d.keys()))
+print()
 
 """
 Variables in Python are mainly of 2 types:

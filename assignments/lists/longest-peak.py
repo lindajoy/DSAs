@@ -5,6 +5,8 @@ A peak is defined as adjacent integers in the array that are strictly increasing
 at which point they become strictly decreasing. At least three integers are required to form a peak.
 
 For example, the integers 1, 4, 2 form a peak, but the integers 1, 2, 4 don't.
+
+Not understood the solution.
 """
 
 def findLongestPeak(array):
@@ -33,7 +35,7 @@ def findLongestPeak(array):
         longestPeak = max(currPeak, longestPeak)
 
         i = right
-        
+
     return longestPeak
 	
 input = [-5, 1, 22, 5, 4, 3, 10]

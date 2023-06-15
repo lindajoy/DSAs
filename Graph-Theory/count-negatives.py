@@ -8,6 +8,7 @@ Explanation: There are 8 negatives number in the matrix.
 """
 
 grid = [[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]]
+
 grid2 = [[3,2],[1,0]]
 
 

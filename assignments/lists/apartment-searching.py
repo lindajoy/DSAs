@@ -69,6 +69,8 @@ def find_optimal_apartment(blocks, required_buildings):
     # Find the block with the maximum minimum distance
     min_distances = min(max_distances)
     print(min_distances)
+    for i in enumerate(max_distances):
+        print(i)
     
     # Find the optimal block
     optimal_blocks = [i for i , distance in enumerate(max_distances) if distance == min_distances]
