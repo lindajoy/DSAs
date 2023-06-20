@@ -46,9 +46,9 @@ def is_city_connetected(matrix):
     def dfs(city):
         # Mark it as visited
         visited[city] = True
-
+        
         for neighbour in range(matrix_dimensions):
-            if matrix_dimensions[city][neighbour] == 1 and not visited[neighbour] == True:
+            if matrix[city][neighbour] == 1 and not visited[neighbour] == True:
                 dfs(neighbour)
 
     
@@ -58,6 +58,8 @@ def is_city_connetected(matrix):
             provinces += 1
 
     return provinces
+
+print('Depth First Search:',is_city_connetected(grid1))
 
 # 💡 IMPLEMENTATION 2: BREADTH FIRST SEARCH
 
@@ -73,25 +75,28 @@ def is_city_connected_breadth(city):
     # Number of provinces 
     provinces = 0
 
-    def bfs(city):
+    def bfs(city2):
         queue = deque()
-        queue.append(city)
+        queue.append(city2)
 
         while queue:
             current_city = queue.popleft()
             visited[current_city] = True
 
         for c in range(matrix_dimensions):
-            if matrix_dimensions[current_city][c] == 1 and not visited[c] == True:
+            if city[current_city][c] == 1 and not visited[c] == True:
                 bfs(c)
 
 
     for r in range(matrix_dimensions):
-        if not visited[city]:
-            bfs(city)
+        if not visited[r]:
+            bfs(r)
             provinces += 1
 
     return provinces
+
+print('Breadth First Search:',is_city_connected_breadth(grid1))
+
 
 
 

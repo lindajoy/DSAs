@@ -26,7 +26,7 @@ def orangesRotting(oranges):
 
 
     directions = [(1,0),(0,1),(-1,0), (0,-1)]
-    while fruits_queue and fruits_queue > 0:
+    while fruits_queue and fresh_fruits > 0:
         for i in range(len(fruits_queue)):
             r, c = fruits_queue.popleft()
 
@@ -37,10 +37,19 @@ def orangesRotting(oranges):
                 if (row < 0 or row == len(oranges) or col < 0 or col == len(oranges[0] or oranges[row][col] != 1)):
                     continue
                 oranges[row][col] = 2
-                fresh_fruits.append([row, col])
+                fruits_queue.append([r,c])
                 fresh_fruits -= 1
+                
 
         time += 1
 
     return time if fresh_fruits == 0 else -1
+
+grid = [
+    [2, 1, 1],
+    [1, 1, 0],
+    [0, 1, 1]
+]
+
+print(orangesRotting(grid))
 

@@ -4,9 +4,11 @@ Each 0 represents land and each I represents part of a river.
 A river consists of any number of 1s that are either horizontally or vertically adjacent(but not diagonally adjacent).
 The number of adjacent 1s forming a river determine its size.
 
-Note that the river can twist. In other words, it does not have to be a straight vertical line or straight horizontal line; It can be L-shaped, for example.
+Note that the river can twist. In other words, it does not have to be a straight vertical line or straight horizontal line;
+It can be L-shaped, for example.
 
-Write a function that returns an array of sizes of all rivers represented in the input matrix. The sizes dont need to be any particular order.
+Write a function that returns an array of sizes of all rivers represented in the input matrix. 
+The sizes dont need to be any particular order.
 
 grid = [[0, 1, 0, 1, 0],[1, 0, 1, 0, 1],[0, 1, 0, 1, 0],[1, 0, 1, 0, 1]]
 """
@@ -23,7 +25,7 @@ grid = [[1, 0, 0, 1, 0],
         [1, 0, 1, 0, 0],
         [0, 0, 1, 0, 1],
         [1, 0, 1, 0, 1],
-        [1,0,1,  1, 0]]
+        [1, 0, 1,  1, 0]]
 
 def riverCountSizes(grid):
     # Get the number of rows and columns.
@@ -56,7 +58,7 @@ def riverCountSizes(grid):
     return river_sizes
 
 
-print("🤔",riverCountSizes(grid))
+# print("🤔",riverCountSizes(grid))
 
 def river_sizes(grid):
     sizes = []
@@ -70,6 +72,7 @@ def river_sizes(grid):
         grid[row][col] = -1  # Mark the cell as visited
 
         size = 1
+
         size += dfs(row - 1, col)  # Check the cell above
         size += dfs(row + 1, col)  # Check the cell below
         size += dfs(row, col - 1)  # Check the cell to the left

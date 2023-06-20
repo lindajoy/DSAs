@@ -21,25 +21,32 @@ from collections import defaultdict
 def detonateMaximumBombs(bombs):
     # Create an adjacency list: Creating a graph on our own
     adjList = defaultdict(list)
+    visit = set()
 
     # Loop through the list of bombs
     for i in range(len(bombs)):
         for r in range(i + 1, len(bombs)):
 
-            xi, yi, ri = bombs[i]
-            xj, yj, rj = bombs[r]
+            x1, y1, r1 = bombs[i]
 
-            distance = math.sqrt((xi - xj) ** 2 + (yi -yj) ** 2)
+            x2, y2, r2 = bombs[r]
+
+
+            distance = math.sqrt((x1 - x2) ** 2 + (y1 -y2) ** 2)
 
             # Not understood this bit
-            if distance <= ri:
-                adjList[i].append[r]
-            if distance <= rj:
-                adjList[r].append[i]
+            if distance <= r1:
+                adjList[i].append(r)
+
+            if distance <= r2:
+                adjList[r].append(i)
+
+            print(adjList)
 
     def dfs(i, visit):
         if i in visit:
             return 
+        visit.add(i)
         
         for neighbour in adjList[i]:
             dfs(neighbour,visit)
@@ -47,7 +54,11 @@ def detonateMaximumBombs(bombs):
         return len(visit)
 
     res = 0
-    for i in range(bombs):
+    for i in bombs:
         dfs(i, set())
+
         res = max(res, dfs(i, set))
         return res
+    
+bombs = [[2,1,3],[6,1,4]]
+print(detonateMaximumBombs(bombs))
