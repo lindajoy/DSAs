@@ -9,7 +9,7 @@ Insert newInterval into intervals such that intervals is still sorted in ascendi
 Return intervals after the insertion.
 """
 """
-This code below is buggy because my while loop is not terminating.
+🐛 This code below is buggy because my while loop is not terminating.
 """
 existing_intervals = [[1,3],[4,5],[7,8],[9,12],[13,14]]
 
