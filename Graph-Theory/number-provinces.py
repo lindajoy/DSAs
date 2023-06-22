@@ -46,7 +46,7 @@ def is_city_connetected(matrix):
     def dfs(city):
         # Mark it as visited
         visited[city] = True
-        
+
         for neighbour in range(matrix_dimensions):
             if matrix[city][neighbour] == 1 and not visited[neighbour] == True:
                 dfs(neighbour)
@@ -98,6 +98,34 @@ def is_city_connected_breadth(city):
 print('Breadth First Search:',is_city_connected_breadth(grid1))
 
 
+def cityConnected2(matrix):
+    # Initialize number of provinces
+    numberofprovinces = 0
+
+    # Initialize a visited set
+    visited = set()
+
+    # Get the length of the rows and columns
+    rows, columns = len(matrix), len(matrix[0])
+
+    def dfs(r,c):
+        if r < 0 or r >= rows or c < 0 or c >= columns or matrix[r][c] != 0:
+            return 0
+        # Check whether its within the range
+        visited.add((r,c))
+
+        if matrix[r][c] == 1 and (r,c) not in visited:
+            dfs(r,c)
+
+    for r in range(rows):
+        for c in range(columns):
+            if ((r, c)) not in visited:
+                dfs(r,c)
+                numberofprovinces += 1
+
+    return numberofprovinces
+
+print(cityConnected2(grid1))
 
 
     

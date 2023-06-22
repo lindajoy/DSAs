@@ -26,6 +26,7 @@ def orangesRotting(oranges):
 
 
     directions = [(1,0),(0,1),(-1,0), (0,-1)]
+    
     while fruits_queue and fresh_fruits > 0:
         for i in range(len(fruits_queue)):
             r, c = fruits_queue.popleft()

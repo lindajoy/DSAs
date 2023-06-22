@@ -34,7 +34,6 @@ def detonateMaximumBombs(bombs):
 
             distance = math.sqrt((x1 - x2) ** 2 + (y1 -y2) ** 2)
 
-            # Not understood this bit
             if distance <= r1:
                 adjList[i].append(r)
 
