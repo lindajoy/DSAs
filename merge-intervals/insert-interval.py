@@ -31,6 +31,8 @@ def insertInterval(interval, arr):
     while isInserted:
     
         start_element = [arr[0]]
+        isInserted = False  # Update isInserted to False at the beginning of the while loop
+
 
         for interval in arr[1:]:
 
@@ -41,4 +43,24 @@ def insertInterval(interval, arr):
 
     return start_element
 
-print(insertInterval(new_interval, existing_intervals))
+
+
+def insertInterval2(interval, newInterval):
+    start, end = newInterval[0], newInterval[1]
+    n = len(interval)
+    idx = 0
+
+    # Find the place where it will be inserted
+    while idx < n and start > interval[idx][1]:
+        idx += 1
+    i = idx
+
+    # Keep finding and updating the start and end if they overlap
+    while (i < n ) and (start < interval[i][1]) and interval[i][0] <= end:
+        start = min(start, interval[i][0])
+        end = max(end, interval[i][1])
+        i+= 1
+
+    return interval[:idx] + [[start, end]] + interval[i:]
+
+print(insertInterval2(existing_intervals, new_interval))
