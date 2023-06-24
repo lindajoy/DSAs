@@ -44,7 +44,10 @@ x = l1 + l2
 x.sort()
 => Output [1, 2, 3, 4, 6, 7, 8]
 print(x)
+"""
 
+"""
+Disclaimer: Does not solve the problem yet
 """
 calendar1 = [['9:00', '10:30'], ['12:00', '13:00'], ['16:00', '18:00']]
 dailyBounds1 = ['9:00', '20:00']
@@ -79,9 +82,6 @@ def calendarMatching(daily_Bounds_1, calendar_1, co_worker_bounds, co_worker_cal
 
     merged.append([current_start, current_end])
     return merged
-
-
-
 
 print(calendarMatching(dailyBounds1, calendar1, dailyBounds2, calendar2, meetingDuration ))
 
