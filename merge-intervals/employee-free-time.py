@@ -14,17 +14,22 @@ Sample Input:
 Sample Output:
 [[6,8]]
 """
-
+"""
+Solution Works🎉
+"""
 """
 Pseudocode:
 1. Merge all the lists for each employee append it on one list
 """
 Input = [[[3, 5], [8, 10]], [[4, 6], [9, 12]], [[5, 6], [8, 10]]]
 Input2 = [[[1, 3], [5, 6], [9, 10]],[[2, 4], [7, 8]], [[8, 11], [12, 14]]]
+Input3 = [[[1, 2], [3, 4]], [[2, 3]], [[4, 6]]]
+
 
 def findEmployeesFreeTime(schedules):
     merged = []
     free_time = []
+
     def mergeSingleEmployeesTime(personal_time):
         current_start = personal_time[0][0]
         curent_end = personal_time[0][1]
@@ -45,8 +50,6 @@ def findEmployeesFreeTime(schedules):
         x = mergeSingleEmployeesTime(i)
 
 
-   
-    print(merged)
     current_start = merged[0][0]
     current_end = merged[0][1]
  
@@ -66,6 +69,8 @@ def findEmployeesFreeTime(schedules):
 
 print(findEmployeesFreeTime(Input))
 print(findEmployeesFreeTime(Input2))
+print(findEmployeesFreeTime(Input3))
+
 
 
 
