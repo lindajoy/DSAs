@@ -38,22 +38,22 @@ def findEmployeesFreeTime(schedules):
                 current_start = min(interval[0], curent_end)
                 curent_end = max(interval[0],curent_end )
                 merged.append([current_start, curent_end])
-        return merged
+
+        return merged.sort(key=lambda x:x[0])
 
     for i in schedules:
         x = mergeSingleEmployeesTime(i)
 
 
+   
+    print(merged)
     current_start = merged[0][0]
     current_end = merged[0][1]
  
     for i in merged[1:]:
         if i[0] < current_end:
-
             current_start = max(current_start, i[0])
-
             current_end = min(current_end, i[1])
-
             free_time.append([current_start, current_end])
 
         if i[0] > current_end:
