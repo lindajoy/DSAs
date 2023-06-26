@@ -60,13 +60,34 @@ def calendarMatching(daily_Bounds_1, calendar_1, co_worker_bounds, co_worker_cal
 
     # Merged durations
     booked_time = calendar_1 + co_worker_calendar
+    merged = []
+    freeTime = []
+
     
     # Helper function that helps in sorting the array
     def get_start_time(interval):
         x = interval[0].split(':')
         return int(x[0])
     
-    booked_time.sort(key = lambda x: get_start_time(x))    
+    booked_time.sort(key = lambda x: get_start_time(x)) 
+
+    def mergeIntervals():
+        current_start = booked_time[0][0]
+        current_end = booked_time[0][1]
+
+        for interval in booked_time[1:]:
+            if interval[0] < current_end:
+                current_end = max(current_end,interval[1])
+            else:
+                merged.append([current_start, current_end])
+                current_start = interval[0]
+                current_end = interval[1]
+
+        merged.append([current_start, current_end])
+        return merged
+    
+    merged = mergeIntervals() 
+    print('😌',merged)  # [['9:00', '11:30'], ['12:00', '14:30'], ['14:30', '15:00'], ['16:00', '18:00']]
 
     def subtract_time(interval):
         time = interval.split(':')
@@ -74,27 +95,36 @@ def calendarMatching(daily_Bounds_1, calendar_1, co_worker_bounds, co_worker_cal
         print(int(hour))
         minutes = 60 * int(hour)
 
-        print("Hmm", abs(minutes + int(time[1])))
-
         return abs(minutes + int(time[1]))
 
+    print(merged)
+    for i in range(len(merged)):
 
-    # Do a typical Merge Interval
-    merged = []
-    current_start = max(daily_Bounds_1[0], co_worker_bounds[0])
-    current_end = booked_time[0][1]
+        for j in range(1, len(merged)):
 
-    for interval in booked_time:
-        if subtract_time(interval[0]) >= subtract_time(current_end):
-            if subtract_time(interval[0]) - subtract_time(current_end) >= duration_of_meeting:
-                merged.append([current_end, interval[0]])
-                current_start = max(interval[1], daily_Bounds_1[0], co_worker_bounds[0])
-            current_end = max(current_end, interval[1])
+            if subtract_time(merged[j][0]) >= (subtract_time(merged[i][1])):
+
+                if subtract_time(merged[j][0]) - (subtract_time(merged[i][1])) >= duration_of_meeting:
+                    freeTime.append([merged[i][1], merged[j][0]])
+
+    return freeTime
+   
+    # # Do a typical Merge Interval
+    # merged = []
+    # current_start = max(daily_Bounds_1[0], co_worker_bounds[0])
+    # current_end = booked_time[0][1]
+
+    # for interval in booked_time:
+    #     if subtract_time(interval[0]) >= subtract_time(current_end):
+    #         if subtract_time(interval[0]) - subtract_time(current_end) >= duration_of_meeting:
+    #             merged.append([current_end, interval[0]])
+    #             current_start = max(interval[1], daily_Bounds_1[0], co_worker_bounds[0])
+    #         current_end = max(current_end, interval[1])
         
-        if subtract_time(current_end) < min(subtract_time(daily_Bounds_1[1]), subtract_time(co_worker_bounds[1])) and subtract_time(current_end)- subtract_time(current_start) >= duration_of_meeting:
-            merged.append([current_end, min(daily_Bounds_1[1], co_worker_bounds[1])])
+    #     if subtract_time(current_end) < min(subtract_time(daily_Bounds_1[1]), subtract_time(co_worker_bounds[1])) and subtract_time(current_end)- subtract_time(current_start) >= duration_of_meeting:
+    #         merged.append([current_end, min(daily_Bounds_1[1], co_worker_bounds[1])])
 
-    return merged
+    # return merged
 
 print(calendarMatching(dailyBounds1, calendar1, dailyBounds2, calendar2, meetingDuration))
 
