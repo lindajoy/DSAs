@@ -20,6 +20,7 @@ Pseudocode:
 1. Merge all the lists for each employee append it on one list
 """
 Input = [[[3, 5], [8, 10]], [[4, 6], [9, 12]], [[5, 6], [8, 10]]]
+Input2 = [[[1, 3], [5, 6], [9, 10]],[[2, 4], [7, 8]], [[8, 11], [12, 14]]]
 
 def findEmployeesFreeTime(schedules):
     merged = []
@@ -45,7 +46,6 @@ def findEmployeesFreeTime(schedules):
 
     current_start = merged[0][0]
     current_end = merged[0][1]
-    print(merged, current_end, current_start)
  
     for i in merged[1:]:
         if i[0] < current_end:
@@ -56,14 +56,17 @@ def findEmployeesFreeTime(schedules):
 
             free_time.append([current_start, current_end])
 
+        if i[0] > current_end:
+            current_start = min(i[0], current_end)
+            current_end = max(i[0],current_end )
+            free_time.append([current_start, current_end])
+
+
     return free_time
 
-
-
-
-
-
 print(findEmployeesFreeTime(Input))
+print(findEmployeesFreeTime(Input2))
+
 
 
     
