@@ -23,7 +23,7 @@ times = [[0, 2], [1, 4], [4, 6], [0, 4], [7, 8], [9, 11], [3, 10]]
 def laptopRentals(intervals):
     startTimes = sorted([i[0] for i in intervals])
     endTimes = sorted([i[1] for i in intervals])
-    meet_count, curr_count = 0, 0
+    lap_count, curr_count = 0, 0
 
     # The two pointers
     start, end = 0, 0
@@ -36,9 +36,9 @@ def laptopRentals(intervals):
             end += 1
             curr_count -=1
 
-        meet_count = max(meet_count, curr_count)
+        lap_count = max(lap_count, curr_count)
 
-    return meet_count
+    return lap_count
 
 print((laptopRentals(times)))
 
