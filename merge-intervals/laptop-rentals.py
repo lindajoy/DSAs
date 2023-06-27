@@ -1,5 +1,5 @@
 """
-💡 VERY INTERETSTING QUESTION : SAME ALGORITHM AS MEETING ROOMS 2
+💡 VERY INTERESTING QUESTION : SAME ALGORITHM AS MEETING ROOMS 2
 
 You're given a list of time intervals during which students at a school need a laptop. 
 These time intervals are represented by pairs of integers [start, end], where 0 <= start < end.
