@@ -60,6 +60,10 @@ def insertInterval2(interval, newInterval):
         start = min(start, interval[i][0])
         end = max(end, interval[i][1])
         i+= 1
+    
+    print(interval[:idx])
+    print([[start, end]])
+    print(interval[i:])
 
     return interval[:idx] + [[start, end]] + interval[i:]
 
