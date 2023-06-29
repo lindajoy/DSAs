@@ -40,4 +40,30 @@ def minimumNumberofBoats(boats, limit):
     return count
 
 
-print(minimumNumberofBoats(people, limit))
+# print(minimumNumberofBoats(people, limit))
+
+
+def minimumNumberofBoats2(people, limit):
+    right, left = 0, len(people) - 1
+    boats_count = 0
+    # sort the array
+    people.sort()
+
+    # Loop through the array 
+    while right < len(people):
+
+        if people[right] + people[left] <= limit:
+
+            boats_count += 1
+            right += 1
+            left -= 1
+            
+        else:
+            left -= 1
+            boats_count += 1
+
+    return boats_count
+
+
+print(minimumNumberofBoats2(people, limit))
+
