@@ -37,4 +37,10 @@ def canCompleteCircuit(gas: list[int], cost: list[int]):
 
 
 # print(canCompleteCircuit(gas, cost))
-print(canCompleteCircuit(gas1, cost1))
+# print(canCompleteCircuit(gas1, cost1))
+
+sample_array = [[90, 20], [30, 100]]
+
+sample_array.sort(key= lambda x: x[0] - x[1])
+
+print(sample_array)

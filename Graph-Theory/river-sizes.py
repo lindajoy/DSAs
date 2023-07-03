@@ -58,7 +58,7 @@ def riverCountSizes(grid):
     return river_sizes
 
 
-# print("🤔",riverCountSizes(grid))
+print("🤔",riverCountSizes(grid))
 
 def river_sizes(grid):
     sizes = []
