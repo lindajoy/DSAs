@@ -28,7 +28,11 @@ times3 =  [[0, 5], [1, 4], [2, 3], [6, 8], [7, 9]]
 
 def laptopRentals(intervals):
     startTimes = sorted([i[0] for i in intervals])
+    print(startTimes)
+    
     endTimes = sorted([i[1] for i in intervals])
+    print(endTimes)
+
     lap_count, curr_count = 0, 0
 
     # The two pointers

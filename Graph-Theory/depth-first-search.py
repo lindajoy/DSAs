@@ -28,7 +28,7 @@ Link: https://leetcode.com/problems/number-of-islands/description/
 💡 This is a recursive function that calls the dfs function and finds the islands from the matrix.
 """
 
-def numIslands( grid):
+def numIslands(self, grid):
     if not grid:
         return 0
     
@@ -36,46 +36,26 @@ def numIslands( grid):
 
     rows, columns = len(grid), len(grid[0])
 
-    def dfs(grid, row, column):
-        if row < 0 or column < 0 or row>=len(grid) or column>=len(grid[0]):
-          return
-    
-        # Mark current one as visited
-        grid[row][column] = "#"
-        
-        dfs(grid, row + 1, column)
-        dfs(grid, row, column + 1)
-        dfs(grid, row - 1, column)
-        dfs(grid, row, column -1)
-
     for row in range(rows):
         for column in range(columns):
             if grid[row][column] == "1":
-                dfs(grid, row, column)
+                self.dfs(grid,row, column)
                 count += 1
     return count
 
 
-# def dfs(self, grid, row, column):
+def dfs(self, grid, row, column):
 
-#     if row < 0 or column < 0 or row>=len(grid) or column>=len(grid[0]):
-#         return
+    if row < 0 or column < 0 or row>=len(grid) or column>=len(grid[0]):
+        return
     
-#     # Mark current one as visited
-#     grid[row][column] = "#"
+    # Mark current one as visited
+    grid[row][column] = "#"
     
-#     self.dfs(grid, row + 1, column)
-#     self.dfs(grid, row, column + 1)
-#     self.dfs(grid, row - 1, column)
-#     self.dfs(grid, row, column -1)
+    self.dfs(grid, row + 1, column)
+    self.dfs(grid, row, column + 1)
+    self.dfs(grid, row - 1, column)
+    self.dfs(grid, row, column -1)
 
-grid = [
-  ["1","1","1","1","0"],
-  ["1","1","0","1","0"],
-  ["1","1","0","0","0"],
-  ["0","0","0","0","0"]
-]
-
-print(numIslands(grid))
 
 

@@ -27,7 +27,6 @@ def merge_intervals(intervals):
         print('Intervals:',interval[0][0])
         print('Intervals:',interval[0][1])
 
-        print(merged[][1])
         print('Here the interval:',interval[0][0])
 
         if interval[0][0] < merged[-1][1]:

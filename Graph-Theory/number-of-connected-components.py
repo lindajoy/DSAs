@@ -30,6 +30,7 @@ def countComponents(n , listofUndirectedEdges):
     
     print(graph)
 
+    # An adjacency list is a way of representing data in a graph.
     for u,v in listofUndirectedEdges:
         graph[u].append(v)
         graph[v].append(u)
