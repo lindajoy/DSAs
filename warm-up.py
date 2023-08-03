@@ -10,6 +10,9 @@ PSEUDOCODE:
   3. When we use split we create a list of those elements
   4. Convert them into integers 
   5. Return the sum.
+
+FEEDBACK: This question requires some farmiliarisation with string operations.
+          The time and space complexity of this code is 0(n)
 """
 
 """
