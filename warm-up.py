@@ -1,9 +1,7 @@
 """
-Given a string add(3,4) return 7
-Assume that it will always be addition
+Given a string add(3,4) return 7.
+Assumptions: The input will always be add(10,4) => Strongly testing String Manipulation.
 
-Assumptions: The input will always be add(10,4)
-             Strongly testing String Manipulation
 PSEUDOCODE:
   1. We slice the string from index 4 since we know from that index, the numbers will always follow.
   2. Replace the ")" with " "
