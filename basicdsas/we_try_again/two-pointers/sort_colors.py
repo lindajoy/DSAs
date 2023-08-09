@@ -28,25 +28,27 @@ def sortarray(colors):
     white = 0
     blue = len(colors) - 1
 
-
     while white < blue:
         if colors[white] == 0:
             colors[white], colors[red] = colors[red], colors[white]
             white += 1
             red += 1
         elif colors[white] == 1:
+            if colors[blue] < colors[white]:
+                colors[white], colors[blue] = colors[blue], colors[white]
             white += 1 
+
         else:
-            print('Niko hapa')
             colors[white], colors[blue] = colors[blue], colors[white]
             blue -= 1
-            print('Colors',colors)
 
         
 
     return colors
 
 a= [2,2,1,1,0]
+b= [2, 1, 1, 0, 0]
 
 print(sortarray(a))
+print(sortarray(b))
 
