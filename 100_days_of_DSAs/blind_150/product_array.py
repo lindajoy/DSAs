@@ -30,6 +30,7 @@ This is not the optimal solution since we have two for loops so most likely its 
 """
 def product_of_array_except_self(nums):
     product_array = []
+
     for i in range(len(nums)):
         result = nums[:i] + nums[i+1:]
         product = 1
@@ -39,5 +40,29 @@ def product_of_array_except_self(nums):
         product_array.append(product)
 
     return product_array
+
+"""
+More optimal solution..
+"""
+def product_of_array_except_self2(nums):
+    # result = 1 * len(nums) => The length of my array is 4
+    res = [1] * (len(nums))
+    print("Here is the result", res)
+
+    prefix = 1
+    for i in range(len(nums)):
+        res[i] = prefix
+        prefix *= nums[i]
+
+    print('First iteration of res:',res)
+    
+    postfix = 1
+    for i in range(len(nums) -1, -1,-1):
+        res[i] = postfix
+        postfix *= nums[i]
+    return res
+
+
+print(product_of_array_except_self2(nums))
 
 
