@@ -42,4 +42,13 @@ print(can_construct('youareagreathuman', 'eaartygamomneltrrouean'))
 print(can_construct('codinginterviewquestions', 'aboincsdefoetingvqtniewonoregessnutins'))
 print(can_construct('problemsolving', 'adsoptendroblemfemopvinxtbm'))
 print(can_construct('youhaveakindheart', 'abecdefghiavjklmaonopqhrtuvweaxyz'))
-# print(can_construct())
+
+x = "hello"
+x = x.replace("h", "y")
+print("Here is y:", x)
+print('Replacing operation',x.replace("h", "y"))
+print("😱🤔",x)
+
+string = "apple"
+new_string = string.replace('a', 'b')
+print('Here is my new string:',new_string)
