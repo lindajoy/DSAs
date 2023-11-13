@@ -25,3 +25,5 @@ def remove_even_two(lst):
     return [num for num in lst if num %2 != 0]
 
 print(remove_even_two(my_list))
+
+# Time Complexity: O(N)
