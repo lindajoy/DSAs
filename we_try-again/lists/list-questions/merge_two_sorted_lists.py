@@ -64,6 +64,10 @@ print(merge_two_lists([],[1, 2, 3, 4, 5]))
 print(merge_two_lists([1, 4, 45, 63],[]))
 print(merge_two_lists([],[]))
 
+"""
+Time Complexity: We are looping through two different arrays and then inserting elements 0(m+n)
+"""
+
 
 
         
