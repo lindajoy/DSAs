@@ -30,7 +30,7 @@ def find_two_sum_k(lst, k):
 print(find_two_sum_k(lst, k))
 
 """
-Method 2: Using a Set 😊
+Method 2: Using a Set => Cleaner way of doing it. 😊
 """
 def find_two_sum(lst, k):
     # Sets dont contain  duplicates.
