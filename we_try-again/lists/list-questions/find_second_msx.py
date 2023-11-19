@@ -77,3 +77,27 @@ def find_scd_max(lst):
 
 print(find_scd_max([8, 8, 8, 8, 4, 4, 4, 4]))
 print(find_scd_max([4, 2, 1, 5, 0]))
+
+# 💡 Solution 3: Traversing the list twice.
+# Pseudocode:
+# 1. Initialize first_max and second_max to infinity
+# 2. Loop through the list to initialize the first_max
+# 3. Loop through the list again initialize the second_max
+# The time complexity here is O(N)2 => QUADRATIC COMPLEXITY because we have two loops.
+
+def find_scd_max3(lst):
+    # Ensure the inital value is set to -inf
+    first_max = float('-inf')
+    sec_max = float('-inf')
+
+    for item in lst:
+        if item > first_max:
+            first_max = item
+
+    # find second max
+    for item in lst:
+        if item != first_max and item > sec_max:
+            sec_max = item
+    return sec_max
+
+print('Another method:', find_scd_max3( [8, 8, 8, 8, 4, 4, 4, 4]))
