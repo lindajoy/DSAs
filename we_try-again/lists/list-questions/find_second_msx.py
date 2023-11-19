@@ -83,7 +83,8 @@ print(find_scd_max([4, 2, 1, 5, 0]))
 # 1. Initialize first_max and second_max to infinity
 # 2. Loop through the list to initialize the first_max
 # 3. Loop through the list again initialize the second_max
-# The time complexity here is O(N)2 => QUADRATIC COMPLEXITY because we have two loops.
+# The time complexity here is O(N)2 => QUADRATIC COMPLEXITY because we have two loops; Traverse the 
+# List twice.
 
 def find_scd_max3(lst):
     # Ensure the inital value is set to -inf
