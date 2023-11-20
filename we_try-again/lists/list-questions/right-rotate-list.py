@@ -23,6 +23,9 @@ k = 1
 
 Shoud our output be: [20,30,40,50,10] ?
 
+A good question to look at: https://leetcode.com/problems/search-in-rotated-sorted-array/ 
+Binary Search Question.
+
 """
 x = [10,20,30,40,50]
 k = 3
@@ -61,4 +64,5 @@ def rotate_array(nums, k):
         rotated[new_index] = nums[i]
     return rotated
 
-print(rotate_array(x,k))
+# Tested with the case where the length of the array is less than k.
+print(rotate_array([1,2,3],7))
