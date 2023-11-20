@@ -16,6 +16,8 @@ x = [-4,2,-5,1,2,3,6,-5,1]
 def find_max_sublist(x):
     if not x:
         return 0
+    if len(x) == 1:
+        return x[0]
     # Initialize the max values.
     _max = _gmax = x[0]
     for el in x[1:]:
@@ -28,3 +30,5 @@ def find_max_sublist(x):
     return _gmax
 
 print(find_max_sublist(x))
+print(find_max_sublist([-2,-3,-4, -5,-1, -6]))
+print(find_max_sublist([1,-3,4,-2,-1, 6]))
