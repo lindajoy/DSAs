@@ -25,8 +25,7 @@ def find_max_sublist(x):
             _max = el
         else:
             _max += el
-        if _gmax < _max:
-            _gmax = _max
+       
     return _gmax
 
 print(find_max_sublist(x))
