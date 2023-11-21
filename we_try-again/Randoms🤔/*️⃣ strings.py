@@ -15,6 +15,19 @@ print(my_sliced_string)
 split_string = my_string.split()
 print("Split string:", split_string)
 
+
+# Did you know you can sort a string?
+# ❎ TIP 💡‼️‼️🌍
+# Hmm, if your string has both uppercase and lower case always ensure that you have converted it to lowercase
+basic_string = "helloworld"
+mixed_string = "HELLOworld"
+#If you do, ''.join(sorted(basic_string)) you will get: EHLLOdlorw; which is ideally not what we want.
+mixed_string_sorted = ''.join(sorted(mixed_string.lower()))
+print("Sorted Mixed String", mixed_string_sorted)
+sorted_string = ''.join(sorted(basic_string))
+print("Sorting a string:", sorted_string)
+
+
 # Lets remove the spaces in my string
 my_unspaced_string = ''.join(my_string.split())
 print('Unspaced string:', my_unspaced_string)
