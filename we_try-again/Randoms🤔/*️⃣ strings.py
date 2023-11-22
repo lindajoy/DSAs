@@ -32,6 +32,10 @@ print("Sorting a string:", sorted_string)
 my_unspaced_string = ''.join(my_string.split())
 print('Unspaced string:', my_unspaced_string)
 
+# Say you had a list of random strings
+a = ["hello", "Joy", "Lidah", "Wawira"]
+print('Trying To Join a List(Wish me all the best!):', ','.join(a).replace(",", " "))
+
 # OR
 my_unspaced_string_2 = my_string.replace(" ", "")
 print('Tried replace method instead to remove spaces:', my_unspaced_string_2)
