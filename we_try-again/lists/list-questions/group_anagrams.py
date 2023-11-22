@@ -36,3 +36,19 @@ def groupAngrams(lst):
     return list(anagram_dict.values())
 
 print(groupAngrams(strs))
+
+
+# What if you dont want to use dictionary
+def groupAngramsSolution2(lst):
+    my_anagram_dictionary = {}
+
+    for i in lst:
+        sorted_word = "".join(sorted(i))
+        if sorted_word not in my_anagram_dictionary.keys():
+            my_anagram_dictionary.setdefault(sorted_word, []).append(i)
+        else:
+            my_anagram_dictionary[sorted_word].append(i)
+
+    return list(my_anagram_dictionary.values())
+
+print('Grouping my anagram dictionary:', groupAngramsSolution2(strs))

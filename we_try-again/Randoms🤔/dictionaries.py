@@ -41,3 +41,20 @@ print("Deleted Milah:", my_dictionary)
 # Also possible to add a list and dictionary as value.
 my_dictionary["jobs"] = ["Engineer", 'Doctor', 'Pilot',"Captain", 'Teacher', "Awesome Mother", "Awesome Father"]
 print("Added Jobs as key to my dictionary:", my_dictionary)
+
+# 💡💡 DICTIONARY WITH DEFAULT VALUES.
+from collections import defaultdict
+
+# This creates a dictionary with its initial value as integers.
+d = defaultdict(int)
+
+# This creates a dictionary with its initial values as an empty list.
+dlist = defaultdict(list)
+
+# Alternatively, If you must use the built-in dict class, using dict.setdefault() will allow you to create a default whenver you access a key whenever you access a key that does not exist before
+age_of_buildings = {}
+age_of_buildings.setdefault("Pyramids of Egypt", []).append(4500)
+age_of_buildings.setdefault('Knap of Howar', []).append(5500)
+age_of_buildings.setdefault('Stonehenge', []).append(4500)
+age_of_buildings.setdefault('Newgrange', []).append(5000)
+print("Here is my age dictionary:", age_of_buildings)
