@@ -36,6 +36,15 @@ class LinkedList:
     def __init__(self):
         self.head_node = None
 
+    # Insertion at head
+    def insert_at_head(self, data):
+        # Create a new node containing your specified value
+        temp_node = Node(data)
+        # The new node points to the same node as the head
+        temp_node.next_element = self.head_node
+        self.head_node = temp_node # make the head point to the new node
+        return self.head_node # return the new list
+
     def get_head(self):
         return self.head_node
     
@@ -57,3 +66,11 @@ print('Here is my list head Node:',lst.get_head())
 # (SEE UP THERE)
 
 print(lst.is_empty())
+
+# SINGLY LINKED LIST INSERTION
+"""
+TYPES OF INSERTION:
+    1. Insertion at the head
+    2. Insertion at the tail
+    3. Insertion at the kth index
+"""
