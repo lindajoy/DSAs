@@ -42,8 +42,8 @@ def isValidSudoku(board):
     # The range of our columns and rows is 9 by 9
     for r in range((9)):
         for c in range((9)):
-            print('The value of row:', r)
-            print('The value of column:', c)
+            # print('The value of row:', r)
+            # print('The value of column:', c)
 
             if board[r][c] == '.':
                 continue
@@ -54,6 +54,7 @@ def isValidSudoku(board):
                 board[r][c] in squares[(r // 3, c //3)]):
                 return False
             
+            # Here we are adding the value of board[r][c] to the value c or row
             colums[c].add(board[r][c])
             rows[r].add(board[r][c])
 
@@ -82,5 +83,8 @@ set_default_dict = defaultdict(set)
 set_default_dict['yellow', 'blue'].add('colors')
 set_default_dict['red sea'].add('sea')
 print(set_default_dict)
+
+if 'red sea' in set_default_dict:
+    print('Boom!')
                 
     
