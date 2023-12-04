@@ -13,6 +13,10 @@ Sample String = s = "A man, a plan, a canal: Panama"
 
 isalnum() method returns True if all the characters are alphanumeric, meaning alphabet letter(a-z) and numbers(0-9).
 Example of characters that are not alphanumeric: (space)!#%&? etc.
+
+Question for the interviewer:
+1. Can we assume that our string might also contain numbers? 
+2. Can we assume that our string will contain alphanumeric characters?
 """
 
 Sample_String = s = "A man, a plan, a canal: Panama"

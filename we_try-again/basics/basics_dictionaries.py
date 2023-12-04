@@ -74,3 +74,29 @@ movie_2 = {'name': 'Zootopia', 'actor1': 'Juddy', 'actor2': 'Fox'}
 # So it does not really merge the two dictionaries, it just returns the latermost values from the dictionary
 movies_combined = {**movie_1, **movie_2}
 print(movies_combined)
+
+
+# OKAY MORE ABOUT DEFAULT DICTS...🤔
+from collections import defaultdict
+
+set_dict = defaultdict(set)
+set_dict['one'].add(1)
+set_dict['two'].add(2)
+set_dict['three'].add(3)
+set_dict['three'].add(3)
+set_dict['three'].add(7)
+print(set_dict)
+
+list_dict = defaultdict(list)
+list_dict['Joy'].append('Mombasa')
+list_dict['Joy'].append('Eldoret')
+list_dict['Joy'].append('Cape Town')
+list_dict['Lidah'].append('Nairobi')
+list_dict['Lidah'].append('Kampala')
+print('Here is my list dictionary:', list_dict)
+
+string_dict = defaultdict(str)
+string_dict['Data'] = 'Data'
+string_dict['Structures'] = 'Structures'
+
+print('Here is my random string dictionary!',string_dict)
