@@ -42,14 +42,10 @@ def findProductOfArrayExceptSelf(nums):
 
     for i in range(len(nums)):
         result = nums[:i] +nums[i+1:]
-        print('Hmm I wanna see something:',nums[i+ 1:])
-        print("Here is my concatenated list at each iteration:", result)
         product = 1
 
         for i in result:
-            print("Here is my i in result", i)
             product *= i
-            print('Oh hi here is my product at this point', product)
         productArray.append(product)
 
     return productArray
