@@ -69,7 +69,14 @@ print(sort_colors_2([0, 1, 0]))
 print(sort_colors_2([1, 1, 0, 2]))
 print(sort_colors_2([2, 2]))
 
-# QuickSort Algorithm:
+# QuickSort Algorithm: Quite interesting 🤔
+# This is a divide and conquer algorithm.
+# How quick sort works:
+# 1. Choose an element or the pivot index, It can be anything
+# 2. Elements that are less than the pivot index go to the left of the pivot index, greater than the element go to the right of the index.
+# 3. Passing the smaller lists as an array.
+# 4. Join the sorted arrays that are returned from the recursive call and the pivot
+
 RED, WHITE, BLUE = range(3)
 
 def dutch_flag_sort(colors):
