@@ -35,7 +35,7 @@ def sumOfSquared(n:int) -> int:
     # return output
 
     # USING DIVMOD
-    ans = divmod(n, 10)
+    ans = divmod(n, 10) # Returns a tuple!(Quotient, remainder) (Hehe)
     for i in ans:
         output += i ** 2
     return output
