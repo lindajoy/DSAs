@@ -8,6 +8,10 @@ he will put in $1 more than the day before. On every subsequent Monday, he will 
 Given n, return the total amount of money he will have in the Leetcode bank at the end of the nth day.
 """
 
+"""
+Comments: I honestly struggled through this question, despite it being an easy question. 
+          Needs repitition
+"""
 # 💡 First iteration, This just solves for when the days equate to a week or less
 def totalMoney(n):
     total = 0
@@ -19,6 +23,7 @@ def totalMoney(n):
 print(totalMoney(4))
 
 # 💡 Seconde Iteration...
+
 # This is the brute force way meaning that the time complexity here will be: O(n) as the length of the range increases.
 # The more time to execute increases!
 
@@ -40,6 +45,7 @@ def totalMoney2(n):
         deposit += 1
         day += 1
 
+        # This means we are beginning a new week!
         if day% 7 == 0:
             print(day // 7)
             deposit = 1  + day // 7
