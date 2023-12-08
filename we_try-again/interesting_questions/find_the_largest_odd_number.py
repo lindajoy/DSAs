@@ -52,8 +52,8 @@ random_string2 = "annrita"
 print('Hello! Random Sliced String:', random_string2[4: 10])
 
 
-print(find_largest_odd_number("4206"))
-print(find_largest_odd_number("35427"))
+# print(find_largest_odd_number("4206"))
+# print(find_largest_odd_number("35427"))
 
 
 # def find_largest_odd_number2(string):
@@ -67,3 +67,31 @@ print(find_largest_odd_number("35427"))
 # print(find_largest_odd_number2("35427"))
 
 
+# 💡 Second Solution
+
+def largestOddNumber(num):
+    for i in range(len(num) -1, -1, -1):
+        print(num[i])
+        if i%2 == 0:
+            print(i)
+            return num[:i+ 1]
+    return ""
+
+print(largestOddNumber("123456"))
+print(largestOddNumber("35427"))
+print(largestOddNumber("52"))
+
+# Lets try to understand something...
+
+random_string_3 = "WawiraJoy"
+
+for i in range(len(random_string_3)- 1, -1, -1):
+    # When looping through an array it will always start from the end index.
+    # So here the end index is 8
+    # it will start from 8 going towards the start
+    # the end value is 0;
+
+    print('Random character in my string: ',random_string_3[i])
+  
+   
+    
