@@ -94,4 +94,6 @@ for i in range(len(random_string_3)- 1, -1, -1):
     print('Random character in my string: ',random_string_3[i])
   
    
-    
+random_int = 123
+
+print(random_int[0])
