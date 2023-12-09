@@ -52,10 +52,11 @@ def is_int_palindrome(x):
 
     # Recursive function that calls itself whenever the value temp is not equal to 0.
     while temp != 0:
+        # Returns the remainder when a number is divided by 10
         digit = temp % 10
         reversed_num = reversed_num* 10 + digit
+        # Returns the whole digit when divided by 10.
         temp //= 10
-
 
     return reversed_num == x
 
