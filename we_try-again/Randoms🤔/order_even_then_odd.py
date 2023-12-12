@@ -21,3 +21,7 @@ def even_odd(lst):
     return lst
 
 print(even_odd(Input))
+
+'''
+Time complexity is O(N): where n is the length of the array
+'''
