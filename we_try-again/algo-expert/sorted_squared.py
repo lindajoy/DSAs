@@ -16,14 +16,20 @@ def sorted_squared_array(nums):
     squares = [(i**2) for i in nums]
 
     # Here I am using the bubble sort
-    n = len(squares)
-    for i in range(n):
-        for j in range(0, n-i-1):
-            print(f"What is the value of j?{j}")
-            if squares[j] > squares[j+1]:
-                squares[j], squares[j+1] = squares[j+1], squares[j]
+    # n = len(squares)
+    # for i in range(n):
+    #     for j in range(0, n-i-1):
+    #         print(f"What is the value of j?{j}")
+    #         if squares[j] > squares[j+1]:
+    #             squares[j], squares[j+1] = squares[j+1], squares[j]
+    # return squares
+    # Get the length of the squares
+    len_squares = len(squares) - 1
+    for i in range(0, len_squares):
+        if squares[i] > squares[i + 1]:
+            squares[i], squares[i + 1] = squares[i+1], squares[i]
+
+    len_squares -= 1
     return squares
-
-
 
 print(sorted_squared_array(nums))
