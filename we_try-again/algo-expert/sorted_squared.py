@@ -33,3 +33,21 @@ def sorted_squared_array(nums):
     return squares
 
 print(sorted_squared_array(nums))
+
+"""
+This actually makes more sense
+"""
+
+# 💡 Important lesson learnt an this chanllenge or a reminder rather:
+
+def bubbleSort(lst):
+    end = len(lst) - 1
+
+    while end > 0:
+        for i in range(0, end):
+            if lst[i] > lst[i+1]:
+                lst[i], lst[i+1] = lst[i+1], lst[i]
+        end -= 1
+    return lst
+
+print(bubbleSort([5,2,1,0,8,1]))
