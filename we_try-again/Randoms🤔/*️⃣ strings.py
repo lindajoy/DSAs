@@ -85,6 +85,7 @@ input_str_2 = "add(100,4000)"
 
 def addUsingString(str):
     sliced_str = str[4: -1]
+    print("Hello My sliced string", sliced_str)
     sliced_str = sliced_str.split(',')
     total_sum = sum(int(num) for num in sliced_str)
     return total_sum
