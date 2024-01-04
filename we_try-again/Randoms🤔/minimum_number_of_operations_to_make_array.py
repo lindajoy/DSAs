@@ -14,6 +14,7 @@ Input:
 Output: 4
 """
 from collections import Counter
+import math
 
 
 nums = [2,3,3,2,2,4,2,3,4]
@@ -67,6 +68,7 @@ def minOperationsDynamic(nums):
     # create an empty dictionary
     cache = {}
 
+    # Recursive function.
     def dfs(n):
         if n < 0:
             return float("inf")
@@ -100,10 +102,12 @@ def minOperationsDynamic(nums):
 
 print(minOperationsDynamic([4,4,4,4,4]))
 
-random_example = 5
 
-if random_example in [2,3]:
-    print('Tunaingia Google')
+# Dicovered the math.ciel operation
+# Did you know that the math.ceil converts a decimal to the nearest whole number.
+print(math.ceil(1.3)) # Expects it to be 2
+print(math.ceil(4.1)) # Expect it to be 5
+
     
 
 
