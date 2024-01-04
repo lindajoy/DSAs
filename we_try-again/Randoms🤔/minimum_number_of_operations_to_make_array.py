@@ -51,13 +51,60 @@ def minOperations(nums):
 # print(minOperations([2, 2, 2, 1, 1, 1, 3, 3, 3]))
 # print(minOperations([1,2,3,4,5]))
 
-# Interesting Discovery instead of looping through the array and finding
+# 💡 Interesting Discovery instead of looping through the array and finding
 # the number occurences, You can use the counter method
 nums3 = [1, 2, 2, 2, 1, 3, 3, 3, 1]
+
 count = Counter(nums3)
 print(count)
+# The base case of the solution is that :
+# If the num_count = 1 then the shrinking of this element cannot happen so its -1
+# if the num_count = 2 or 3 then the shrinking of the item can take place within one count.
 
+# 💡 Makes sense?
 # DFS Solution.
+def minOperationsDynamic(nums):
+    # create an empty dictionary
+    cache = {}
+
+    def dfs(n):
+        if n < 0:
+            return float("inf")
+        if n in [2,3]:
+            return 1
+        if n in cache:
+            return cache[n]
+        
+        res = min(dfs(n-2), dfs(n-3))
+        print("Hello res", res)
+
+        if res  == -1:
+            return  -1
+        cache[n] = res + 1
+        return res + 1
+    
+    count = Counter(nums)
+    print('Here is my count dictionary:',count)
+    res = 0
+
+    for n, c in count.items():
+        print("Here is my n", n)
+        print("Here is my c", c)
+
+        op = dfs(c)
+        if op == float("inf"):
+            return -1
+        res += op
+
+    return res
+
+print(minOperationsDynamic([4,4,4,4,4]))
+
+random_example = 5
+
+if random_example in [2,3]:
+    print('Tunaingia Google')
+    
 
 
 
