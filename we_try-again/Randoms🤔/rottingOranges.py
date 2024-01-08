@@ -14,6 +14,7 @@ INPUT: grid = [[2,1,1],[0,1,1],[1,0,1]]
 OUTPUT: -1
 """
 
+# 💡: This solution would not work I guess because of the ordering.
 def minimumNumberOfMinutes(grid):
     minutes = 0
     rows, columns = len(grid), len(grid[0])
@@ -22,7 +23,6 @@ def minimumNumberOfMinutes(grid):
 
     def dfs(row, column):
         minutes = 0
-        print(fresh_fruits)
         if row < 0 or row >= rows or column < 0 or column >= columns or (row,column) in visited_set:
             return 0
         
@@ -47,4 +47,37 @@ def minimumNumberOfMinutes(grid):
                 dfs(r,c)
     return minutes if fresh_fruits == 0 else -1
 
-print(minimumNumberOfMinutes([[2,1,1],[1,1,0],[0,1,1]]))
+# Solution 2: Lemme see
+def orangesRotting(grid):
+    if not grid:
+        return -1
+    
+    m, n = len(grid), len(grid[0])
+    fresh_count = 0
+    rotten = []
+    
+    # Count fresh oranges and store positions of rotten oranges
+    for i in range(m):
+        for j in range(n):
+            if grid[i][j] == 1:
+                fresh_count += 1
+            elif grid[i][j] == 2:
+                rotten.append((i, j, 0))  # (x, y, minutes)
+    
+    # Define the four directions (up, down, left, right)
+    directions = [(0, 1), (0, -1), (1, 0), (-1, 0)]
+    minutes = 0
+    
+    while rotten:
+        # Here we are destructuring...
+        x, y, minutes = rotten.pop(0)
+        
+        for dx, dy in directions:
+            nx, ny = x + dx, y + dy
+            
+            if 0 <= nx < m and 0 <= ny < n and grid[nx][ny] == 1:
+                grid[nx][ny] = 2  # Mark fresh orange as rotten
+                fresh_count -= 1
+                rotten.append((nx, ny, minutes + 1))
+    
+    return minutes if fresh_count == 0 else -1
