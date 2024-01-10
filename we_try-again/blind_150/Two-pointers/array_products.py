@@ -37,3 +37,29 @@ print(arrayOfProducts(array))
 print(arrayOfProducts([1, 2, 0, 4]))
 print(arrayOfProducts([-1, 2, -3, 4]))
 print(arrayOfProducts([2, -3, 4, -5]))
+
+
+# Lets do some slicing revision:
+frodo_characters = [
+    "Bilbo Baggins", #0
+    "Samwise Gamgee", #1
+    "Frodo Baggins", #2
+    "Peregrin Took (Pippin)", #3
+    "Meriadoc Brandybuck (Merry)", #4
+    "Gandalf", #5
+    "Aragorn", #6
+    "Legolas", #7
+    "Gimli", #8
+    "Thorin Oakenshield"#9
+]
+
+print(frodo_characters[:2]) # ['Bilbo Baggins', 'Samwise Gamgee']
+print(frodo_characters[2:]) #['Frodo Baggins', 'Peregrin Took (Pippin)', 'Meriadoc Brandybuck (Merry)', 'Gandalf', 'Aragorn', 'Legolas', 'Gimli', 'Thorin Oakenshield']
+# Something to note here is that before frodo baggins is being printed on the list else we only have Bilbo and Samwise.
+
+# 🍰 Slicing syntax has the notation lst[start:end:stop]
+# Reversing frodo_characters using slice notation.
+print(frodo_characters[::-1])
+# Prints all the names that index%2 == 0
+print('We wanna see something here..',frodo_characters[::2])
+print('Slicing from index 5 to 8', frodo_characters[5:8])
