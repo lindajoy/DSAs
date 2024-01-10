@@ -63,3 +63,4 @@ print(frodo_characters[::-1])
 # Prints all the names that index%2 == 0
 print('We wanna see something here..',frodo_characters[::2])
 print('Slicing from index 5 to 8', frodo_characters[5:8])
+print('slicing from index 6 till the end,', frodo_characters[6:])
