@@ -14,6 +14,8 @@ Sequence → [3, 7, 4]
 Output → True
 """
 
+# For Loop: Takes O(n) time; n being the length of the array + sequence
+# Space complexity: We are storing the set_ptr which takes O(1)
 def isValidSubsequence(array, sequence):
     seq_ptr = 0
     for i in range(len(array)):
