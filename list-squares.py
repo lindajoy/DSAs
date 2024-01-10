@@ -38,3 +38,8 @@ def get_square_of_list_numbers(x):
 
 final_squares_two  = [get_square_of_list_numbers(i) for i in list_1]
 print("Using List Comprehension:", final_squares_two)
+
+names = []
+names.append('Joy')
+names.append('Miguel')
+print('Here are the couples:', names)
