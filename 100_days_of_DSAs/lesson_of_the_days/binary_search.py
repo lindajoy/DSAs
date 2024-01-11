@@ -49,3 +49,6 @@ def binarySearch_Recurive(array, x, low, high):
             return binarySearch(array, x, mid + 1, high)
     else:
         return -1
+    
+
+print(5 // 2)
