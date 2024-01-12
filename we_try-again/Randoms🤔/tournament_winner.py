@@ -32,6 +32,7 @@ OUTPUT:
     // Python -  6 points
 """
 def tournament_winner(competitions, results):
+    # Initialize our hash map
     winners_map = {}
 
     for i in range(len(results)):
@@ -39,13 +40,13 @@ def tournament_winner(competitions, results):
             winner = competitions[i][1]
         else:
             winner = competitions[i][0]
-            
+        
         # 💡 Forgot to do this.
         if winner in winners_map:
             winners_map[winner] += 3
         else:
             winners_map[winner] = 3
-        
+    # 💡 Interesting how we return the maximum winners result from our hash map!
     return max(winners_map, key=winners_map.get)
 
 competitions = [
