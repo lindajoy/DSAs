@@ -10,7 +10,7 @@ def moveElementToEnd(array, toMove):
     left, right = 0, len(array) - 1
 
     while left < right:
-        while left < right and array[right] == toMove:
+        if array[right] == toMove:
             right -= 1
 
         if array[left] == toMove:
