@@ -96,3 +96,26 @@ count = sentence_1.count('joy')
 print("Number of counts", count)
 replaced_str = sentence_1.replace('joy','Wawira', count)
 print('Replaced the sentence:', replaced_str)
+
+# Other important methods:
+# str.isalum => Evaluates to true  if all characters in the given string are alphanumeric, that is, they consist of alphabetic or numeric characters;
+print("Hello2world".isalnum())
+print("2016".isalnum())
+print("2016!".isalnum()) # False contains excalmation mark!
+print('Joy Wawira'.isalnum()) # False contains space
+
+# STRING.CONTAINS
+print('linda' in 'linda is working')
+# Note that testing an empty string will always return True
+print('' in 'linda is working')
+
+# JOINS A LIST OF STRING INTO ONE STRING
+print(' '.join(['once', 'upon', 'a', 'time']))
+print('----'.join(['joy', 'lidah', 'wawira']))
+
+# COUNT NUMBER OF ITEMS A SUBSTRING APPEARS IN A STRING
+p_str = "She sells seashells by the seashore"
+print(p_str.count('sh'))
+print(p_str.count('se'))
+print(p_str.count('sea'))
+print(p_str.count('seashells'))
