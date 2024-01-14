@@ -85,3 +85,14 @@ print("This is a sentence".split('e', maxsplit= 2))
 print("Joy Leroy Maroy Winny".split('y', maxsplit=3))
 # Hmm🤔
 print("Joy Leroy Maroy Winny".rsplit('y', maxsplit=3))
+
+
+# REPLACE ALL OCCURENCES OF ONE SUBSTRING WITH ANOTHER SUBSTRING.
+# 💡 You can use str.replace which takes two arguments old and new containing the old sub string which is to be replaced by the new sub-string.
+# The optional argument count specifies the number of replacements to be made.
+
+sentence_1 = "joy is happy because she makes other people feel joy when she teaches other people about the joy of programming!"
+count = sentence_1.count('joy')
+print("Number of counts", count)
+replaced_str = sentence_1.replace('joy','Wawira', count)
+print('Replaced the sentence:', replaced_str)
