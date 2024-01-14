@@ -119,3 +119,8 @@ print(p_str.count('sh'))
 print(p_str.count('se'))
 print(p_str.count('sea'))
 print(p_str.count('seashells'))
+
+txt = "apple#banana#cherry#orange"
+print(txt.split('#'))
+print(replaced_str.startswith('Wawira'))
+print(replaced_str.endswith('programming'))
