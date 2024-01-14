@@ -80,6 +80,7 @@ Pseudocode: Here's what I am thinking:
 4.  Next, we will loop through the list converting each string to a number and doing the addition.
 """ 
 
+# GOOGLE QUESTION: DID IT LAST TIME BUT FAILED.
 input_str = "add(10,4)"
 input_str_2 = "add(100,4000)"
 
