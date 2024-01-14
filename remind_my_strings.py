@@ -71,4 +71,17 @@ print('My name sorted:',' '.join(sorted(my_name.lower())))
 # For this expect the output: J L W a a a d h i i o r w y
 print('My name sorted:',' '.join(sorted(my_name)))
 
+# 💡 Lets learn more about splitiing
 
+print('Expecting a list', my_name.split())
+str_to_split = "Mauritius, Rwanda , USA, are some of the countries i would like to explore!"
+print("Splitting My long travelling string Manifestation:", str_to_split.split(','))
+
+# The default is to split on every occurence of the delimeter, however the maxsplit parameter limits the number of splittings that occur. The default value of -1 means no limit.
+# This outputs: ['This is a s', 'nt', 'nce']
+print("This is a sentence".split('e', maxsplit= 2))
+
+# Hehe => Interesting Output: ['Jo', ' Lero', ' Maro', ' Winny']
+print("Joy Leroy Maroy Winny".split('y', maxsplit=3))
+# Hmm🤔
+print("Joy Leroy Maroy Winny".rsplit('y', maxsplit=3))
