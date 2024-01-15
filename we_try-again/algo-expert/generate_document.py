@@ -24,7 +24,7 @@ document = "AlgoExpert is the Best!"
 #
 # 1. The characters string can be greater or equal to the length of the len(document)?
 # 2. Tehcnical question: When we look for the length of the string, does it also calculate the white space?
-# 3. 
+# 3. Another question, You could ask the interviewer is: Can I use the counter method to generate me the hashmap containing occurences of each character?
 
 from collections import Counter
 
