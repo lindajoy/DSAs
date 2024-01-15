@@ -16,7 +16,7 @@ def firstNonRepeatingCharacter(sample_string):
         # Used the slicing concept.
         # Example 1:
         # If i am at index 1, I would like to check whether the rest of my string does not have the string within it.
-        # So we slice from index 2.
+        # So we slice 🔤:from index 2.
         if sample_string[i] not in sample_string[i+1:]:
             return i
     return -1
