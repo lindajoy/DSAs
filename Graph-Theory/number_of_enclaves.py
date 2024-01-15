@@ -41,7 +41,7 @@ def numberOfEnclaves(grid):
 
     return land_inside_grid - bordered_land
 
-grid = [[[0,0,0,0],[1,0,1,0],[0,1,1,0],[0,0,0,0]]]
+grid = [[0,0,0,0],[1,0,1,0],[0,1,1,0],[0,0,0,0]]
 grid2 = [[0,0,0,0],[1,0,1,0],[0,1,1,0],[0,0,0,0]]
 
 print(numberOfEnclaves(grid2))
