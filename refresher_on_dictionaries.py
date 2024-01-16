@@ -86,7 +86,9 @@ names = ['Joy', 'Wawira', 'Lidah']
 tags = ['Felicitations', 'Kudos', 'Bravo']
 
 for name, tag in zip(names, tags):
-    print('🎉 {0} {1} here is your Google offer letter.'.format(tag, name))
+    print('🎉 {0} , {1} here is your Google offer letter.'.format(tag, name))
+    print('You will be joining Google next week!')
+
 
 
 
