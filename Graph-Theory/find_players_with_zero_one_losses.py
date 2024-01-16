@@ -42,4 +42,41 @@ def find_players_with_zero_losses(array):
     return [sorted(winners_only), sorted(filtered_dict.keys())]
 
 
-print(find_players_with_zero_losses(matches))
+# print(find_players_with_zero_losses(matches))
+
+def find_players(matches):
+    # Create dictionaries to store wins and losses for each player
+    wins = {}
+    losses = {}
+
+    # Iterate through matches
+    for winner, loser in matches:
+        # Update wins
+        if winner in wins:
+            wins[winner] += 1
+        else:
+            wins[winner] = 1
+
+        # Update losses
+        if loser in losses:
+            losses[loser] += 1
+        else:
+            losses[loser] = 1
+
+    # Find players who have not lost any matches
+    not_lost_any = [player for player in wins if player not in losses]
+
+    # Find players who have lost exactly one match
+    lost_once = [player for player in losses if losses[player] == 1]
+
+    # Sort the lists
+    not_lost_any.sort()
+    lost_once.sort()
+
+    return [not_lost_any, lost_once]
+
+# Example usage:
+# matches = [[1, 2], [3, 1], [4, 2], [2, 5]]
+result = find_players(matches)
+print(result)
+
