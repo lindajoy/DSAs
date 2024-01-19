@@ -25,17 +25,17 @@ Example 2:
 sample_input = "Joy will get into google"
 sample_output = "google into get will joy"
 """
+# ⏰ The time complexity is O(n); n being the length of str
 
 def reverseWordsInString(sample_str):
     output_str = ''
-    
+
     # Looping in reversal.
     for i in range(len(sample_str)-1, -1, -1):
         if sample_str[i] == " ":
             sliced_str = sample_str[i:]
             sample_str = sample_str[:i]
             output_str += sliced_str 
-            continue
     return output_str + ' ' + sample_str
 
 print(reverseWordsInString('AlgoExpert is the best!'))
