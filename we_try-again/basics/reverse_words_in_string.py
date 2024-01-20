@@ -46,3 +46,6 @@ print(reverseWordsInString("Joy will get into google"))
 testString = "helloWorld"
 print(testString[:5])
 print(testString[5:])
+
+# Can you multiply a string?
+print(["y"] * 3)
