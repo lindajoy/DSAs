@@ -12,23 +12,70 @@ Note: the input words won't contain any spaces; however, they might contain punc
 # OUTPUT: ["t", "t", "h", "i", "s", "a", "d", "d", "e", "e", "m", "!"]
 # The characters could be ordered differently.
 
+# ❌ COPIED THE FIRST SOLUTION FROM CHATGPT DID NOT WORK.
 def minimumCharactersForWords(words):
-    starting_word = words[0]
-    start_dictionary = {}
+    if not words:
+        return []
+    
+    # Create a dictionary to store the frequency of each character in word
+    char_frequency = {}
 
-    for i in starting_word:
-        if i in starting_word:
-            start_dictionary[i] = 1
-        else:
-            start_dictionary[i] += 1
-    for i in range(1, len(words)):
-        word_in = words[i]
+    # Iterate through each word and update the characters frequency
+    for word in words:
+        for char in word:
+            char_frequency[char] = char_frequency.get(char, 0) +1
 
-        for i  in word_in:
-            if i in word_in:
-                freq = max(start_dictionary[i], )
-                start_dictionary[i] 
-            
+    print('CHARACTER FREQUENCY:', char_frequency)
+    # Create the smallest set of characters needed
+    smallest_set = []
+    for char_word, freq in char_frequency.items():
+        smallest_set.extend([char_word] * min(freq, words.count(char)))
+    return smallest_set
+    
 
-print(minimumCharactersForWords(["this", "that", "did", "deed", "them!", "a"]))
+# 💡 SECOND SOLUTION USING DEFAULTDICT
+from collections import defaultdict
 
+# O(n) time  | O(n) space where n is length of the word
+def get_word_characters(word):
+    char_count = {}
+    for char in word:
+        char_count[char] = char_count.get(char, 0) + 1
+    return char_count
+
+# O(n * time)  | O(c) space
+# where n is the number of words, 1 length of the longest word, c is the number of unique characters.
+def minimumCharactersForWords2(words):
+    min_character_count = defaultdict(int)
+    print(min_character_count)
+    
+    for word in words:
+        word_char_count = get_word_characters(word)
+        for char in word_char_count:
+            # Update count if we find a word that needs more
+            min_character_count[char] = max(
+                min_character_count[char], word_char_count[char]
+            )
+
+    # Convert hash table to list
+    min_character_list = []
+    for char in min_character_count:
+        count = min_character_count[char]
+        min_character_list.extend([char] * count)
+    
+    return min_character_list
+
+print(minimumCharactersForWords2(["this", "that", "did", "deed", "them!", "a"]))
+
+# 💡 Refresher on Default Dictionary
+random_dict = defaultdict(int)
+print("Here is my default dictionary:", random_dict)
+
+# 💡 Random fun fact
+random_dict2 = {'hello': 'world', 'foo': 'bar'}
+
+for i in random_dict2:
+    print(i)
+
+for i in random_dict2.keys():
+    print(i)
