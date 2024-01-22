@@ -19,6 +19,7 @@ def setMisMatch(nums):
     res = [0, 0] #duplicate, missing
 
     count = Counter(nums)
+    print('First count',count)
 
     for i in range(1, len(nums) + 1):
         if count[i] == 0:
@@ -29,3 +30,26 @@ def setMisMatch(nums):
     return res
 
 print(setMisMatch([1,2,2,4]))
+
+
+# Instead of using counter you can create a dictionary yourself
+def setMisMatch2(nums):
+    res = [0,0]
+    count_dict = {}
+
+    # Here we are creating a dictionary
+    for i in nums:
+        count_dict[i] = count_dict.get(i, 0) + 1
+
+    print('Second counter', count_dict)
+
+    for i in range(1, len(nums) + 1):
+        if i not in count_dict:
+            res[1] = i
+        elif count_dict[i] == 2:
+            res[0] = i
+
+    return res
+
+print(setMisMatch2([1,2,2,4]))
+
