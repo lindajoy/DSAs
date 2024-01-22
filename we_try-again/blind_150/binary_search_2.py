@@ -29,7 +29,7 @@ class Solution:
                 r = m - 1
             else:
                 i = m
-                
+
             if leftBias:
                 r = m - 1
             else:
@@ -39,3 +39,17 @@ class Solution:
           
 x = Solution()  
 print(x.searchRange([5,7,7,8,8,10], 8))
+
+"""
+SOMETHING TO REMEMBER:
+   Found it while doing this question: https://leetcode.com/problems/length-of-last-word/
+   
+💡 STR.SPLIT  takes a string and returns a list of substrings of the original string. The behavior differs depending on
+   whether the sep argument is provided or omitted.
+
+👉🏾 If sep isn't provided, or is None, then the splitting takes place wherever there is whitespace. 
+   However, leading and trailing whitespace is ignored,
+   and multiple consecutive whitespace characters are treated the same as a single whitespace character
+"""
+ten_pm_string = "    fly to the moon  "
+print(ten_pm_string.split())
