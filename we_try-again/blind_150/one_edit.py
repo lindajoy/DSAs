@@ -25,7 +25,8 @@ def oneEdit(string1, string2):
 
 print(oneEdit("apple", "pple"))
 print(oneEdit("hello", "hello"))
-print(oneEdit(" ", "a"))
+print(oneEdit("rain", "ran"))
+print(oneEdit(" ", " "))
 print(oneEdit("open", "oppen"))
 print(oneEdit("abc", "aefbc"))
 print(oneEdit("abc", "cab"))
