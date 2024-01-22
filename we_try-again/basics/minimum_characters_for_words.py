@@ -74,6 +74,7 @@ print("Here is my default dictionary:", random_dict)
 # 💡 Random fun fact
 random_dict2 = {'hello': 'world', 'foo': 'bar'}
 
+# These two do the same thing! 🤔
 for i in random_dict2:
     print(i)
 
