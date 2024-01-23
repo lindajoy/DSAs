@@ -52,3 +52,10 @@ def plusOneBreakDown(digits):
     return [1] + digits
 
 print('My random Numbers(Addition Plus one)', plusOneBreakDown(my_random_numbers2))
+
+# I am thinking about indexing
+random_string_add = "add(14,15)"
+# Converting it to a string
+print(random_string_add[4 : -1].split(','))
+random_string_joy = "hufflepuff"
+print(random_string_joy[6: ])

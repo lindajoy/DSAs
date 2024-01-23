@@ -1,0 +1,1 @@
+Tries are tree based data structures that are typically  used to store associated keys are usually strings. Since they also implement associative arrays, tries are often compared to hash tables. Tries are commonly used on search engines.
