@@ -14,18 +14,20 @@ Return the modified image after performing the flood fill.
 # Output: [[2,2,2],[2,2,0],[2,0,1]]
 
 def floodFill(image, sr, sc, color):
+
     originalColor = image[sr][sc]
 
     if originalColor == color:
         return image
     
     def dfs(row, col):
-            if 0 <= row < len(image) and 0 <= col < len(image[0]) and image[row][col] == originalColor:
-                image[row][col] = color
-                dfs(row + 1, col)
-                dfs(row - 1, col)
-                dfs(row, col + 1)
-                dfs(row, col - 1)
+        # Its indeed an easy question
+        if 0 <= row < len(image) and 0 <= col < len(image[0]) and image[row][col] == originalColor:
+            image[row][col] = color
+            dfs(row + 1, col)
+            dfs(row - 1, col)
+            dfs(row, col + 1)
+            dfs(row, col - 1)
 
     dfs(sr, sc)
 
