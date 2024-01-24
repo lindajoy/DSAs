@@ -13,6 +13,10 @@ Return the modified image after performing the flood fill.
 # Input: image = [[1,1,1],[1,1,0],[1,0,1]], sr = 1, sc = 1, color = 2
 # Output: [[2,2,2],[2,2,0],[2,0,1]]
 
+# Really liked the flood fill question
+# Here we approach it Recursively => The DFS Function always calls itself.
+# 🤔 Take note of the originalColor and the color parameter
+
 def floodFill(image, sr, sc, color):
 
     originalColor = image[sr][sc]
@@ -20,10 +24,12 @@ def floodFill(image, sr, sc, color):
     if originalColor == color:
         return image
     
+    # This is the recursive nature of the algorithm
     def dfs(row, col):
-        # Its indeed an easy question
+        # Check whether we are in range.
         if 0 <= row < len(image) and 0 <= col < len(image[0]) and image[row][col] == originalColor:
             image[row][col] = color
+            # Goes in 4 directions: Top, Right, Bottom, Left
             dfs(row + 1, col)
             dfs(row - 1, col)
             dfs(row, col + 1)
@@ -32,3 +38,4 @@ def floodFill(image, sr, sc, color):
     dfs(sr, sc)
 
     return image
+
