@@ -10,13 +10,11 @@ It is called selection sort because it repeatedly selects the next-smallest elem
 """
 
 def selection_sort(arr):
-    len_of_array = len(arr)
-
-    for i in range(len_of_array):
+    for i in range(len(arr)):
         # We assume the minimum index starts at index 0
         min_idx = i
         # Loop through the array from index (i + 1, and length of array)
-        for j in range(i+1, len_of_array):
+        for j in range(i+1, len(arr)):
             if arr[j] < arr[min_idx]:
                 min_idx = j
             

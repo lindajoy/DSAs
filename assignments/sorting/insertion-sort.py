@@ -43,7 +43,7 @@ def insertionSort00(array):
         # the sorted array will now end at i
 
         added = i
-        while added > 0 and array[added] < array[added - 1]:
+        while array[added] < array[added - 1]:
             # swap
             array[added], array[added -1] = array[added - 1], array[added]
             added -= 1

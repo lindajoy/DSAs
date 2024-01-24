@@ -67,6 +67,6 @@ Not Operator:
 
 '''
 
-print (not True == False) # Returns True
+# print (not True == False) # Returns True
 #print (False == not True) # Invalid syntax
-print ( False == (not True))  # Returns True
+# print ( False == (not True))  # Returns True
