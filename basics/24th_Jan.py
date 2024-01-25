@@ -39,6 +39,8 @@ rnb_singers = [
     "John Legend",
     "Chris Brown",
     "Khalid",
+    " ",
+    " ",
     "Janelle Monáe",
     "Summer Walker",
     "Redd"
@@ -61,6 +63,20 @@ for i in summer_walker:
 
 for i in range(len(summer_walker)):
     print(summer_walker[i])
+
+
+# Random
+my_string = " Hello  World!"
+# Huh, You read it wrong returns true if all the characters are white spaces.
+# Not that it contains white spaces
+print("  ".isspace())
+
+for i in rnb_singers:
+    if i.isspace():
+        pass
+    else:
+        print('🤔 Artist name:',i.lower())
+
 
 
 
