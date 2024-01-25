@@ -48,8 +48,8 @@ Sample Output: [
 
 """
 This what I have in mind: Idea came from Number Of Enclaves Question.
-1. First we mark the borders' neighbours as visited
-
+1. First we mark the borders' neighbours as visited if equal to zero
+2. After that is done we loop through all the rows and columns, and mutating any value that is equal to one
 """
 # We are making progress 💡
 # My solution works: Well on my input
@@ -109,6 +109,16 @@ input2 = [
   [1, 0, 0, 0, 0, 1],
 ]
 
-print(removeIslands(input2))
+input3 = [
+   [1, 0, 0, 0],
+   [0, 1, 1, 0],
+   [0, 1, 1, 0],
+   [0, 1, 1, 0],
+   [0, 0, 0, 1],
+]
+
+# My solution works for both cases.
+print(removeIslands(input))
+print(removeIslands(input3))
 
 
