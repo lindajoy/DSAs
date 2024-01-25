@@ -22,7 +22,7 @@ def numberOfEnclaves(grid):
 
     def dfs(r, c):
         # check whether in bound
-        if (r < 0 or c < 0 or  c == columns or r == rows or not grid[r][c] or(r,c) in visit):
+        if (r < 0 or c < 0 or  c == columns or r == rows or  grid[r][c] == 0 or (r,c) in visit):
             return 0
         visit.add((r,c))
         res = 1
@@ -35,13 +35,22 @@ def numberOfEnclaves(grid):
     # Initialize the number of lands and border-land
     for r in range(rows):
         for c in range(columns):
+            # Returns all the lands => Here we are just calculating all the lands
             land_inside_grid += grid[r][c]
+            # 💡 Breakdown:
+                # Vice versa: We check whether the border land == 1
+                # We check whether our (r, c) is in visit
+                # We check whether our column is within first and last row and columns....
             if (grid[r][c] == 1 and (r,c) not in visit and (c in [0, columns -1] or r in [0, rows-1])):
+                # Land on border
                 bordered_land += dfs(r, c)
+    difference = land_inside_grid - bordered_land
 
-    return land_inside_grid - bordered_land
+
+    return "number of lands on the whole grid {0}, number of bordered land in the boundaries {1}: The difference is {2}".format(land_inside_grid, bordered_land, difference)
 
 grid = [[0,0,0,0],[1,0,1,0],[0,1,1,0],[0,0,0,0]]
 grid2 = [[0,0,0,0],[1,0,1,0],[0,1,1,0],[0,0,0,0]]
 
+# Should output 3
 print(numberOfEnclaves(grid2))

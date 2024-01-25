@@ -5,8 +5,6 @@ The digits are ordered from most significant to least significant in left-to-rig
 The large integer does not contain any leading 0's.
 
 Increment the large integer by one and return the resulting array of digits.
-
-
 """
 Input = [7, 3, 2, 9]
 Output = [7, 3, 3, 0]
