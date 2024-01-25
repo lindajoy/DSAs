@@ -58,9 +58,12 @@ def removeIslands(matrix):
     if not matrix:
         return matrix
     
+    # Get the number of rows and columns
     rows, columns = len(matrix), len(matrix[0])
+    # Initialize an empty set
     visit = set()
-
+  
+    # Step 1 would be to mark the border elements as visited, if its within the borders.
     def markedAsVisited(r,c):
         if (r < 0 or c < 0 or c == columns or r == rows or matrix[r][c] == 0 or  (r,c ) in visit):
             return
@@ -70,6 +73,7 @@ def removeIslands(matrix):
             markedAsVisited(dr+r , dc + c)
 
 
+    # Step 2: This is where the mutations happen.🎉
     def dfs(r,c):
         if (r < 0 or c < 0 or c == columns or r == rows or matrix[r][c] == 0 or (r,c ) in visit):
             return
@@ -79,6 +83,7 @@ def removeIslands(matrix):
         for dr,dc in directions:
             dfs(dr+r , dc + c)
 
+    # Looping through each row and column and finding all the elements that are  within the border and marking them and their neighbours as visited; We dont care about mutating them;
     for r in range(rows):
         for c in range(columns):
             # Get land and neighbours for the border elements
