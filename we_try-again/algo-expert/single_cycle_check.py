@@ -45,22 +45,27 @@ def hasSingleCycle(array):
     # We keep track of the visited elements
     numVisited = 0
     # We begin our journey at 0
-    currentIndex = 0
+    currentIndex = len(array) - 1
 
     def findNextIndex(current, array):
         leap = array[current]
+        # 💡 Interesting way of looking for our next index. This is one trick you should have for similar problems.
         nextIndex  = (current + leap) % len(array)
         if (nextIndex >= 0):
             return nextIndex
         else:
             return nextIndex + len(array)
-
+        
+    # We create a loop such that it continues to loop 
+    # if the number of visited is less than the length of the array
     while (numVisited < len(array)):
-        if (numVisited > 0 and currentIndex == 0):
+        # If the number of visited is greater than 0 and we are already back to our currentIndex:
+        # Meaning that we have not visited every element in the array.
+        if (numVisited > 0 and currentIndex == len(array) - 1):
             return False
         numVisited += 1
         currentIndex = findNextIndex(currentIndex, array)
-    return currentIndex == 0
+    return currentIndex == len(array) - 1
 
 print(hasSingleCycle([2, 3, 1, -4, -4, 2]))
 

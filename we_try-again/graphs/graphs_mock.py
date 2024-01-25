@@ -55,7 +55,6 @@ def find_path(matrix):
             if matrix[r][c] == -1:
 
 
-   
 
 
 
