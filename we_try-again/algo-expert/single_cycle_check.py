@@ -15,6 +15,8 @@ every element in the array is visited exactly once before landing back on the st
 array = [2, 3, 1, -4, -4, 2]
 Output = Should be true.
 """
+# Challenge when solving this question was:
+#   1. I did not understand what the question was asking at first
 
 # PROBLEM BREAKDOWN 💪🏻
 """
@@ -41,10 +43,12 @@ Given the input: [2, 3, 1, -4, -4, 2], If we start at index 0:
 # Whats the input? An Array
 # Whats the output? A boolean 
 
+
 def hasSingleCycle(array):
     # We keep track of the visited elements
     numVisited = 0
-    # We begin our journey at 0
+    # We begin our journey at the end of the list; We can start the current Index at any point.
+    # You can Opt to start at the beginning, middle or end 🙃
     currentIndex = len(array) - 1
 
     def findNextIndex(current, array):

@@ -59,3 +59,26 @@ random_string_add = "add(14,15)"
 print(random_string_add[4 : -1].split(','))
 random_string_joy = "hufflepuff"
 print(random_string_joy[6: ])
+
+# Interesting way of doing this ~ Hmm 🤔
+# Another implementation of Plus One
+def plus_one_one(A):
+    # Add the last integer in the array plus one.
+    A[-1] += 1
+    print('Hmm Discovering Something:', A)
+    for i in reversed(range(1, len(A))):
+        print(i)
+        if A[i] != 10:
+            break
+        A[i] = 0
+        A[i - 1] += 1
+    if A[0] == 10:
+        A[0] = 1
+        A.append(0)
+    return A
+
+print(plus_one_one([1,2,3,9]))
+
+for i in reversed(range(1, len([1,2,3,9]))):
+    print('Index at I', i)
+
