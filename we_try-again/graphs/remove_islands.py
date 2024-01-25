@@ -52,7 +52,7 @@ This what I have in mind: Idea came from Number Of Enclaves Question.
 
 """
 # We are making progress 💡
-# My solution works: Hehe
+# My solution works: Well on my input
 def removeIslands(matrix):
     # Validate the input
     if not matrix:
@@ -108,8 +108,6 @@ input2 = [
   [1, 0, 1, 1, 0, 0],
   [1, 0, 0, 0, 0, 1],
 ]
-
-
 
 print(removeIslands(input2))
 
