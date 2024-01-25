@@ -47,7 +47,7 @@ Sample Output: [
 """
 
 """
-This what I have in mind: Idea came from Number Of Enclaves Question.
+This what I have in mind: Idea came from (see NUMBER OF ENCLAVES QUESTION).
 1. First we mark the borders' neighbours as visited if equal to zero
 2. After that is done we loop through all the rows and columns, and mutating any value that is equal to one
 """
@@ -87,6 +87,7 @@ def removeIslands(matrix):
     for r in range(rows):
         for c in range(columns):
             # Get land and neighbours for the border elements
+            # 💡 IMPORTANT TIP
             if (matrix[r][c] == 1 and (r,c) not in visit and (c in [0, columns-1] or r in [0, rows-1])):
                 markedAsVisited(r,c)
             
