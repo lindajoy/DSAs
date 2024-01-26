@@ -6,7 +6,7 @@ Example: [5, 2, 4, 6, 3, 1]
 Output here of the maximum pair could be: [4,6]
 """
 # You are given an array and expected to return the maximum pair
-
+# 💡 BE CAREFUL WITH SLICING.
 def maximum_pair(arr):
     pair = []
     max_entry = float('-inf')
