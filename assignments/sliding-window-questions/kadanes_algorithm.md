@@ -28,3 +28,5 @@ def maximumSubarray(nums):
 
    return max_sum
 ```
+
+Kadane's algorithm Formula: localMaxSum[i] = max(input[i], input[i] + localMaxSum[i-1])

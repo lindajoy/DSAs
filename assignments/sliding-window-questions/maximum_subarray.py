@@ -26,4 +26,20 @@ def maximumSubarray(nums):
 
    return max_sum
    
-print(maximumSubarray( [-2, 1, -3, 4, -1, 2, 1, -5, 4]))
+# print(maximumSubarray( [-2, 1, -3, 4, -1, 2, 1, -5, 4]))
+
+# 💡 Using Kadane's Algorithm: This is using Kadane's Algorithm
+def max_subarray_sum(nums):
+    max_sum = nums[0]  # Initialize max_sum with the first element
+    current_sum = nums[0]  # Initialize current_sum with the first element
+    
+    # Iterate through the array starting from the second element
+    for num in nums[1:]:
+        # Update current_sum to either continue the current subarray or start a new one
+        current_sum = max(num, current_sum + num)
+        # Update max_sum if current_sum is greater
+        max_sum = max(max_sum, current_sum)
+    
+    return max_sum
+
+print(max_subarray_sum([-2, 1, -3, 4, -1, 2, 1, -5, 4]))
