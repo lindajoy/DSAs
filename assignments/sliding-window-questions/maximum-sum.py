@@ -29,8 +29,21 @@ Pseudocode:
 Step 1: Start from the the beginning of the array(which is 3)
 Step 2: Take the first two elements in the array => 
 """
+# What are the inputs? An array and k the size of the subarray
+# Time Complexity for this algorithm is O(N); n being the length of the array.
 
-from collections import Counter
+def maximum_sum(lst, k):
+    max_entry = float("-inf")
 
+    for i in range(len(lst)):
+        next_index = i + k
+        if next_index < len(lst):
+            sum_of_list = sum(lst[i: i+k])
+            max_entry = max(max_entry, sum_of_list)
 
-print(Counter("missipi"))
+    return max_entry
+
+print(maximum_sum([3, 5, 2, 1, 7], 2))
+print(maximum_sum([4, 2, 1, 7, 8, 3], 3))
+print(maximum_sum([1, 3, 5, 2, 9, 7, 4], 2))
+  

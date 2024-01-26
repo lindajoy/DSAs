@@ -37,9 +37,11 @@ print(searchInSortedMatrix(matrix, target))
 
 # Using Binary Search
 def search_in_matrix(matrix, target):
+    # Validate the input
     if not matrix or not matrix[0]:
         return [-1, -1]
 
+    # We get the number of rows and columns
     rows, cols = len(matrix), len(matrix[0])
     row, col = 0, cols - 1
 

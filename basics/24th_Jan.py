@@ -77,6 +77,18 @@ for i in rnb_singers:
     else:
         print('🤔 Artist name:',i.lower())
 
+words = ['Hello', 'World', 'Foo', 'Bar']
+print('Reveresed word', words[::-1])
+
+# Looping from the last word to the first word.
+for i in range(len(words) -1, -1, -1):
+    print(words[i])
+
+# Getting better with list comprehensions
+print([(idx, i) for (idx, i) in enumerate(words) ])
+# Outputs: [(0, 'Hello'), (1, 'World'), (2, 'Foo'), (3, 'Bar')]
+
+print([(idx , i) for i,idx in enumerate(words)])
 
 
 
