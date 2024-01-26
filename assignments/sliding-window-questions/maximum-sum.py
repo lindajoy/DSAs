@@ -37,6 +37,7 @@ def maximum_sum(lst, k):
 
     for i in range(len(lst)):
         next_index = i + k
+        # Mixed up slicing a little bit.
         if next_index < len(lst):
             sum_of_list = sum(lst[i: i+k])
             max_entry = max(max_entry, sum_of_list)
