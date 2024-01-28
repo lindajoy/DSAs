@@ -17,3 +17,17 @@ print(10 < x < 20 < y < 30)
 # Prints true.
 
 # I think I get it now..
+# Hmm You can compare lists.
+print([1,2,3] == [1,2,3])
+
+my_dict = {
+    "name": "John",
+    "age": 25
+}
+
+my_dict_2 = {
+    "name": "John",
+    "age": 25
+}
+
+print(my_dict  == my_dict_2)
