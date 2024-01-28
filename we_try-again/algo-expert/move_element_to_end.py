@@ -12,12 +12,19 @@ toMove = 2
 def move_element_to_end(arr, toMove):
     left, right = 0, len(arr) - 1
 
-    while left < len(arr):
-        if arr[left] == toMove:
+    while left < right:
+        if arr[left] != toMove:
+            left += 1
+        elif arr[left] == toMove and arr[right] != toMove:
             arr[left],  arr[right] = arr[right], arr[left]
             left += 1
+            right -= 1
+        else:
             right -= 1
         
     return arr
 
 print(move_element_to_end([1,2,3,4,5], 3))
+print(move_element_to_end([2, 1, 2, 2, 2, 3, 4, 2], 2))
+print(move_element_to_end([1, 2, 3, 3, 4, 5, 3], 3))
+
