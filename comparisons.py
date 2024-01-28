@@ -1,0 +1,19 @@
+# Chaining Comparisons
+
+x = 15
+print(id(x))
+print(10 < x < 20)
+# Should return True
+print(10 < x and x < 20)
+# Same as the condition above
+x = 0
+print(x)
+print(id(x))
+
+# Add more complex examples
+x = 15
+y = 25
+print(10 < x < 20 < y < 30)
+# Prints true.
+
+# I think I get it now..
