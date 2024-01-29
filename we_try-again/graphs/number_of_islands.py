@@ -77,3 +77,35 @@ def numberOfIslands(grid):
 
 print(numberOfIslands(grid))
 print(numberOfIslands(grid2))
+
+# Lets try implementing this with DFS
+# What is the input? A matrix
+# What is the output? Number of Islands(Number)
+
+def numberOfIslandsDfs(matrix):
+    # Validate input
+    if not matrix:
+        return 0
+    
+    rows, columns = len(matrix), len(matrix[0])
+    visit = set()
+    no = 0
+    
+    def dfs(r,c):
+        # We need to check if in range
+        if r < 0 or r == rows or c < 0 or c == columns or matrix[r][c] != "1" and (r,c) not in visit:
+            return
+        visit.add((r,c))
+       
+        directions = [(1,0), (0,1), (-1,0), (0,-1)]
+        for dr, dc in directions:
+            dfs(r+dr, c+dc)
+
+    for r in range(rows):
+        for c in range(columns):
+            if matrix[r][c] == "1" and (r,c) not in visit:
+                dfs(r, c)
+                no += 1
+    return no
+                
+print(numberOfIslandsDfs(grid2))
