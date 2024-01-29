@@ -18,7 +18,6 @@ Return the modified image after performing the flood fill.
 # 🤔 Take note of the originalColor and the color parameter
 
 def floodFill(image, sr, sc, color):
-
     originalColor = image[sr][sc]
 
     if originalColor == color:
