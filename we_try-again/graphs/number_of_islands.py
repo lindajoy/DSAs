@@ -91,15 +91,21 @@ def numberOfIslandsDfs(matrix):
     visit = set()
     no = 0
     
-    def dfs(r,c):
-        # We need to check if in range
-        if r < 0 or r == rows or c < 0 or c == columns or matrix[r][c] != "1" and (r,c) not in visit:
+    def dfs(r, c):
+        # Check if out of bounds or already visited or not part of island
+        if (r < 0 or r == rows or c < 0 or c == columns or 
+            matrix[r][c] != "1" or (r, c) in visit):
             return
-        visit.add((r,c))
-       
-        directions = [(1,0), (0,1), (-1,0), (0,-1)]
+        
+        visit.add((r, c))
+        
+        # Define directions for movement
+        directions = [(1, 0), (0, 1), (-1, 0), (0, -1)]
+        
+        # Explore neighbors
         for dr, dc in directions:
-            dfs(r+dr, c+dc)
+            dfs(r + dr, c + dc)
+
 
     for r in range(rows):
         for c in range(columns):
