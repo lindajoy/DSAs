@@ -71,6 +71,7 @@ def searchPathInMaze(maze, start, end):
         return None
 
 # Using Breadth First Search(BFS)
+# 🥹 The good thing about BFS is that you are always getting the shortest path ⨒
 from collections import deque
 
 def hasPathBFS(maze, start, destination):

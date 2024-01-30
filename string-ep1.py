@@ -31,3 +31,6 @@ print("White:", WHITE)
 x= "sasa"
 
 print(x[::-1])
+
+# ord() operator returns the unicode point of a given character.
+print(ord('A'))
