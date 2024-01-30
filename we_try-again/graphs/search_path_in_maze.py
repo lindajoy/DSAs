@@ -36,6 +36,9 @@ cur.x - 1, cur.y), Coordinate(cur.x + 1, cur.y), Coordinate( cur.x, cur,y - 1), 
 
 
 # Another solution if that makes more sense.
+# The good thing about this question is that we are only searching for a path
+# It does not matter whether the path is short or long.
+# If it was specied that we should find the shortest path, we could have used BFS.
 
 def searchPathInMaze(maze, start, end):
     # Define directions: up, down,left, right
@@ -66,5 +69,35 @@ def searchPathInMaze(maze, start, end):
         return path
     else:
         return None
+
+# Using Breadth First Search(BFS)
+from collections import deque
+
+def hasPathBFS(maze, start, destination):
+    visited = set()
+    directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
+    queue = deque()
+    queue.append(start)
+    visited.add(tuple(start))
+
+    while queue:
+        current = queue.popleft()
+        if current == destination:
+            return True
+        
+        for dx, dy in directions:
+            x, y = current[0], current[1]
+            while 0 <= x + dx < len(maze) and 0 <= y + dy < len(maze[0]) and maze[x + dx][y + dy] == 0:
+                    x += dx
+                    y += dy
+                
+            if (x, y) not in visited:
+                queue.append((x, y))
+                visited.add((x, y))
+        
+        return False
+
+
+
 
 
