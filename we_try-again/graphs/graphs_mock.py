@@ -26,18 +26,20 @@ matrix = [
     [1, 1, 1, 1, 1, -1]
 ]
 
-outputMatrix = [
-    [1, 1, 1, 1, 1, -1_],
-    [1, 0, 0, 0, 0, 1_],
-    [1, 0, -1_, 0, 0, 1_],
-    [1, 0, 1_, 1_, 1_, 1_],
-    [1, 0, 1, 0, 0, 1_],
-    [1, 1, 1, 1, 1, -1_]
-]
+# outputMatrix = [
+#     [1, 1, 1, 1, 1, -1_],
+#     [1, 0, 0, 0, 0, 1_],
+#     [1, 0, -1_, 0, 0, 1_],
+#     [1, 0, 1_, 1_, 1_, 1_],
+#     [1, 0, 1, 0, 0, 1_],
+#     [1, 1, 1, 1, 1, -1_]
+# ]
 
 # Here I am thinking about the two graph algorithms: BFS and DFS.
 # Assumptions made:
 #   1. The output is a list of positions.
+#   2. Let's assume that we are looking for the shortest paths.
+#   3. We are supposed to return, positions of the shortest path.
 
 # Lets create a Pseudocode for this right?
 # So how would solving it using DFS look like?
@@ -46,14 +48,38 @@ PSEUDOCODE:
 
 1. Loop through the entire matrix, 
 """
+from collections import deque
 
 def find_path(matrix):
     rows, cols = len(matrix), len(matrix[0])
     visit = set()
+    connections = []
+    q = deque()
+
     for r in range(rows):
         for c in range(cols):
             if matrix[r][c] == -1:
+                q.append((r,c))
 
+    if len(q) == 0:
+        return 'All cities have been connected!'
+    
+    while q:
+        size = len(q)
+
+        for _ in range(size):
+            row, col = q.popleft()
+            directions = [[0,1], [1,0],[0,-1],[-1,0]]
+            for dr, dc in directions:
+                r, c = row+dr, col + dc
+
+                if (r in range(rows) and c in range(cols) and matrix[r][c] != 0  and (r,c) not in visit):
+                    connections.append((r,c))
+                    visit.add((r,c))
+    return connections
+
+
+print(find_path(matrix))
 
 
 
