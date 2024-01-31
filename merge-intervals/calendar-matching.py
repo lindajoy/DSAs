@@ -57,19 +57,23 @@ dailyBounds2 = ['10:00', '18:30']
 meetingDuration = 30
 
 def calendarMatching(daily_Bounds_1, calendar_1, co_worker_bounds, co_worker_calendar, duration_of_meeting):
-
     # Merged durations
     booked_time = calendar_1 + co_worker_calendar
+    # Returns the merged times of the two candidates calendars.
     merged = []
+    # Returns the result of the merged free times.
     freeTime = []
 
-    
     # Helper function that helps in sorting the array
     def get_start_time(interval):
         x = interval[0].split(':')
         return int(x[0])
     
     booked_time.sort(key = lambda x: get_start_time(x)) 
+
+    print('Hello Booked time', booked_time)
+    dailyEmployeeBoundsStartBoubds = [daily_Bounds_1, co_worker_bounds].sort(key = lambda x: get_start_time(x)) 
+    print('K',dailyEmployeeBoundsStartBoubds)
 
     def mergeIntervals():
         current_start = booked_time[0][0]
@@ -87,23 +91,21 @@ def calendarMatching(daily_Bounds_1, calendar_1, co_worker_bounds, co_worker_cal
         return merged
     
     merged = mergeIntervals() 
-    print('😌',merged)  # [['9:00', '11:30'], ['12:00', '14:30'], ['14:30', '15:00'], ['16:00', '18:00']]
+    print('😌',merged) 
+    # [['9:00', '11:30'], ['12:00', '14:30'], ['14:30', '15:00'], ['16:00', '18:00']]
+    # You forgot something very important => The daily bounds of each colleague.
+
 
     def subtract_time(interval):
         time = interval.split(':')
         hour = (time[0])
-        print(int(hour))
+        # print(int(hour))
         minutes = 60 * int(hour)
-
         return abs(minutes + int(time[1]))
 
-    print(merged)
     for i in range(len(merged)):
-
         for j in range(1, len(merged)):
-
             if subtract_time(merged[j][0]) >= (subtract_time(merged[i][1])):
-
                 if subtract_time(merged[j][0]) - (subtract_time(merged[i][1])) >= duration_of_meeting:
                     freeTime.append([merged[i][1], merged[j][0]])
 
