@@ -11,6 +11,7 @@
 
 def front_back(a, b):
     def divide_string(s):
+        # Need a better way to remember this.
         mid = len(s) // 2
         front = s[:mid + len(s) % 2]
         print('Front',front)
@@ -26,6 +27,7 @@ def front_back(a, b):
 # Something that I always seem to forget:
 random_string = "HelloWorlds"
 random_string2= "HelloWorlds"
+print('k',random_string2[-2])
 print(front_back(random_string, random_string2))
 
 # This one includes the fourth index.
