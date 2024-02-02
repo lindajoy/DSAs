@@ -30,3 +30,19 @@ def dailyTemparatures(temparatures):
     
 
 print(dailyTemparatures([73,74,75,71,69,72,76,73]))
+
+
+def dailyTemparatures2(temparatures):
+    results = [0] * len(temparatures)
+    stack = []
+
+    # This makes better sesnse
+    for i in range(len(temparatures)):
+        for j in range( 1 + i, len(temparatures)):
+            if temparatures[i] < temparatures[j]:
+                results[i] = j - i
+                # Forgot to add the break: Once the warmer temparature is found.
+                break
+    return results
+
+print(dailyTemparatures2([73,74,75,71,69,72,76,73]))
