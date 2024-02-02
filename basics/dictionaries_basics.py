@@ -19,3 +19,5 @@ print("Added by 10", my_dictionary)
 
 my_dictionary["raspberry"] = my_dictionary.get("raspberry", 0) + 1
 print('Added raspberry:', my_dictionary)
+
+# This is a better way to approach or add items  on a hashmap
