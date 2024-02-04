@@ -53,5 +53,52 @@ buildings = [3, 7, 8, 3, 6, 1]
 direction = "WEST"
 buildings2 = [3, 5, 4, 4, 3, 1, 3, 2]
 direction2 = "EAST"
-print(sunset_buildings(buildings2, direction2))  # Output: [1, 2, 4, 5]
+# print(sunset_buildings(buildings2, direction2))  # Output: [1, 2, 4, 5]
 
+# SUNSET VIEWS
+
+# O(N) time and space
+def sunsetViews3(buildings, direction):
+    result = []
+    
+    step = 1 if direction == "EAST" else -1
+    start = 0 if direction == "EAST" else len(buildings) - 1
+    
+    index = start
+    print("Starting Index", index)
+    while index >= 0 and index < len(buildings):
+        print(index)
+        height = buildings[index]
+
+
+        while len(result) > 0 and buildings[result[-1]] <= height:
+            print('buildings index:', buildings[result[-1]])
+
+            result.pop()
+            
+        result.append(index)
+        index += step
+        
+    return result if direction == "EAST" else result[::-1]
+buildings2 = [3, 5, 4, 4, 3, 1, 3, 2]
+direction2 = "EAST"
+print(sunsetViews3(buildings2, direction2))
+
+
+# O(N) time and space
+def sunsetViews(buildings, direction):
+    result = []
+    
+    step = 1 if direction == "WEST" else -1
+    start = 0 if direction == "WEST" else len(buildings) - 1
+    
+    index = start
+    currentMax = float('-inf')
+    while index >= 0 and index < len(buildings):
+        if buildings[index] > currentMax:
+            result.append(index)
+            currentMax = buildings[index]
+            
+        index += step
+        
+    return result if direction == "WEST" else result[::-1]
