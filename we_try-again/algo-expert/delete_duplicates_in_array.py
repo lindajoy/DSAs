@@ -11,10 +11,13 @@ Return the number of valid elements.
 Many languages have library functions for performing this operation- you cannot use these functions.
 
 """
+# Whats the input? An array.
+# Whats the output? The number of entries in our array.
 
 # Time Complexity is: O(N)
 # Space Complexity is : O(1)
 
+# Using Pop
 def deleted_duplicates(nums):
     if not nums:
         return []
@@ -24,9 +27,32 @@ def deleted_duplicates(nums):
 
     while right < len(nums):
         if nums[left] == nums[right]:
+            # Proud of you => used pop; Takes in an index.
+            # Can we use remove?
+            # Yes we can!
             nums.pop(left)
         left += 1
         right += 1
-    return nums
+    return len(nums)
 
 print(deleted_duplicates([2,3,5,5,7,11,11,13]))
+
+# Using remove
+def deleted_duplicates2(nums):
+    if not nums:
+        return []
+    
+    left = 0
+    right = left + 1
+
+    while right < len(nums):
+        if nums[left] == nums[right]:
+            # Proud of you => used pop; Takes in an index.
+            # Can we use remove?
+            # Yes we can!
+            nums.remove(nums[left])
+        left += 1
+        right += 1
+    return len(nums)
+
+print(deleted_duplicates2([2,3,5,5,7,11,11,13]))
