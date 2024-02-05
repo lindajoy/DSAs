@@ -56,3 +56,23 @@ def deleted_duplicates2(nums):
     return len(nums)
 
 print(deleted_duplicates2([2,3,5,5,7,11,11,13]))
+
+random_str = "add(10,40)"
+list_generated = random_str[4:-1].split(',')
+summing_up = 0
+for i  in list_generated:
+    summing_up += int(i)
+
+print(summing_up)
+
+def summing_given_string(str):
+    split_str = str[4:-1]
+    list_str = split_str.split(',')
+    total_sum = 0
+
+    for i in list_str:
+        total_sum += int(i)
+    return total_sum
+
+print(summing_given_string(random_str))
+
