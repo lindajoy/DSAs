@@ -1,8 +1,11 @@
 def longestMountain(arr):
+    # Initialize answer and index i
     ans = 0
     i = 0
 
+    # loop through the array
     for i in range(len(arr) - 1):
+        # Hmm, I really dont like repeating this line: i + 1 < len(arr)
         while i + 1 < len(arr) and arr[i] == arr[i+1]:
             i+=1
         increasing = 0
