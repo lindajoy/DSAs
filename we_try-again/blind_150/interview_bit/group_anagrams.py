@@ -13,6 +13,14 @@ Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
 
 from collections import defaultdict
 
+s_random = [('NC', 'Raleigh'), ('VA', 'Richmond'), ('WA', 'Seattle'), ('NC', 'Asheville')]
+cities = defaultdict(list)
+
+for k, v in s_random:
+    cities[k].append(v)
+
+print("Here are the list of cities", cities)
+
 def groupAnagrams(strs):
     # How to defaulDicts work?
     strings = defaultdict(list)
