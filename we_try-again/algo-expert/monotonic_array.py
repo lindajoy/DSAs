@@ -43,22 +43,31 @@ def isMonotonicArray(nums):
             IsIncreasing = True
         elif nums[left] > nums[right]:
             isDecreasing = True
- 
-        if isDecreasing and nums[right] > nums[left]:
-            return False
-        elif IsIncreasing and nums[right] < nums[left]:
-            return False
-        
-        right += 1
         left += 1
+        right += 1
+
+ 
+    if isDecreasing and nums[right] > nums[left]:
+        return False
+    elif IsIncreasing and nums[right] < nums[left]:
+        return False
+        
     return True
 
     
 print(isMonotonicArray([1, 3, 2, 5, 4]))
 print(isMonotonicArray([1, 1, 1, 1, 1]))
+print('Should return False:',isMonotonicArray([1, 1, 4, 5, 3]))
 print(isMonotonicArray([5, 4, 3, 3, 2, 2, 1]))
 print(isMonotonicArray([5, 3, 2, 4, 1]))
 print(isMonotonicArray([[-1, -5, -10, -1100, -1100, -1101, -1102, -9001]]))
 
     
     
+
+# I have been struggling with the concept of break and continue in the if statements.
+
+for i in range(5):
+    if i == 2:
+        print(i)
+        continue
