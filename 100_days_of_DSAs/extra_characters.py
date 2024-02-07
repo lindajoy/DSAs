@@ -21,7 +21,7 @@ for i in dictionary:
     empty_dict[i] = len(i)
 
 print('Unsorted Empty Dictionary', empty_dict)
-sorted_letters = dict((empty_dict.items(), key=lambda x: x[1], reverse=True))
+sorted_letters = dict(empty_dict.items(), key=lambda x: x[1], reverse=True)
 print(sorted_letters)
 
 ## Dynamic Programming Solution => Not understood this....🥲

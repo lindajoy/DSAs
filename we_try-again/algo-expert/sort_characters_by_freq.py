@@ -31,7 +31,7 @@ print(sortFrequency('tree'))
 
 
 # Using a List
-def frequencySort(self, s: str) -> str:
+def frequencySort(s: str) -> str:
     count = []
     str_concat = ""
     # Here we are creating a hashmap.
@@ -52,3 +52,22 @@ def frequencySort(self, s: str) -> str:
     return str_concat
         
 # 💡 Using Default Dictionary Instead
+from collections import Counter, defaultdict
+def frequencySort2(s: str):
+    count_chars = Counter(s) # char -> cnt
+    buckets = defaultdict(list)
+    # Hmm, I would not have done it this way
+
+    for char, cnt in count_chars.items():
+        buckets[cnt].append(char)
+
+    print("Buckets:", buckets)
+    res = []
+
+    for i in range(len(s), 0, -1):
+        for c in buckets[i]:
+            res.append(c*i)
+    return "".join(res)
+
+print(frequencySort2('tree'))
+
