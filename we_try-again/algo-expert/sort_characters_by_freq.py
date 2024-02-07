@@ -32,22 +32,23 @@ print(sortFrequency('tree'))
 
 # Using a List
 def frequencySort(self, s: str) -> str:
-        count = []
-        str_concat = ""
-        # Here we are creating a hashmap.
-        # What if we did a list instead?
+    count = []
+    str_concat = ""
+    # Here we are creating a hashmap.
+    # What if we did a list instead?
 
-        for i in set(s):
-            freq = s.count(i)
-            str_count = [i, freq]
-            count.append(str_count)
+    for i in set(s):
+        freq = s.count(i)
+        str_count = [i, freq]
+        count.append(str_count)
 
-        # Why does not sort work here well?
-        count = sorted(count, key=lambda x: x[1], reverse=True)
+    # Why does not sort work here well?
+    count = sorted(count, key=lambda x: x[1], reverse=True)
 
-        for c, i in count:
-            pr = c * i
-            str_concat += pr
+    for c, i in count:
+        pr = c * i
+        str_concat += pr
 
-        return str_concat
+    return str_concat
         
+# 💡 Using Default Dictionary Instead
