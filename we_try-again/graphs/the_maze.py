@@ -18,26 +18,43 @@ def maze(maze, startingPoint, endingPoint):
     if not maze:
         return False
     
+    # Initialize an empty set
     visited = set()
+    # Initialize a list of tuples that indicate the directions
     directions = [(1, 0), (0, 1), (-1, 0), (0, -1)]
-    path = [startingPoint[0], startingPoint[1]]
+    path = [(startingPoint[0], startingPoint[1])]
 
     def dfs(x, y):
+        # This means you have reached the end point
         if (x, y) == endingPoint:
             return True
-        if (x < 0 or y < 0 or y== len(maze[0]) or x == len(maze) or maze[x][y] == 1 or  (x, y) in visited):
+        # Here we are answering the question; Are you within range?
+        if (x < 0 or y < 0 or y == len(maze[0]) or x == len(maze) or maze[x][y] == 1 or  (x, y) in visited):
             return False
+        
+        # Go in all four directions to check whether the res defaults to true; If it does not that means the path is not correct
+        # So its best to return a Falsy value.
         for dx, dy in directions:
             new_x, new_y = x + dx, dy + y
             visited.add((new_x, new_y))
-            path.append((new_x, new_y))
             res = dfs(new_x, new_y)
             if res:
+                path.append((new_x, new_y))
                 return True
-            path.pop()
         return False
 
-    if dfs(startingPoint[0], startingPoint[1]):
+    return True if dfs(startingPoint[0], startingPoint[1]) else False
+    
+
+# Pop usually removes the last item in the list
+# It Logs the  element removed.
+
+print([1,2,3,4,5].pop())
+k = 3
+
+def random_function(k):
+    if k == 2:
         return True
-    else:
-        return False
+    print('Hello!')
+
+print(random_function(k))
