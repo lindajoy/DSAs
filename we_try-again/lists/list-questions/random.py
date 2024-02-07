@@ -25,3 +25,11 @@ lst = [[1, 2, 3, 4],
 
 for i in range(0, 4):
     print(lst[i].pop()),
+
+b = [['b', 2], ['a', 1], ['A', 1]]
+
+# Let me try 
+# Use sorted instead
+eNums2 = sorted(b, key=lambda x: x[1])
+
+print(eNums2)
