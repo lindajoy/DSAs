@@ -43,5 +43,34 @@ pThere are multiple cycles in this graph:
 3) 1 -> 2 -> 0 -> 1
 These are just 3 examples; there are more.
 """
+
 # An adjcaceny list is a way we can represent graphs in our computers.
 # Hmm, How do we approach this problem?
+
+# When building an adjacency list in Python; We often use the default dict.
+
+# First thing lets see whether I understand the concept of defaultdict.
+from collections import defaultdict
+# Say we have a list of tuples.
+lord_of_rings = [('Frodo', 'Baggins'), ('Pippin', 'Took'), ('Andy', 'Serkiss'), ('Frodo', 'Aaragon'), ('Andy', 'Sander'), ('Frodo', 'Blessing')]
+list_dictionary = defaultdict(list)
+
+for name, surname in lord_of_rings:
+    list_dictionary[name].append(surname)
+
+print('Here is my list dictionary:', list_dictionary)
+
+# What if we wanted to play with integers and strings?
+str_default_dict = defaultdict(str)
+int_default_dict = defaultdict(int)
+
+str_for_friday = 'missisipi'
+for i in str_for_friday:
+    int_default_dict[i] += 1
+
+print('Character Occurence in string:',int_default_dict.items())
+
+for i in str_for_friday:
+    str_default_dict[i] = i
+
+print(str_default_dict.items())

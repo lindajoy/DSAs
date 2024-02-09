@@ -22,6 +22,8 @@ Output: [1, 2, 4, 8]
 # 💡 Memoization Optimization
 # Takes in an array and we need to return an array list of integers.
 
+# In this approach we are using memoization
+
 def largestDivisibleSubset(nums):
     # Sort the array
     nums.sort()
