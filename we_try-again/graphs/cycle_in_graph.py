@@ -74,3 +74,57 @@ for i in str_for_friday:
     str_default_dict[i] = i
 
 print(str_default_dict.items())
+
+
+# CYCLE IN GRAPH
+# O(V + E) time and O(V) space
+
+def has_cycle(edges):
+    # What is the input? A list of edges
+    # What is the output? A Boolean value that indicates whether a cycle exists or not.
+
+    def dfs(node, visited, rec_stack):
+        visited[node] = True
+        rec_stack[node] = True
+        print('I am here:',edges[node])
+        
+        for neighbor in edges[node]:
+            if not visited[neighbor]:
+                if dfs(neighbor, visited, rec_stack):
+                    return True
+            elif rec_stack[neighbor]:
+                return True
+        
+        rec_stack[node] = False
+        return False
+    
+    num_nodes = len(edges)
+    # This marks whether the current node is visted or not
+    visited = [False] * num_nodes
+    # Fills the value if its a true or face
+    rec_stack = [False] * num_nodes
+    
+    for node in range(num_nodes):
+        print(node)
+        if not visited[node]:
+            if dfs(node, visited, rec_stack):
+                return True
+    
+    return False
+
+# Sample Input
+edges = [[1, 2], [2], [0], [0]]
+edges1 = [
+    [1, 3],
+    [2, 3, 4],
+    [0],
+    [],
+    [2, 5],
+    [],
+]
+print('Hello world!')
+print(has_cycle(edges1))  # Output: True
+
+# Prints from 0 to 4
+# for i in range(5):
+#     print(i)
