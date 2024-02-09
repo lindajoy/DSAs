@@ -31,8 +31,10 @@ def minimumCharactersForWords(words):
     for char_word, freq in char_frequency.items():
         smallest_set.extend([char_word] * min(freq, words.count(char)))
     return smallest_set
-    
+print(minimumCharactersForWords(["this", "that", "did", "deed", "them!", "a"]))
 
+lst = ["this", "that", "did", "deed", "them!", "a"]
+lst.count('😄','a')
 # 💡 SECOND SOLUTION USING DEFAULTDICT
 from collections import defaultdict
 
