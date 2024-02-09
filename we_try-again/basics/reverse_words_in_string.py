@@ -30,9 +30,10 @@ sample_output = "google into get will joy"
 
 def reverseWordsInString(sample_str):
     output_str = ''
-    # Looping in reversal.
-    for i in range(len(sample_str)-1, -1, -1):
 
+    # Looping in reversal.
+    for i in range(len(sample_str) - 1, -1, -1):
+        # Hehe I am pretty wise:
         if sample_str[i] == " ":
             sliced_str = sample_str[i:]
             sample_str = sample_str[:i]
@@ -40,10 +41,30 @@ def reverseWordsInString(sample_str):
 
     return (output_str + ' ' + sample_str).strip()
 
-print(reverseWordsInString('AlgoExpert is the best!'))
+print(reverseWordsInString('AlgoExpert is the best!').title())
 print(reverseWordsInString("Joy will get into google"))
 
-testString = "helloWorld"
+string_one = "Joy will get into google"
+print(string_one.split(' '))
+
+def reverse_words_2(random_str):
+    # We can use a list
+    list_str = random_str.split(' ')
+    # Using two pointers.
+    left, right = 0, len(list_str) - 1
+
+    while left <= right:
+        list_str[left], list_str[right] = list_str[right], list_str[left]
+        left += 1
+        right -= 1
+
+    return ' '.join(list_str)
+
+print(reverse_words_2("Joy will get into google"))
+print(reverse_words_2('AlgoExpert is the best!').title())
+
+
+testString = "hello World"
 print(testString[:5])
 print(testString[5:])
 
