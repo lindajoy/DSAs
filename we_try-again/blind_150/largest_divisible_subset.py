@@ -32,21 +32,20 @@ def largestDivisibleSubset(nums):
         if i == len(nums):
             return []
         if (i, prev) in cache:
-            return cache([i, prev])
+            return cache[(i, prev)]
         
         res = dfs(i + 1, prev)
         if nums[i] % prev == 0:
-            tmp = [nums[i] + dfs(i + 1, nums[i])]# include nums[i]
+            tmp = [nums[i]] + dfs(i + 1, nums[i])# include nums[i]
             res = tmp if len(tmp) > len(res) else res
 
+        print('i', i)
+        print('prev', prev)
+
         cache[(i, prev)] = res
+        print('Cache', cache)
         return res
     
     return dfs(0,1)
 
-
-
-
-
-    return dfs(0,1)
-
+print(largestDivisibleSubset([1,2,3]))
