@@ -12,6 +12,10 @@ Output : [["yo", "oy"], ["flop", "olfp"], ["act", "tac", "cat"], ["foo"]]
 from collections import defaultdict
 
 def group_anagrams(words):
+    # Validate input:
+    if not words or len(words) == 0:
+        return []
+    
     words_dict = defaultdict(list)
 
     for i in words:
