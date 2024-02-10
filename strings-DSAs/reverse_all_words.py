@@ -35,3 +35,20 @@ def reverse_words_in_a_string(str):
     return output_str + ' ' + str
 
 print(reverse_words_in_a_string("AlgoExpert is the best!"))
+
+# Using the Two pointers
+def reverse_words_in_a_string_list(str):
+    string_list = str.split(" ")
+    print(string_list)
+    left, right = 0, len(string_list) - 1
+
+    while left < right:
+        string_list[left], string_list[right] = string_list[right], string_list[left]
+        left += 1
+        right -= 1
+
+    return ' '.join(string_list)
+
+
+
+print(reverse_words_in_a_string_list("AlgoExpert is the best!"))
