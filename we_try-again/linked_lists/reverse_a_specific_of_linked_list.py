@@ -28,7 +28,7 @@ def reverse_sublist(L, start, finish):
 
     # Reverse sublist
     sublist_iter = sublist_head.next
-    for _ in range(finish-start):
+    for _ in range(finish - start):
         temp = sublist_iter.next
         sublist_iter.next, temp.next , sublist_head.next = (temp.next, sublist_head.next, temp)
 
@@ -67,3 +67,4 @@ def reversing_a_list_portion(l, startingPoint, endingPoint):
     return first_slice
     
 print(reversing_a_list_portion([1,2,3,4], 2, 3))
+print(4%1)
