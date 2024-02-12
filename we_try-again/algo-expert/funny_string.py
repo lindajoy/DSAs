@@ -44,3 +44,5 @@ print(funny_string("abc"))
 print(funny_string("acxz"))
 print(funny_string("bcxz"))
 
+print(max([2,9,10,5]))
+
