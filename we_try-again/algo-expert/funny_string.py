@@ -18,6 +18,8 @@ The absolute differences of the adjacent elements for both strings are [1,1,1,1]
 # What is the input? A string
 # What is the output? Can either be Funny or Not Funny
 
+# What went wrong? Did not read through the question well 🥹
+
 def funny_string(s):
     # Ordinal conversion of the string s into list
     ordinal_list = [ord(s) for s in s][::-1]
