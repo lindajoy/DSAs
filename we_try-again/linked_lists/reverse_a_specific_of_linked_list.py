@@ -46,23 +46,24 @@ def reverse_sublist(L, start, finish):
 def reversing_a_list_portion(l, startingPoint, endingPoint):
     if startingPoint == endingPoint:
         return l
+    
+    # Before does not include that specific index.
     first_slice = l[:startingPoint]
-    secons_slice = l[startingPoint:]
+    # After includes that index
+    second_slice = l[startingPoint:]
 
     left = 0
-    right = len(secons_slice) - 1
+    right = len(second_slice) - 1
 
     while left < right:
-        secons_slice[left], secons_slice[right] = secons_slice[right], secons_slice[left]
+        second_slice[left], second_slice[right] = second_slice[right], second_slice[left]
         left += 1
         right -= 1
 
     # This commented line would not work hehe; Isn't that intersting?🤔
-    # return first_slice.extend(secons_slice)
-    first_slice.extend(secons_slice)
+    # return first_slice.extend(second_slice)
+    first_slice.extend(second_slice)
 
     return first_slice
     
-
-
 print(reversing_a_list_portion([1,2,3,4], 2, 3))
