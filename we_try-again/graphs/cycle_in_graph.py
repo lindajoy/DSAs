@@ -86,7 +86,6 @@ def has_cycle(edges):
     def dfs(node, visited, rec_stack):
         visited[node] = True
         rec_stack[node] = True
-        print('I am here:',edges[node])
         
         for neighbor in edges[node]:
             if not visited[neighbor]:
