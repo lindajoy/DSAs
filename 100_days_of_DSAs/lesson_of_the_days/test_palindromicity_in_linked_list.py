@@ -28,11 +28,26 @@ class ListNode:
     # Reversing a linked list: https://leetcode.com/problems/reverse-linked-list/description/
     # Finding the middle node in the linked list: https://leetcode.com/problems/middle-of-the-linked-list/submissions/1173162016/
 
+# I think the trickiest bit on this question, which i am not comfortable with is when it comes to reversing a list: I need to understand it more 🤔
+        
+
+# Lets look at The question on reversing a list.
+# Okay lets draw this on excalidraw..😄
+def reverseList(head: ListNode):
+    new_list = None
+    current = head
+
+    while current:
+        next_node = current.next
+        current.next = new_list
+        new_list = current
+        current = next_node
+    return new_list
+
+        
 def isPalindrome(head: ListNode):
     # finding the middle and end
     slow, fast = head, head
-
-
     while fast and fast.next:
         fast = fast.next.next
         slow = slow.next
