@@ -26,7 +26,7 @@ class ListNode:
 # If you think about it; the simple questions concerning linked lists are what built up the solution:
         
     # Reversing a linked list: https://leetcode.com/problems/reverse-linked-list/description/
-    # Finding the middle node in the linked list: 
+    # Finding the middle node in the linked list: https://leetcode.com/problems/middle-of-the-linked-list/submissions/1173162016/
 
 def isPalindrome(head: ListNode):
     # finding the middle and end
