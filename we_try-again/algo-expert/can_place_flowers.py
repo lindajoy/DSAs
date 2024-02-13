@@ -28,7 +28,9 @@ Output: false
 # Something I am thinking about is we can do is initialize a left and right pointer
 # Loop through the entire array by always checking its neighbors.
 
-# Since we are looping through each member in an array: The time complexity would be O(N)
+# Since we are looping through each member in an array: 
+# The time complexity would be O(N)
+# The space complexity would be O(N) as well.
 
 def canPlaceFlowers(flowerbed, number_of_flowers):
     # Validate the inputs
