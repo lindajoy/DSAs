@@ -76,6 +76,26 @@ def is_well_formed(s):
 
 print(is_well_formed('()[]{}'))
 
+def is_well_formed2(s):
+    leftMin, leftMax = 0, 0
+
+    for c in s:
+        if c == "(":
+            leftMin, leftMax = leftMin + 1, leftMax + 1
+        elif c == ")":
+            leftMin, leftMax = leftMin - 1, leftMax + 1
+        else:
+            leftMin, leftMax = leftMin - 1, leftMax + 1
+
+        if leftMax < 0:
+            return False
+        if leftMin < 0:
+            leftMin = 0
+
+    return leftMin == 0
+
+print(is_well_formed2("()"))
+
 # Lets break this down:
 # Given our input is: ()
 # Just the first iteration to ensure that we capture the logic well:
@@ -101,3 +121,6 @@ if "Joy" in places_of_work:
 # This one wont print out anything since Google is a value not a key.
 if "Google" in places_of_work:
     print('Joy is Joining google in July')
+
+string = 'abcdef'
+print(string.split())
