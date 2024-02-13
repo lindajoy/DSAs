@@ -54,7 +54,7 @@ class ListNode:
         self.value = value
 
 # Solution using Two pointers; Fast and slow pointers solution.
-
+# When you understand the solution it becomes easier. 🤔
 
 def removeNthNodeFromEnd(head: ListNode, n: int) -> ListNode:
     # Initialize the slow and fast pointer
