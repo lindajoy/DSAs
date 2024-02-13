@@ -36,8 +36,6 @@ Left parenthesis '(' must go before the corresponding right parenthesis ')'.
 # print(s == no_1)
 
 
-
-
 # Lets go back to valid parantheses question 1 => What are we trying to achieve on this question.
 
 # Understand more on Stacks.
@@ -66,23 +64,32 @@ Output: false
 
 def is_well_formed(s):
     # Initialze an empty list and a dictionary that points a 'key' opening bracket to value:its closing bracket
-
     left_chars, lookup = [], {'(' : ')', '{' :'}', '[': ']'}
-
     for c in s:
+        # Just looks up the keys.
         if c in lookup:
             left_chars.append(c)
+        # Check whether the key: points to value c.
         elif not left_chars or lookup[left_chars.pop()] != c:
             return False
-    print(left_chars)
-    return not left_chars
+    return len(left_chars) == 0
 
 print(is_well_formed('()[]{}'))
+
+# Lets break this down:
+# Given our input is: ()
+# Just the first iteration to ensure that we capture the logic well:
+# leftchar = ["("]
+# leftchar.pop() => Outputs the value: "()"
+# lookup["("]
+
 
 # Say when you do something like this:
 lst = [2, 3]
 
-print(not lst)
+
+print(lst.pop())
+print(lst)
 
 # Another thing which i find interesting is
 places_of_work = { "Joy": "Google", "Ann": "Mastercard", "Justin": "Microsoft"}
