@@ -19,6 +19,9 @@ Output: false
 
 # Hehe this is an easy question.
 
+# A little bit difficult than it looks..🤔
+# My First solution fails on the third example.
+
 # Whats is the input? An array flowerbed, and number of flowers
 # What is the output? Boolean.
 
@@ -32,15 +35,24 @@ def canPlaceFlowers(flowerbed, number_of_flowers):
     if number_of_flowers > len(flowerbed):
         return False
     
-    for i in range(1, len(flowerbed)- 1):
-        if i != 1 and i + 1 != 1 and i - 1 != 1:
+    # 💡 We add this line since this is not a cyclic flowerbed; The flowers are arranged in a straight line.
+    flowerbed = [0] + flowerbed + [0]
+
+    for i in range(1, len(flowerbed) - 1):
+        if flowerbed[i] != 1 and flowerbed[i + 1] != 1 and flowerbed[i - 1] != 1:
             number_of_flowers -= 1
             flowerbed[i] = 1
 
+    print(flowerbed)
+    print(number_of_flowers)
+
     return number_of_flowers <= 0
 
-print(canPlaceFlowers([1,0,0,0,1], 1))
+print(canPlaceFlowers([0,0,1,0,1], 1))
 print(canPlaceFlowers([1,0,0,0,1], 2))
+print(canPlaceFlowers([1,0,0,0,0,1], 2))
+
+
 
 
 
