@@ -122,5 +122,9 @@ if "Joy" in places_of_work:
 if "Google" in places_of_work:
     print('Joy is Joining google in July')
 
-string = 'abcdef'
+string = 'abcdef kmm'
 print(string.split())
+
+print( 5 // 2)
+import math
+print(math.ceil( 5 // 2))
