@@ -21,8 +21,11 @@ The absolute differences of the adjacent elements for both strings are [1,1,1,1]
 # What went wrong? Did not read through the question well 🥹
 
 def funny_string(s):
+    if isinstance(s, int):
+        return "Not Funny"
+    
     # Ordinal conversion of the string s into list
-    ordinal_list = [ord(s) for s in s][::-1]
+    ordinal_list = [abs(ord(s)) for s in s][::-1]
     left, right = 0, 1
     difference_list = []
     random_set = set()
@@ -43,6 +46,10 @@ def funny_string(s):
 print(funny_string("abc"))
 print(funny_string("acxz"))
 print(funny_string("bcxz"))
+print(funny_string("ivvkxq"))
+print(funny_string("ivvkx"))
+print(funny_string(2))
+
 
 print(max([2,9,10,5]))
 
