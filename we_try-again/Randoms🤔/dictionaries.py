@@ -31,6 +31,8 @@ my_dictionary['Mukami'] = 14
 my_dictionary["Sarah"] = 37
 my_dictionary["Vincent"] = 50
 my_dictionary["Milah"] = 60
+my_dictionary["Milah"] = 90
+
 
 print("My full dictionary:", my_dictionary)
 

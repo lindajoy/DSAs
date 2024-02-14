@@ -23,14 +23,21 @@ Pseudocode:
 6. Check whether we are at the bottom left index return True.
 """
 
+# Returns a True or Falsy value incase a path exists.
+
 def doesPathExist(matrix):
     rows, columns = len(matrix), len(matrix[0])
     directions = [ (1,0), (-1,0), (0, 1), (0,-1)]
+    starting_point = [0, 0]
+    ending_point = [4, 4]
 
 
     def dfs(row, column):
         if row < 0 or column < 0 or row >= len(matrix) or column >= len(matrix[0]):
             return
+        
+        if [row, column] == ending_point:
+            return True
         
         # Mark current index as visited
         matrix[row][column] = -1
@@ -42,7 +49,4 @@ def doesPathExist(matrix):
             row, column = dr + row , dc + column
             dfs(row, column)
 
-    for r in range(rows):
-        for c in range(columns):
-            if matrix[r][c] != -1:
-                dfs(r, c)
+    return dfs(starting_point[0],starting_point[0])
