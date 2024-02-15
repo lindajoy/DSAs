@@ -24,6 +24,8 @@ Output: 2
 
 # Hehe, Kumbe it was not that difficult.
 
+# Take away: I have learnt more about string manipulation
+
 def unique_email_addresses(emails):
     my_dict = set()
 
@@ -38,8 +40,17 @@ print(unique_email_addresses(["test.email+alex@leetcode.com","test.e.mail+bob.ca
 
 
 # Something useful learnt today was:
+# With split you are converting a string's element to a list.
+
 sample_email = "test.email+alex@leetcode.com"
 print(sample_email.split("@"))
 random_list = sample_email.split("@")
 print(random_list[0].split('+')[0])
+
+# Say you had something like
+phone_number = "123-456-789"
+print(phone_number.split('-'))
+
+some_message = "Hello Joy You are doing pretty Good"
+print(some_message.lower().split(" "))
 
