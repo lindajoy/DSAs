@@ -55,3 +55,40 @@ print(phone_number.split('-'))
 some_message = "Hello Joy You are doing pretty Good"
 print(some_message.lower().split(" "))
 
+# Some random list
+lst1 = [1,2,3,4,5]
+prod = 1
+
+for i in lst1:
+    prod = prod * i
+print(prod)
+
+print(type(2))
+print(int("-2"))
+
+
+def calPoints( operations) -> int:
+    ops = []
+    for i in operations:
+        if i == "D":
+            number = (ops[-1]) * 2
+            ops.append(number)
+        elif i == "C":
+            ops.pop(-1)
+        elif i == "+":
+            lastTwonumbers = ops[-2:]
+            totalsum = sum(lastTwonumbers)
+            ops.append(totalsum)
+        else:
+            integer = int(i)
+            ops.append(integer)
+
+    # 5 + -2 + -4 + 9 + 5 + 14 = 27.
+    print(ops)
+    return sum(ops)
+
+
+print(calPoints(["5","2","C","D","+"]))
+print(calPoints(["5","-2","4","C","D","9","+","+"]))
+
+[5, -2, -4, 9,]
