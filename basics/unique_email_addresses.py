@@ -25,6 +25,7 @@ Output: 2
 # Hehe, Kumbe it was not that difficult.
 
 # Take away: I have learnt more about string manipulation
+# 💡 I found this question intersting
 
 def unique_email_addresses(emails):
     my_dict = set()
