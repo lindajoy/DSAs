@@ -34,7 +34,7 @@ def doesPathExist(matrix):
 
     def dfs(row, column):
         if row < 0 or column < 0 or row >= len(matrix) or column >= len(matrix[0]):
-            return
+            return False
         
         if [row, column] == ending_point:
             return True

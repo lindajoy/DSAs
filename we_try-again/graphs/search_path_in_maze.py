@@ -34,6 +34,8 @@ cur.x - 1, cur.y), Coordinate(cur.x + 1, cur.y), Coordinate( cur.x, cur,y - 1), 
         return []
     return path
 
+lst = [1,2,3,4,5]
+print('Total sum:',sum(lst))
 
 # Another solution if that makes more sense.
 # The good thing about this question is that we are only searching for a path

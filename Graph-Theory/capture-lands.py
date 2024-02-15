@@ -5,6 +5,7 @@ A region is captured by flipping all 'O's into 'X's in that surrounded region.
 """
 
 def captureRegions(matrix):
+    # Get the number of rows and columns
     rows, columns = len(matrix), len(matrix[0])
 
     # Capture the Unsurrounded region

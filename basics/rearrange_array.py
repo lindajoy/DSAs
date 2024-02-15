@@ -12,6 +12,9 @@ Return the modified array after rearranging the elements to satisfy the aforemen
 
 What is the input? An array of integers
 What is the output? An modified arrangement of the array
+
+The time complexity of this operation is O(N)
+The space complexity of this operation is also O(N) 
 """
 # It worked 😄
 def rearrange_array(nums):
