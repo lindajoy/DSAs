@@ -98,3 +98,20 @@ for index, item in enumerate(my_list):
 
 for index, value in enumerate(harry_potter_chars.items()):
     print('😁🥹', index ,':', value)
+
+# Lets do some sorting of my dictionary
+lord_of_rings_chars = {
+    'Aaaragon': 43,
+    "Frodo": 89,
+    "Samwise": 13,
+    "Pippin": 40,
+    "Legolas": 30,
+    "Gandalf": 90
+}
+
+sorted_dictionary_chars = sorted(lord_of_rings_chars.items())
+sorted_characters = sorted(lord_of_rings_chars.items(), key=lambda x: x[1], reverse=True)
+
+print(sorted_characters)
+print(sorted_dictionary_chars)
+

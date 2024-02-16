@@ -22,8 +22,6 @@ for i in dictionary:
 
 print('Unsorted Empty Dictionary', empty_dict)
 sorted_letters = dict(empty_dict.items(), key=lambda x: x[1], reverse=True)
-print(sorted_letters)
-
 ## Dynamic Programming Solution => Not understood this....🥲
 s = "leetscode"
 dict3 = ["leet","code","leetcode"]
