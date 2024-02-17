@@ -3,10 +3,14 @@ In this problem you are to count the number of ways of starting at the top-left 
 All moves must either go right or down. For example, we show three ways in a 5 x 5 2D array
 
 Write a program that counts how many ways you can go from the top-left to the bottom-right in a 2D array.
+
+Intuition:
+
 """
 
 # Takes in the number of rows and columns.
-def number_of_ways_to_get_to_end(x, y):
+def number_of_ways_to_get_to_end(grid):
+    x, y = len(grid), len(grid[0])
 
     def compute_number_of_ways(n, m):
         if n == m == 0:
@@ -21,7 +25,13 @@ def number_of_ways_to_get_to_end(x, y):
     number_of_ways = [[0] * y for _ in range(x)]
     return compute_number_of_ways(x-1, y-1)
     
-grid=[[1, 3, 1], [1, 5, 1], [4, 2, 1]]
+grid = [
+    [1, 2, 3, 4, 5],
+    [6, 7, 8, 9, 10],
+    [11, 12, 13, 14, 15],
+    [16, 17, 18, 19, 20],
+    [21, 22, 23, 24, 25]
+]
 
-print(number_of_ways_to_get_to_end(4, 4))
+print(number_of_ways_to_get_to_end(grid))
 

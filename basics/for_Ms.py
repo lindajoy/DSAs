@@ -3,40 +3,58 @@ You are given two arrays, A and B, each made up of n integers, they represent a 
 is the upper row and b is the lower row, Your task is to go from the upper-left cell represented by (a [0]) to the bottom right of the cell
 (represented by[n-1]), moving only right and down, so that the maximu value over which you pass is small as possible.
 """
-# def dfs(grid, i=0, j=0, max_val=float('inf')):
-#     if i == len(grid) - 1 and j == len(grid[0]) - 1:
-#         return min(max_val, grid[i][j])
+def max_fish_value(A):
+       n, m = len(A), len(A[0])
+       dp = [[0] * m for _ in range(n)]
+       dp[0][0] = A[0][0]
 
-#     directions = [(1, 0), (0, 1)]  # Right and Down
-#     min_max = float('inf')
+       for i in range(n):
+           for j in range(m):
+               if i > 0:
+                   dp[i][j] = max(dp[i][j], dp[i-1][j] + A[i][j])
+               if j > 0:
+                   dp[i][j] = max(dp[i][j], dp[i][j-1] + A[i][j])
 
-#     for dx, dy in directions:
-#         x, y = i + dx, j + dy
-#         if 0 <= x < len(grid) and 0 <= y < len(grid[0]):
-#             min_max = min(min_max, dfs(grid, x, y, max(max_val, grid[i][j])))
-    
-#     return min_max
+       return dp[n-1][m-1]
+ 
+   # Example usage:
+A = [
+    [1, 3, 1],
+    [1, 5, 1],
+    [4, 2, 1]
+]
 
-# grid = [[1, 2, 3], [4, 5, 6]]
-# result = dfs(grid)
-# print("Minimum maximum value passing through:", result)
+B = [[10, 8, 9],
+     [1, 12, 5],
+     [3, 4, 15]]
 
-def maxFish(grid):
-  nc=grid[0]
-  for i in range(len(nc)):
-    if(i!=0):
-      nc[i]+=grid[0][i-1]
-  
-  for i in range(1,len(grid)):
-    for j in range(len(grid[0])):
-      if (j!=0):
-        nc[j]=max(grid[i][j]+nc[j], nc[j-1]+grid[i][j])
-      else:
-        nc[j]+=grid[i][j]
-  return nc[len(grid[0])-1]
-  
-grid=[[1, 3, 1], [1, 5, 1], [4, 2, 1]]
+A1 = [[1, -2],
+     [3, 4]]
 
-print(maxFish(grid))
-# print(maxFish([1, 2],[3, 4],[5, 6]))
-print(maxFish([[7, 2, 9],[1, 5, 3],[4, 8, 6]]))
+
+result = max_fish_value(A1)
+result2 = max_fish_value(B)
+
+print(f"Maximum fish value: {result}")
+
+
+def max_fish_value2(A, B):
+     GRID = [A, B]
+     ROWS, COLS = len(GRID), len(GRID[0])
+     dp = [[0] * COLS for _ in range (ROWS)]
+     dp[0][0] = GRID[0][0]
+
+     for row in range(ROWS):
+          for col in range(COLS): 
+               if row > 0:
+                    dp[row][col] = max(dp[row][col], dp[row - 1][col] + GRID[row][col])
+               if col > 0:
+                    dp[row][col] = max(dp[row][col], dp[row][col - 1] + GRID[row][col])
+
+
+
+     return dp[ROWS- 1][COLS - 1]
+arr1 = [1, -2]
+arr2 = [3, 4]
+print(max_fish_value2(arr1, arr2))
+
