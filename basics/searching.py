@@ -163,8 +163,9 @@ def searchForAPair(nums, target):
             if mid > 0 and nums[mid - 1] == target:
                 result[0] = mid - 1
             else:
-                result[0] = mid - 0
+                result[0] = mid
 
+            # We do not want it to go out of bound.
             if mid < len(nums) - 1 and nums[mid + 1] == target:
                 result[1] = mid + 1
             else:
