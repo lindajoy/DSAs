@@ -72,6 +72,8 @@ array_example = [-14, -10, 2, 108, 108, 243, 285, 285, 285, 401]
 # we do know that no subsequent elements can be the first one.
 # Therefore we remove all elements with index i + 1 or more from the candidates
 
+# The time complexity is still O(log n) => This is because each iteration reduces the size of the candidate by half.
+
 def search_first_of_k(A, k):
     # Initialize the left and the right pointers.
     left, right, result = 0, len(A) - 1, -1
@@ -89,3 +91,44 @@ def search_first_of_k(A, k):
 
 print('First instance of 2', search_first_of_k([2,2,2,2,2,2], 2))
 print('First Instance of 300', search_first_of_k([297,298, 299,299,299,300,301,302,303,304,305], 300))
+
+"""
+Design an effecient algorithm that takes a sorted array and a key, and finds the index of the first occurence of an element
+greater than than the key. 
+
+For example say that you are given the following array:
+
+[-14, 10, 2, 108, 108, 243, 285, 285, 285, 401]
+
+Our target is 285
+The greatest index after 285 is 9
+"""
+# Whats is the pseudocode of this?
+
+# Initialize the left, right and index(which is what we will return) in the end
+# While left <= right:
+# We can calculate the mid point: (left +  right) // 2
+# if mid_point is equal to target:
+#   left = midpoint + 1
+# if midpoint > target:
+#   index = midpoint
+def getIndexOfNextLargestNumber(nums, target):
+    left, right = 0, len(nums) - 1, 
+
+    if target not in nums:
+        return -1
+
+    while left <= right:
+        mid = (left + right) // 2
+        if nums[mid] == target:
+            left = mid + 1
+        elif nums[mid] > target:
+            right = mid - 1
+        elif nums[mid] < target:
+            left = mid + 1
+    return left if left < len(nums) else -1
+
+print(getIndexOfNextLargestNumber([-14, 10, 2, 108, 108, 243, 285, 285, 285, 401], 285))
+print(getIndexOfNextLargestNumber([1, 2, 3, 3, 4, 5, 6], 3))
+print(getIndexOfNextLargestNumber([1, 2, 2, 3, 4, 4, 5], 2))
+print(getIndexOfNextLargestNumber([10, 20, 30, 40, 50], 2))
