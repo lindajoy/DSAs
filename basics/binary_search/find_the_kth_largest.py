@@ -82,3 +82,46 @@ def find_kth_largest_optimal(nums, k):
            break
    return nums[k]
 
+# There is something intersting, I saw in the EOP solution though it was hard to follow.
+import random
+left , right = 0, 10
+# This can help in selecting the pivot element if ever given the choice to do it.
+print(random.randint(left,right))
+
+# The third solution: Comes with a long concept I have never checked out in a while: 🤹🏾‍♀️ QUICKSORT ALGORITHM.
+
+"""
+QUICKSORT ALGORITHM: This is a divide and conquer algorithm 🤔
+
+Quicksort is a sorting algorithm based on the divide and conquer approach where:
+
+    1. An array is divided into subarrays by selecting a pivot element(element selected element)
+       Elements less than the pivot should be positioned in such a way elements are kept on the left side
+       and elements greater are on the right side of the pivot
+    
+    2. The left and right subarrays are also divided using the same approach. The process continues untill each subarray
+        cointains a single element
+
+    3. At this point, elements are already sorted. Finally elements are combined to form a sorted array.
+"""
+def partition(array, low, high):
+    pivot = array[high]
+    i = low - 1
+    for j in range(low, high):
+        if array[j] <= pivot:
+            i += 1
+            array[i], array[j] = array[j], array[i]
+    array[i + 1], array[high] = array[high], array[i + 1]
+    return i + 1
+
+def quickSort(array, low, high):
+    if low < high:
+        pi = partition(array, low, high)
+        quickSort(array, low, pi - 1)
+        quickSort(array, pi + 1, high)
+
+data = [1, 7, 4, 1, 10, 9, -2]
+print("Unsorted Array:", data)
+size = len(data)
+quickSort(data, 0, size - 1)
+print("Sorted Array in Ascending Order:", data)
