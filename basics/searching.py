@@ -159,14 +159,17 @@ def searchForAPair(nums, target):
         mid = (left + right) // 2
 
         if nums[mid] == target:
-            if nums[mid - 1] == target:
-                result.clear()
-                result.append(mid- 1)
-                result.append(mid- 1)
-            elif nums[mid + 1] == target:
-                result.clear()
-                result.append(mid)
-                result.append(mid + 1) 
+            # The two numbers will always follow each other in the other array.
+            if mid > 0 and nums[mid - 1] == target:
+                result[0] = mid - 1
+            else:
+                result[0] = mid - 0
+
+            if mid < len(nums) - 1 and nums[mid + 1] == target:
+                result[1] = mid + 1
+            else:
+                result[1] = mid
+            return result
         elif nums[mid] > target:
             right = mid - 1
         else:
