@@ -132,3 +132,48 @@ print(getIndexOfNextLargestNumber([-14, 10, 2, 108, 108, 243, 285, 285, 285, 401
 print(getIndexOfNextLargestNumber([1, 2, 3, 3, 4, 5, 6], 3))
 print(getIndexOfNextLargestNumber([1, 2, 2, 3, 4, 4, 5], 2))
 print(getIndexOfNextLargestNumber([10, 20, 30, 40, 50], 2))
+
+"""
+Write a program which takes a sorted array A integers, and an integer k, and returns the interval enclosing k, i.e,
+the pair of integers L and U such that L is the first occurence of k in A and U is the last occurence of k in A.
+If k does not appear in A, return [-1,-1]
+
+For example if: A = [1,2,2,4,4,4,7,11,11,13] and k = 11, You should return [7,8]
+
+"""
+
+# 🧐 Here are some of my discoveries.
+
+# We should return an array of pair indexes.
+# The thing is this two digits will always "follow each other" in our array.
+# So we can let the mid point be our anchor. If we find our target we need to check the index before and after.
+
+# Assumptions:
+# Here we will always assume that the the occurence of the number will occur twice in our array.
+
+def searchForAPair(nums, target):
+    left, right = 0, len(nums) - 1
+    result = [-1, -1]
+
+    while left <= right:
+        mid = (left + right) // 2
+
+        if nums[mid] == target:
+            if nums[mid - 1] == target:
+                result.clear()
+                result.append(mid- 1)
+                result.append(mid- 1)
+            elif nums[mid + 1] == target:
+                result.clear()
+                result.append(mid)
+                result.append(mid + 1) 
+        elif nums[mid] > target:
+            right = mid - 1
+        else:
+            left = mid + 1
+
+    return result
+
+print(searchForAPair([1,2,2,4,4,4,7,11,11,13], 11))
+
+
