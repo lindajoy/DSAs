@@ -1,3 +1,5 @@
+# Link to continue reading this: https://freedium.cfd/https://towardsdatascience.com/41-questions-to-test-your-knowledge-of-python-strings-9eb473aa8fe8
+
 # 1. How do you confirm that 2 strings have the same identity
 """
 The is operator returns True if 2 names point to the same location in memory, This is what we
