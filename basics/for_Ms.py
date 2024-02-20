@@ -38,12 +38,22 @@ result2 = max_fish_value(B)
 print(f"Maximum fish value: {result}")
 
 
+# The intution we are given a grid; And we need to return the maximum number of fish a fisherman can capture.
+# The idea here is to initialize a grid with 0s, the idea is as we traverse through the entire grid, we are storing 
+# The maximum number of fish we can capture on our previous cell.
+
+# Here we are recieving the input as 2 different arrays:
+#    We need to add them on one grid
+#    Initialize dp[0][0] to have the value of the first element in the first position
 def max_fish_value2(A, B):
      GRID = [A, B]
      ROWS, COLS = len(GRID), len(GRID[0])
      dp = [[0] * COLS for _ in range (ROWS)]
+     # Actually this can also be:
+     # C = A[0]
      dp[0][0] = GRID[0][0]
 
+     # Traverse through the entire grid
      for row in range(ROWS):
           for col in range(COLS): 
                if row > 0:

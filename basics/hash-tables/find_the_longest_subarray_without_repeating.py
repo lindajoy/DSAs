@@ -16,10 +16,7 @@ def findLongestSubarrayWithoutRepeatingCharacters(arr):
     # Loop through the array; We enumerate here we get the index and the element we are looping through in our array.
     # So help me God!
     for i, a in enumerate(arr):
-        # print('Hello I',i)
-        # print('Hello A', a)
         if a in most_recent_occurences:
-            print(most_recent_occurences)
             duplicated_index = most_recent_occurences[a]
 
             if duplicated_index >= longest_dup_free_subarray:
