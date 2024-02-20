@@ -56,6 +56,7 @@ def max_fish_value2(A, B):
      # Traverse through the entire grid
      for row in range(ROWS):
           for col in range(COLS): 
+               # Check if the row and column is within the range
                if row > 0:
                     dp[row][col] = max(dp[row][col], dp[row - 1][col] + GRID[row][col])
                if col > 0:
