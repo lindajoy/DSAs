@@ -46,3 +46,58 @@ print('{0} , {1} will be the best teacher in the whole world'.format(name, secon
 
 # Search a specific part of a string from a substring
 print("Why don't skeletons ever fight each other? Because they don't have the guts!".index('the', 10, 50))
+
+# Check if a string contains only numbers
+# This should return true
+print('8000'.isnumeric())
+print('800i'.isnumeric())
+
+# Split a string on a specific character
+print("This is great".split(" "))
+print("not--so--great".split("--"))
+print('yellow@baggins#lish#megan'.split("#"))
+
+# Destructuring
+username, domain = "joy@google.com".split("@")
+print(username)
+print(domain)
+
+# Check if a string is composed of all lower case characters
+print("all lower case".islower())
+print("not ALL lowercase".islower())
+
+# Check if the first character in a string is lowercase
+print('aPPLE'[0].islower())
+
+# Reversing
+random_string = "Hotel Transalvaynia"
+print(''.join(reversed(random_string)))
+print(random_string[::-1])
+
+# Joining a list into a single string
+hotel_transylvania_characters = [
+    "Dracula",
+    "Mavis",
+    "Jonathan",
+    "Frankenstein",
+    "Wayne",
+    "Murray",
+    "Griffin",
+    "Blobby",
+    "Ericka Van Helsing",
+    "Dennis",
+    "Winnie",
+    "Quasimodo",
+    "Eunice",
+    "Tinkles",
+    "Belvedere",
+    "The Werewolf Kids"
+]
+
+
+my_combined_characters = '-'.join(hotel_transylvania_characters)
+print('😄', my_combined_characters)
+
+# Check if all characters in a string conform to ASCII
+print('A'.isascii())
+print('A'.isascii())
