@@ -34,3 +34,16 @@ print(remove_duplicates(names))
 names2 =  [("John", "Smith"), ("Jane", "Doe"), ("John", "Smith"), ("Adam", "Johnson")]
 print(remove_duplicates(names2))
     
+# Using a Hash Map Function is actually easier...
+def remove_duplicates_first_name(arr):
+    seen = {}
+
+    for first_name, last_name in arr:
+        if first_name not in seen:
+            seen[first_name] = (first_name, last_name)
+
+    return list(seen.values())
+
+print(remove_duplicates_first_name(names2))
+print(remove_duplicates_first_name(names))
+
