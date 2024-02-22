@@ -20,6 +20,9 @@ Output: 2
 
 # Incoming = n - 1
 # Outgoing = 0
+
+# This a graph problem; Such that we find the incoming and outgoing indices.
+
 from collections import defaultdict
 
 def findJudge(n, trust):
