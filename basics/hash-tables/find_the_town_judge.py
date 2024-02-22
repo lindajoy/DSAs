@@ -26,13 +26,18 @@ Output: 2
 from collections import defaultdict
 
 def findJudge(n, trust):
+    # Initializing with the kind of data we want.
     outgoing = defaultdict(int)
     incoming = defaultdict(int)
+    print('OUTGOING:', outgoing)
+    print('INCOMING:', incoming)
 
     for src, dst in trust:
         outgoing[src] += 1
         incoming[dst] += 1
 
+    # We are looping through the array from 1 to n + 1
+    # So say we had [1, 2, 3]
     for i in range(1, n+1):
         if outgoing[i] == 0 and incoming[i] == n - 1:
             return i
@@ -41,4 +46,20 @@ def findJudge(n, trust):
 print(findJudge(2, [[1,2]]))
 print(findJudge(3,[[1,3],[2,3]]))
 print(findJudge(3, [[1,3],[2,3],[3,1]]))
+
+integer_dict = defaultdict(int)
+
+numbers = [1,2,3,3,3,4,4,5]
+
+for i in numbers:
+    integer_dict[i] += 1
+
+# Outputs the correct integer dict.
+print('Playing with Integer Dicts:', integer_dict)
+
+# Outputs the value, at 4
+print('Output for 4:', integer_dict[4])
+
+# Outputs the value, at 1
+print('Output for 1:', integer_dict[1])
 
