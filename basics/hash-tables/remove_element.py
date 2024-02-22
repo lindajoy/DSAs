@@ -21,13 +21,15 @@ def remove_element(arr, k):
     n = len(arr)
     i = 0
 
+    # Loop through the array
     while i < n:
+        # Check whether the value at the specific index is equal to the target
         if arr[i] == k:
             arr[i], arr[n - 1] = arr[n - 1], arr[i]
             n -= 1  # decrement the length of the array by discarding the last element
         else:
             i += 1
-    
+    # Return length n at the end
     return n
 
 print(remove_element([3,2,2,3], 3))
