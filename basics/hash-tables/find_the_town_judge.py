@@ -33,6 +33,8 @@ def findJudge(n, trust):
     print('INCOMING:', incoming)
 
     for src, dst in trust:
+        # With default dict every item is initialized to 0
+        # Its very hard for it tp break at this point since we add the 1
         outgoing[src] += 1
         incoming[dst] += 1
 
@@ -44,7 +46,7 @@ def findJudge(n, trust):
     return -1
 
 print(findJudge(2, [[1,2]]))
-print(findJudge(3,[[1,3],[2,3]]))
+print(findJudge(3, [[1,3],[2,3]]))
 print(findJudge(3, [[1,3],[2,3],[3,1]]))
 
 integer_dict = defaultdict(int)
