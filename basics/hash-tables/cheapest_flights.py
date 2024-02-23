@@ -42,7 +42,7 @@ from collections import defaultdict, deque
 #
 # Queues flow the the principle of First In, First Out Principle.
 # You can picture a line in a coffee shop, the first customer to get a coffee from starbucks will get attended first.
-#
+# Hmm, needs more perspective: 🤔
 
 def findCheapestPrice(n, flights, src, dst, K):
     # Here we are saving all the neighbours in an adjacency list 
@@ -69,6 +69,7 @@ def findCheapestPrice(n, flights, src, dst, K):
         while size > 0:
             curr_node, curr_price = queue.popleft()
             for neighbor, price in adj[curr_node]:
+                print(neighbor, price)
                 new_price = curr_price + price
                 if new_price < visited[neighbor]:
                     visited[neighbor] = new_price
@@ -83,7 +84,7 @@ n = 4
 flights = [[0,1,100],[1,2,100],[2,0,100],[1,3,600],[2,3,200]]
 src = 0
 dst = 3
-k = 1
+k = 2
 print(findCheapestPrice(n, flights,src, dst, k))
 
 n2 = 3
