@@ -64,6 +64,8 @@ def findCheapestPrice(n, flights, src, dst, K):
     queue = deque([(src, 0)])
     K += 1
 
+    # The base case is that while K(Number of stops) > 0
+    # We are accumulating the total number of prices to the end of the destination.
     while K > 0 and queue:
         size = len(queue)
         while size > 0:
