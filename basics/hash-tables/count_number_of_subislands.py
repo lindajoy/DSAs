@@ -26,12 +26,18 @@ def count_sub_islands(grid1, grid2):
     ROWS_1, COLUMNS_1 = len(grid1), len(grid1[0])
     ROWS_2, COLUMNS_2 = len(grid2), len(grid2[0])
     visit1, visit2 = set(), set()
+    l1, l2 = [],[]
+
+    def dfs(r, c, lst):
+        
+
+
 
     for r1 in range(ROWS_1):
         for c1 in range(COLUMNS_1):
-            dfs(r1, c1)
+            dfs(r1, c1, l1)
 
 
     for r2 in range(ROWS_2):
         for c2 in range(COLUMNS_2):
-            dfs(r2, c2)
+            dfs(r2, c2, l2)

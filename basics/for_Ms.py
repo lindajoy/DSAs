@@ -1,6 +1,7 @@
 """
 You are given two arrays, A and B, each made up of n integers, they represent a grid with n columns and 2 rows, where A
-is the upper row and b is the lower row, Your task is to go from the upper-left cell represented by (a [0]) to the bottom right of the cell
+is the upper row and b is the lower row, Your task is to go from the upper-left cell represented by (a [0]) 
+to the bottom right of the cell
 (represented by[n-1]), moving only right and down, so that the maximu value over which you pass is small as possible.
 """
 def max_fish_value(A):

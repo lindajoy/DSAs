@@ -76,7 +76,6 @@ def findCheapestPrice(n, flights, src, dst, K):
                 if new_price < visited[neighbor]:
                     visited[neighbor] = new_price
                     queue.append((neighbor, new_price))
-
             size -= 1
         K -= 1
 
