@@ -59,10 +59,12 @@ print(total_sum)
 #  => Our input is just a special array.
 
 # This is pretty smart never thought about it this way.
+# Makes a bit of sense..💡🤔
 def product_sum(special_array, depth=1):
     # Initialize the total sum to 0
     total_sum = 0
     
+    # Looping through each element in the special array.
     for element in special_array:
         if isinstance(element, list):
             # This function calls itself.
