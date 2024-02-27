@@ -11,7 +11,7 @@ Sample Output: array = [1, 4, 9, 25, 36, 64, 81]
 def sorted_squared_array(arr):
     squared_array = [ i * i for i in arr ]
 
-    # Implemented the bubble sort
+    # Implemented the bubble sort to  help in swapping between elements
     is_sorted = False
     while not is_sorted:
         is_sorted = True
