@@ -33,3 +33,6 @@ print(lst[1])
 print(lst[-4])
 print(lst[1:])
 print(lst[2:])
+# Values that are greater than 2 in vals.
+vals = [1,2,3,4]
+print(any(val > 2 for val in vals))
