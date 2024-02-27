@@ -31,14 +31,16 @@ blueShirtHeights = [6, 9, 2, 4, 5]
 # blueShirtHeights = [5, 8, 2, 9]
 # When we sort them what do we get?
 red = [3, 4, 6, 7]
-blue = [2, 5, 8, 9]
+blue = []
 
 # This one assumes that the red people will always be shorter than the blue people.
 
 def classPhotos(reds, blues):
+    # If blues or reds do not exist.
     if not blues or not reds:
         return False
     isBlueGreater = False
+
     # Here we are sorting the two arrays
     reds.sort()
     blues.sort()
@@ -56,3 +58,4 @@ def classPhotos(reds, blues):
 
     
 print(classPhotos(redShirtHeights, blueShirtHeights))
+print(classPhotos(red, blue))
