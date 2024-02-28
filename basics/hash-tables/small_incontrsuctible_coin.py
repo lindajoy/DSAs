@@ -19,3 +19,4 @@ def small_inconstructible(nums):
     return result
 
 print(small_inconstructible([1,1,1,1,1,5,10,25]))
+

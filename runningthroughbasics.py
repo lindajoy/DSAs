@@ -69,3 +69,17 @@ def f():
     print (x)
     
 print(f())
+
+# Zip Function
+# Zip returns a list of tuples where the i-th tuple contains the i-th element each of the argument sequences or iterables.
+alist = ['a1', 'a2', 'a3']
+blist = ['b1', 'b2', 'b3']
+
+for a, b in zip(alist, blist):
+    print(a, b)
+
+clist = ['c1', 'c2', 'c3']
+dlist = ['d1', 'd2', 'd3', 'd4']
+
+for c , d in zip(clist, dlist):
+    print(c, d)
