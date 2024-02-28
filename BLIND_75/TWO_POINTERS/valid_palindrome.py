@@ -6,6 +6,15 @@ and removing all non-alphanumeric characters, it reads the same forward and back
 Alphanumeric characters include letters and numbers.
 Given a string s, return true if it is a palindrome, or false otherwise.
 """
+# What does isalnum() do?
+
+# If all characters in the string are either letters (from a to z) or numbers (from 0 to 9), the method returns True.
+# Example:
+
+random_str = "7h9R2p5Q"
+# Returns true or false is isalnum() returns true or false if the string contains numbers/strings.
+lst = [i for i in random_str if i.isalnum()]
+print(lst)
 
 def isValidPalindrome(str):
    str = "".join(item for item in str if item.isalnum()).lower()
