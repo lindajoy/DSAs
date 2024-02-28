@@ -14,6 +14,7 @@ Notice that you may not slant the container.
 # height = [1,8,6,2,5,4,8,3,7]
 # Output: 49
 
+# 💡 I usually have trouble with this question.
 def maxArea(heights):
     left, right = 0 , len(heights) - 1
     maxarea = 0
