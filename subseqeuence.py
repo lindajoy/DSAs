@@ -1,5 +1,4 @@
 def subsequence(array, subsequence):
-
     sub_start = 0
 
     for i in array:
