@@ -30,6 +30,9 @@ class TreeNode:
 # In BFS: We use the deque data structure that imitates the queue data structure.
 # Initialize even To true to know whether we are in an even or an odd level.
         
+# 💡 We use (-inf) when the the order is decreasing.
+# 💡 We use (inf) when the order is increasing.
+        
 from collections import deque
 
 def isEvenOddTree(root: TreeNode):
