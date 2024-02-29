@@ -40,6 +40,8 @@ def find_first_greater_than_k(tree: TreeNode, k):
 # Finding First Value That is greater... 
 # Hey! Breathe in,  You got this.
 
+# 😄🤔
+
 def find_first_val_greater_than_k(root: TreeNode, target):
     if root is None:
         return None
@@ -67,6 +69,7 @@ Node G for 285, and null for 143.
 
 # Here we are Traversing through the tree Node to find the element that is the first to be equal to the target.
 # Hey dont give up? Okay? 
+# Hey Breathe ~
 
 from collections import deque
 
