@@ -23,16 +23,28 @@ class TreeNode:
         
 # Whenever you come across a question involving trees, Your first thought should be either of the two algorithms: BFS and DFS
         
+# Could you describe what was the pseudocode you used for this algorithm?
+
+# NOTE: We use a BFS to traverse through each level of the Binary Tree.
+        
+# In BFS: We use the deque data structure that imitates the queue data structure.
+# Initialize even To true to know whether we are in an even or an odd level.
+        
 from collections import deque
 
 def isEvenOddTree(root: TreeNode):
     even = True
+
+    # Here we are appending the root value to our queue.
     q = deque([root])
 
     while q:
+        # Initialize the previous value here.
         prev = float("-inf") if even else float("inf")
 
+        # We are looping through the queue
         for _ in range(len(q)):
+            # Our node is set when q pops from the left.
             node = q.popleft()
 
             if even and (node.val % 2 == 0 or node.val <= prev):
