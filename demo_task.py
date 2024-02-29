@@ -16,6 +16,9 @@ Write an efficient algorithm for the following assumptions:
     each element of array A is an integer within the range [−1,000,000..1,000,000].
 """
 
+# 💡 Try to always think of the optimal solution whenever you are given an algorithm question.
+# [ The rule of thumb is to always start with the brute force approach then optimize.]
+
 # PERSONAL NOTE
 
 # @joy I like this question because I like the word effecient where it says write an effecient algorithm.
