@@ -30,6 +30,7 @@ Explanation: One of the '1's must be in the last position. The maximum number th
 # The question assures us that there will always be one 1.
 
 # String Concatenation.
+# This question made me feel stupid 
 def maximumOddBinaryNumber(binary):
     count_of_ones = 0
 
@@ -38,6 +39,22 @@ def maximumOddBinaryNumber(binary):
             count_of_ones += 1
 
     return (count_of_ones - 1) * "1" + (len(binary) - count_of_ones) * "0" + "1"
+
+random_str = "add(3,4)"
+
+def find_sum(r_str):
+    # Removing the unecessary parts of a string.
+    sliced_str = r_str[4:-1]
+    # Splitting by ","
+    nums = sliced_str.split(',')
+
+    total = 0
+    for i in nums:
+        total += int(i)
+    return total
+
+print(find_sum("add(3,4)"))
+
 
 
 
