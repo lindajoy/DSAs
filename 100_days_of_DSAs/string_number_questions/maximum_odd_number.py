@@ -42,6 +42,26 @@ def maximumOddBinaryNumber(binary):
 
 random_str = "add(3,4)"
 
+# Intuition of this solution:
+
+# We are looping through the array in reversal, if we find the first 1, we
+# Swap them with the last value in our array.
+# We later join them to ensure we return a string.
+
+def maximumOddBinaryNumber2(binary):
+    # 010 => Sorted would be 100
+    sorted_s = sorted(binary, reverse=True)
+    print("Sorted S:", sorted_s)
+
+    for i in range(len(binary) - 1, -1, -1):
+        if sorted_s[i] == "1":
+            print(sorted_s[i])
+            print(-1)
+            sorted_s[i], sorted_s[-1] = sorted_s[-1], sorted_s[i]
+            break
+    return ''.join(sorted_s)
+print(maximumOddBinaryNumber2("0101"))
+
 def find_sum(r_str):
     # Removing the unecessary parts of a string.
     sliced_str = r_str[4:-1]
