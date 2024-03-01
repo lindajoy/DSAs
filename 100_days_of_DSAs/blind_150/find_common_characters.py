@@ -19,6 +19,7 @@ def find_common_characters(words):
     for char in first_word:
         # Here we are generating a list and getting the minimum count within the words.
         frequency = min(word.count(char) for word in words)
+        # This is an interesting way of concatenating our list towards the end of the list.
         concat = [char] * frequency
         res.extend(concat)
 
