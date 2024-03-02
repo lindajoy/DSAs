@@ -23,6 +23,7 @@ print(squares_of_sorted_array([-4,-1,0,3,10]))
 
 # SECOND SOLUTION
 # Using Two Pointers/ Rather like the MIT professor says the Two Fingers approach ✌🏽.
+# This is actually a better way of doing it. 🤔
 
 def squares_of_sorted_array_2(nums):
     n = len(nums)
