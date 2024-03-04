@@ -70,3 +70,10 @@ arr1 = [1, -2]
 arr2 = [3, 4]
 print(max_fish_value2(arr1, arr2))
 
+
+b = set()
+b.add('a')
+b.add('b')
+print(list(b))
+b.clear()
+print(b)
