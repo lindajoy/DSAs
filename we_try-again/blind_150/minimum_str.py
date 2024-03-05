@@ -28,6 +28,8 @@ Return the minimum length of s after performing the above operation any number o
 
 # This is an interesting question. 🤔
 
+# Leetcode link: https://leetcode.com/problems/minimum-length-of-string-after-deleting-similar-ends/description/?envType=daily-question&envId=2024-03-05
+
 def minimumLength(s):
     # Initialize the left and the right pointers.
     left, right = 0, len(s) - 1
