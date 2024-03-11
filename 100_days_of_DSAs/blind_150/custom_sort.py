@@ -9,6 +9,17 @@ More specifically, if a character x occurs before a character y in order, then x
 
 Return any permutation of s that satisfies this property.
 """
+
+# What did you learn from this question?
+
+    # => Reminded me on how to remove elements from a dictionary
+    # Say You had a dictionary cities:
+    # cities = {'Nairobi': 1000, "Lusaka": 2100, "Eld": 400}
+    # If you wish to remove "Eld" is a simple as: cities.pop("Eld")
+
+    # Another thing:
+    # if you have a string like: "hello" and would like to convert it to a list: ["h", "e", "l", "l", "o"]
+
 from collections import Counter
 
 def customSortString(order, s):
