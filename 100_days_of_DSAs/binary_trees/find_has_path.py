@@ -7,4 +7,4 @@ return true if the tree has a root-to-leaf path such that adding up all the valu
 A leaf is a node with no children.
 """
 
-print( -1 or 0)
+# What do we remember about Binary Trees?
