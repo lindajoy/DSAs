@@ -45,5 +45,7 @@ s = "abcd"
 print(customSortString('cba', 'abcd'))
 print(customSortString("kqep","pekeq"))
 print(customSortString("kqepe","pekeq"))
+print(customSortString("monday","daymonnnnn"))
+
 
 print(customSortString(order, s))
