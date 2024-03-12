@@ -21,3 +21,6 @@ my_dictionary["raspberry"] = my_dictionary.get("raspberry", 0) + 1
 print('Added raspberry:', my_dictionary)
 
 # This is a better way to approach or add items  on a hashmap
+list_one = [(1,), (2,)]  # Convert inner lists to tuples
+
+print(set(list_one))
