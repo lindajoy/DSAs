@@ -44,29 +44,31 @@ class ListNode:
         self.value = value
         self.next = next
 
-    def add_linked_lists(l1, l2):
-        # Initialize a new linked list; Using the List Node class
-        dummy_head = ListNode()
-        current = dummy_head
-        carry = 0
-
-        while l1 or l2 or carry:
-            # 💡 Extracting the first and second value in the two linked lists.
-            val1 = l1.value if l1 else 0
-            val2 = l2.value if l2 else 0
-
-            # Calculate the sum and carry for the current digit.
-            total_sum = val1 + val2 + carry
-            carry = total_sum // 10
-            current_digit = total_sum % 10
-
-            current.next = ListNode(current_digit)
-            current = current.next
-
-            if l1:
-                l1 = l1.next
-            if l2:
-                l2 = l2.next
-
-        return dummy_head.next
+# This was an indentation issue. 💩
         
+def add_linked_lists(l1:ListNode, l2: ListNode):
+    # Initialize a new linked list; Using the List Node class
+    dummy_head = ListNode()
+    current = dummy_head
+    carry = 0
+
+    while l1 or l2 or carry:
+        # 💡 Extracting the first and second value in the two linked lists.
+        val1 = l1.value if l1 else 0
+        val2 = l2.value if l2 else 0
+
+        # Calculate the sum and carry for the current digit.
+        total_sum = val1 + val2 + carry
+        carry = total_sum // 10
+        current_digit = total_sum % 10
+
+        current.next = ListNode(current_digit)
+        current = current.next
+
+        if l1:
+            l1 = l1.next
+        if l2:
+            l2 = l2.next
+
+    return dummy_head.next
+    
