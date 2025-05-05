@@ -4,7 +4,7 @@ class lostFrequencies:
         self.value = value
         
 # A class is a blueprint of an object
-
 obj = lostFrequencies("Some value")
+
 # Logs some value!
 print('Let see the value:', obj.value)
