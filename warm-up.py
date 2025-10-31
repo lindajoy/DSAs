@@ -33,3 +33,5 @@ print(addTwoNumbers(b))
 print(addTwoNumbers(a))  
 print(addTwoNumbers(c))        
 
+nums = [1, 2, 3,4]
+print(nums[0:1])
